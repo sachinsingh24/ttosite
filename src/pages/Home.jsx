@@ -11,6 +11,16 @@ export default function Home() {
             subtitle: "The Technology Transfer Office of IIT Hyderabad serves as a catalyst that transforms cutting-edge research into real-world impact. We work closely with faculty, researchers, students, startups, and industry partners to accelerate the journey from idea to innovation to implementation.",
             imageUrl: "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=60",
           },
+          {
+            title: "Grow Your Business",
+            subtitle: "This is slide 2",
+            imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=60",
+          },
+          {
+            title: "We Build Digital Solutions",
+            subtitle: "This is slide 3",
+            imageUrl: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=60",
+          },
         ]}
       />
 
