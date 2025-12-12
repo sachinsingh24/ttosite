@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-light py-5 mt-auto">
+    <footer className="bg-dark text-light pt-5 pb-3 mt-auto">
       <div className="container">
         <div className="row g-4">
           {/* Office Section */}
