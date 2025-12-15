@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 export default function About() {
   return (
     <>
+      {/* Hero Section */}
       <Hero
         slides={[
           {
@@ -30,6 +31,7 @@ export default function About() {
         ]}
       />
 
+      {/* Main About Section */}
       <section className="container py-5">
         <h2 className="mb-3 fw-bold">Who We Are</h2>
         <p>
@@ -55,47 +57,77 @@ export default function About() {
 
         <h2 className="mt-5 mb-4 fw-bold">Our Role in the Ecosystem</h2>
 
-        <div className="row p-3" style={{background:"#be0d07", borderRadius:"10px"}}>
-          <div className="col-md-3">
-            <div className="card h-100 shadow-sm p-3 text-center">
-              <i className="bi bi-lightbulb fs-1 mb-3"></i>
-              <p>
-                Support faculty and research scholars in navigating innovation
-                and intellectual property pathways
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-3">
-            <div className="card h-100 shadow-sm p-3 text-center">
-              <i className="bi bi-people fs-1 mb-3"></i>
-              <p>
-                Facilitate strong, sustainable engagement between IIT Hyderabad
-                and industry partners
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-3">
-            <div className="card h-100 shadow-sm p-3 text-center">
-              <i className="bi bi-rocket fs-1 mb-3"></i>
-              <p>
-                Promote a vibrant, innovation-first culture across the campus
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-3">
-            <div className="card h-100 shadow-sm p-3 text-center">
-              <i className="bi bi-diagram-3 fs-1 mb-3"></i>
-              <p>
-                Act as the central hub for technology licensing, partnerships,
-                and spin-off creation
-              </p>
-            </div>
+        {/* FIXED & ALIGNED CARD SECTION */}
+<div
+  className="row g-3 pb-3 px-2"
+  style={{
+    background: "#be0d07",
+    borderRadius: "12px",
+  }}
+>
+  {[
+    {
+      icon: "bi-lightbulb",
+      text: "Support faculty and research scholars in navigating innovation and intellectual property pathways",
+    },
+    {
+      icon: "bi-people",
+      text: "Facilitate strong, sustainable engagement between IIT Hyderabad and industry partners",
+    },
+    {
+      icon: "bi-rocket",
+      text: "Promote a vibrant, innovation-first culture across the campus",
+    },
+    {
+      icon: "bi-diagram-3",
+      text: "Act as the central hub for technology licensing, partnerships, and spin-off creation",
+    },
+  ].map((item, index) => (
+    <div className="col-md-3 d-flex" key={index}>
+      <div
+        className="card shadow-sm text-center p-4 d-flex flex-column"
+        style={{
+          borderRadius: "14px",
+          minHeight: "260px",
+        }}
+      >
+        {/* FIXED ICON WRAPPER FOR PERFECT ALIGNMENT */}
+        <div
+          className="icon-wrapper d-flex justify-content-center align-items-center mb-3"
+          style={{
+            height: "100px",     // FIXED height for icon row alignment
+            width: "100%",
+          }}
+        >
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{
+              width: "80px",
+              height: "80px",
+              borderRadius: "50%",
+              background: "#ffe6e6",
+            }}
+          >
+            <i
+              className={`${item.icon} fs-1`}
+              style={{ color: "#b30000" }}
+            ></i>
           </div>
         </div>
 
+        {/* TEXT AREA */}
+        <div style={{ flexGrow: 1 }}>
+          <p className="m-0" style={{ fontSize: "15px" }}>
+            {item.text}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+        {/* Learn More Button */}
         <div className="text-center mt-4">
           <button className="btn btn-outline-dark px-4">LEARN MORE</button>
         </div>
