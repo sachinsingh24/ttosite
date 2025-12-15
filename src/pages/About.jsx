@@ -33,105 +33,120 @@ export default function About() {
 
       {/* Main About Section */}
       <section className="container py-5">
-        <h2 className="mb-3 fw-bold">Who We Are</h2>
-        <p>
-          The Technology Transfer Office (TTO) at IIT Hyderabad serves as the
-          strategic interface between academia, industry, and society. Our
-          mission is to transform research outputs into impactful technologies,
-          products, and solutions.
+        {/* WHO WE ARE */}
+        <h2 className="fw-bold mb-3 display-6">
+          Who <span style={{ color: "#b30000" }}>We Are</span>
+        </h2>
+        <p className="text-muted fs-5">
+          The Technology Transfer Office (TTO) at IIT Hyderabad serves as the strategic
+          interface between academia, industry, and society. Our mission is to transform
+          research outputs into impactful technologies, products, and solutions.
         </p>
-        <p>
-          By combining scientific insight, intellectual property management,
-          commercialization strategy, and strong industry networks, we ensure
-          that innovations emerging from IIT Hyderabad reach the people and
+        <p className="text-muted fs-5">
+          With a strong foundation in intellectual property management, industry networks,
+          and commercialization expertise, TTO ensures that innovations reach people and
           markets where they can create meaningful change.
         </p>
 
-        <h2 className="mt-5 mb-3 fw-bold">What Drives Us</h2>
-        <p>
-          We believe every innovation has the power to transform lives. Our role
-          is to recognize this potential early, protect it, nurture it, and
-          connect it with the right partners—ultimately catalyzing real-world
-          impact.
+        {/* WHAT DRIVES US */}
+        <h2 className="fw-bold mt-5 mb-3 display-6">
+          What <span style={{ color: "#b30000" }}>Drives Us</span>
+        </h2>
+        <p className="text-muted fs-5">
+          We believe every innovation has the power to transform lives. Our role is to
+          recognize this potential early, protect it, nurture it, and connect it with the
+          right partners—ultimately catalyzing real-world impact.
         </p>
 
-        <h2 className="mt-5 mb-4 fw-bold">Our Role in the Ecosystem</h2>
+        {/* Role in Ecosystem */}
+        <h2 className="fw-bold mt-5 mb-4 display-6 text-center">
+          Our Role in the <span style={{ color: "#b30000" }}>Innovation Ecosystem</span>
+        </h2>
 
-        {/* FIXED & ALIGNED CARD SECTION */}
-<div
-  className="row g-3 pb-3 px-2"
-  style={{
-    background: "#be0d07",
-    borderRadius: "12px",
-  }}
->
-  {[
-    {
-      icon: "bi-lightbulb",
-      text: "Support faculty and research scholars in navigating innovation and intellectual property pathways",
-    },
-    {
-      icon: "bi-people",
-      text: "Facilitate strong, sustainable engagement between IIT Hyderabad and industry partners",
-    },
-    {
-      icon: "bi-rocket",
-      text: "Promote a vibrant, innovation-first culture across the campus",
-    },
-    {
-      icon: "bi-diagram-3",
-      text: "Act as the central hub for technology licensing, partnerships, and spin-off creation",
-    },
-  ].map((item, index) => (
-    <div className="col-md-3 d-flex" key={index}>
-      <div
-        className="card shadow-sm text-center p-4 d-flex flex-column"
-        style={{
-          borderRadius: "14px",
-          minHeight: "260px",
-        }}
-      >
-        {/* FIXED ICON WRAPPER FOR PERFECT ALIGNMENT */}
+        {/* CARD SECTION */}
         <div
-          className="icon-wrapper d-flex justify-content-center align-items-center mb-3"
+          className="row g-4 p-4 rounded-4 mt-3"
           style={{
-            height: "100px",     // FIXED height for icon row alignment
-            width: "100%",
+            background: "linear-gradient(135deg, #eea55d 0%, #ffb97c 100%)",
           }}
         >
-          <div
-            className="d-flex justify-content-center align-items-center"
-            style={{
-              width: "80px",
-              height: "80px",
-              borderRadius: "50%",
-              background: "#ffe6e6",
-            }}
-          >
-            <i
-              className={`${item.icon} fs-1`}
-              style={{ color: "#b30000" }}
-            ></i>
-          </div>
-        </div>
+          {[
+            {
+              icon: "bi-lightbulb",
+              text: "Support faculty and scholars in navigating innovation and intellectual property pathways",
+            },
+            {
+              icon: "bi-people",
+              text: "Facilitate strong, sustainable engagement between IIT Hyderabad and industry partners",
+            },
+            {
+              icon: "bi-rocket",
+              text: "Promote a vibrant, innovation-first culture across the IIT Hyderabad community",
+            },
+            {
+              icon: "bi-diagram-3",
+              text: "Serve as the central hub for technology licensing, partnerships, and spin-off creation",
+            },
+          ].map((item, index) => (
+            <div className="col-md-3 d-flex" key={index}>
+              <div
+                className="card shadow-sm text-center p-4 d-flex flex-column ecosystem-card"
+                style={{
+                  borderRadius: "16px",
+                  minHeight: "260px",
+                }}
+              >
+                {/* ICON WRAPPER */}
+                <div
+                  className="d-flex justify-content-center align-items-center mb-3"
+                  style={{
+                    height: "100px",
+                  }}
+                >
+                  <div
+                    className="d-flex justify-content-center align-items-center"
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      borderRadius: "50%",
+                      background: "#ffe6e6",
+                    }}
+                  >
+                    <i
+                      className={`${item.icon} fs-1`}
+                      style={{ color: "#b30000" }}
+                    ></i>
+                  </div>
+                </div>
 
-        {/* TEXT AREA */}
-        <div style={{ flexGrow: 1 }}>
-          <p className="m-0" style={{ fontSize: "15px" }}>
-            {item.text}
-          </p>
+                {/* TEXT */}
+                <p className="text-muted mt-2" style={{ fontSize: "15px", flexGrow: 1 }}>
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
-  ))}
-</div>
-
 
         {/* Learn More Button */}
-        <div className="text-center mt-4">
-          <button className="btn btn-outline-dark px-4">LEARN MORE</button>
+        <div className="text-center mt-5">
+          <button className="modern-btn px-4 py-2 fw-bold">Learn More</button>
         </div>
       </section>
+
+      {/* Modern About Page Styles */}
+      <style>{`
+        .ecosystem-card {
+          border-radius: 18px;
+          transition: 0.25s ease;
+          background: #fff;
+        }
+        .ecosystem-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+      `}</style>
     </>
   );
 }

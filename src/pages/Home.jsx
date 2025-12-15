@@ -4,82 +4,133 @@ import Hero from "../components/Hero";
 export default function Home() {
   return (
     <>
+      {/* HERO SECTION */}
       <Hero
         slides={[
           {
             title: "TTO – IIT HYDERABAD",
-            subtitle: "The Technology Transfer Office of IIT Hyderabad catalyzes the transformation of cutting-edge research into real-world impact. We bridge academia, startups, and industry to accelerate the journey from idea to innovation to implementation.",
-            imageUrl: "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=60",
+            subtitle:
+              "The Technology Transfer Office of IIT Hyderabad catalyzes the transformation of cutting-edge research into real-world impact. We bridge academia, industry, and startups to accelerate the journey from idea to innovation to implementation.",
+            imageUrl:
+              "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=60",
           },
           {
             title: "Empowering Innovation",
-            subtitle: "We provide structured support for IP protection, evaluation, licensing, and commercialization—enabling researchers and innovators to scale their technologies.",
-            imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=60",
+            subtitle:
+              "Structured support for IP protection, evaluation, licensing, and commercialization.",
+            imageUrl:
+              "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=60",
           },
           {
             title: "Building Industry Partnerships",
-            subtitle: "Through strategic collaboration with industry, we unlock opportunities for technology adoption, joint R&D, and deep-tech entrepreneurship.",
-            imageUrl: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=60",
+            subtitle:
+              "Unlocking opportunities for technology adoption, joint R&D, and deep-tech entrepreneurship.",
+            imageUrl:
+              "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=60",
           },
         ]}
       />
 
+      {/* MAIN SECTION */}
       <section className="container py-5">
-        <h2 className="mb-4">Our Vision</h2>
-        <p>To build a globally recognised technology-commercialization ecosystem with IIT Hyderabad at its center—where research, innovation, and industry converge to generate transformative societal impact.</p>
 
-        <h2 className="mt-5 mb-3">Our Mission</h2>
-        <p>We empower the IIT Hyderabad community to protect, translate, and commercialize their research by:</p>
-        <ul>
+        {/* Vision */}
+        <h2 className="fw-bold mb-3 display-6">
+          Our <span style={{ color: "#b30000" }}>Vision</span>
+        </h2>
+        <p className="text-muted" style={{ fontSize: "18px" }}>
+          To build a globally recognised technology-commercialization ecosystem with IIT Hyderabad at its center—where
+          research, innovation, and industry converge to generate transformative societal impact.
+        </p>
+
+        {/* Mission */}
+        <h2 className="fw-bold mt-5 mb-3 display-6">
+          Our <span style={{ color: "#b30000" }}>Mission</span>
+        </h2>
+        <p className="text-muted" style={{ fontSize: "18px" }}>
+          We empower the IIT Hyderabad community to protect, translate, and commercialize their research by:
+        </p>
+
+        <ul className="modern-list">
           <li>Strengthening intellectual property culture</li>
           <li>Building strategic industry partnerships</li>
           <li>Supporting licensing and technology transfer</li>
           <li>Enabling spin-offs and deep-tech startups</li>
           <li>Creating sustainable impact at local, national, and global levels</li>
         </ul>
-        <h2 className="mt-5 mb-4">What We Do</h2>
-        <div style={{ background: "#eea55d", padding: "20px", borderRadius: "10px" }}>
+
+        {/* WHAT WE DO */}
+        <h2 className="fw-bold mt-5 mb-4 display-6 text-center">
+          What <span style={{ color: "#b30000" }}>We Do</span>
+        </h2>
+
+        <div
+          className="p-4 rounded-4 shadow-sm"
+          style={{
+            background: "linear-gradient(135deg, #eea55d 0%, #ffb97c 100%)",
+          }}
+        >
           <div className="row g-4">
-            <div className="col-md-4">
-              <div className="card h-100 shadow-sm p-3">
-                <h5 className="fw-bold">IP Protection</h5>
-                <p>End-to-end support for patent filing, trademark registration, copyright management, and safeguarding research outcomes.</p>
-              </div>
-            </div>
 
-            <div className="col-md-4">
-              <div className="card h-100 shadow-sm p-3">
-                <h5 className="fw-bold">Technology Scouting & Evaluation</h5>
-                <p>Identifying high-potential innovations and assessing technical, commercial, and market readiness to fast-track deployment.</p>
+            {[
+              {
+                title: "IP Protection",
+                desc: "End-to-end support for patent filing, trademark registration, copyright management, and ensuring strong intellectual property rights.",
+              },
+              {
+                title: "Technology Scouting & Evaluation",
+                desc: "Identifying high-potential innovations and assessing technical, commercial, and market readiness.",
+              },
+              {
+                title: "Industry Partnering",
+                desc: "Facilitating collaborations, sponsored research, and technology co-development with industry partners.",
+              },
+              {
+                title: "Licensing & Commercialization",
+                desc: "Helping innovators bring their technologies to market through licensing and commercialization support.",
+              },
+              {
+                title: "Startup & Spin-off Support",
+                desc: "Supporting innovators in launching deep-tech startups — incubation, IP strategy, investor readiness and more.",
+              },
+            ].map((item, index) => (
+              <div className="col-md-4" key={index}>
+                <div className="card h-100 p-4 shadow service-card">
+                  <h5 className="fw-bold">{item.title}</h5>
+                  <p className="text-muted mt-2">{item.desc}</p>
+                </div>
               </div>
-            </div>
+            ))}
 
-            <div className="col-md-4">
-              <div className="card h-100 shadow-sm p-3">
-                <h5 className="fw-bold">Industry Partnering</h5>
-                <p>Facilitating collaborations, sponsored research, and technology co-development with national and global industry leaders.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card h-100 shadow-sm p-3">
-                <h5 className="fw-bold">Licensing & Commercialization</h5>
-                <p>Enabling innovators to bring their technologies to market through licensing, tech transfer agreements, and commercial partnerships.</p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card h-100 shadow-sm p-3">
-                <h5 className="fw-bold">Startup & Spin-off Support</h5>
-                <p>Assisting innovators in launching deep-tech startups with guidance on IP strategy, incubation, market access, and investor readiness.</p>
-              </div>
-            </div>
           </div>
         </div>
 
-        <div className="text-center mt-4">
-          <button className="btn btn-outline-dark px-4">LEARN MORE</button>
+        {/* CTA */}
+        <div className="text-center mt-5">
+          <button className="modern-btn px-4 py-2 fw-bold">
+            Learn More
+          </button>
         </div>
       </section>
+
+      {/* MODERN UI STYLES */}
+      <style>{`
+        .service-card {
+          border-radius: 16px;
+          transition: 0.3s ease;
+          background: #fff;
+        }
+        .service-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+
+        .modern-list li {
+          margin-bottom: 10px;
+          font-size: 17px;
+        }
+      `}</style>
     </>
   );
 }

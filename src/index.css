@@ -63,8 +63,6 @@ button:focus-visible {
   }
 }
 
-
-
 .hero-text-anim {
   opacity: 0;
   transform: translateY(30px);
@@ -89,11 +87,9 @@ button:focus-visible {
   }
 }
 
-
-
 /* ACTIVE LINK */
 nav.navbar .navbar-nav .nav-link.active {
-  color: #eea55d!important;
+  color: #eea55d !important;
   font-weight: 600;
   border-bottom: 2px solid #eea55d;
 }
@@ -106,7 +102,37 @@ nav.navbar .navbar-nav .nav-link:hover {
 
 .service-card-img {
   width: 100%;
-  height: 200px;        /* same height for all images */
-  object-fit: cover;    /* crops image nicely */
-  border-radius: 12px;  /* modern shape */
+  height: 200px; /* same height for all images */
+  object-fit: cover; /* crops image nicely */
+  border-radius: 12px; /* modern shape */
 }
+
+.modern-btn {
+  background: linear-gradient(90deg, #b30000, #ff5e00);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 26px;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+.modern-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Base nav-link styles remain same */
+
+/* Disable underline animation on mobile */
+@media (max-width: 991px) {
+  .navbar .nav-link::after {
+    display: none !important;
+  }
+
+  /* Optional: Add a clean left highlight for active link on mobile */
+  .navbar .nav-link.active-nav {
+    border-left: 3px solid #b30000;
+    padding-left: 10px !important;
+  }
+}
+
