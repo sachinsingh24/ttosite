@@ -29,7 +29,7 @@ export default function Hero({ slides = [] }) {
             <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
               <div
                 style={{
-                  height: "100vh",
+                  height: "100dvh",
                   backgroundImage: `url(${slide.imageUrl})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
