@@ -67,7 +67,7 @@ export default function About() {
         <div
           className="row g-3 pb-3 px-2 rounded-3 mt-3"
           style={{
-            background: "linear-gradient(135deg, #eea55d 0%, #ffb97c 100%)",
+            background: "linear-gradient(135deg, #b30000 0%, #ffb97c 100%)",
           }}
         >
           {[

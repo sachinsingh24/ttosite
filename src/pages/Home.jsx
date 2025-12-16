@@ -67,7 +67,7 @@ export default function Home() {
         <div
           className="p-4 rounded-4 shadow-sm"
           style={{
-            background: "linear-gradient(135deg, #eea55d 0%, #ffb97c 100%)",
+            background: "linear-gradient(135deg, #eea55d 0%, #b30000 100%)",
           }}
         >
           <div className="row g-4">
