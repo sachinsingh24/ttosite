@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Team from "./pages/Team";
+import NotFound from "./pages/NotFound";
+import ErrorPage from "./pages/ErrorPage";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -21,6 +23,8 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/error" element={<ErrorPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

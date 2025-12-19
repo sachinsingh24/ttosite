@@ -1,8 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: "/", // correct for subdomain
   plugins: [react()],
-  server: { historyApiFallback: true },
+  build: {
+    outDir: "tto.iith.ac.in", // 👈 build folder name
+    emptyOutDir: true
+  }
 });
