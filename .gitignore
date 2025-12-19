@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 tto.iith.ac.in
-# vite.config.js
+vite.config.js
 
 
 # Editor directories and files
