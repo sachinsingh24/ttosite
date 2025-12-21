@@ -66,7 +66,7 @@ export default function Home() {
             background: "linear-gradient(135deg, #f08815 0%, #be0d07 100%)",
           }}
         >
-          <div className="row g-4">
+          <div className="row g-4 justify-content-center">
             {[
               {
                 title: "IP Protection",

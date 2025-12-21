@@ -40,7 +40,7 @@ export default function Services() {
           TTO IIT Hyderabad provides end-to-end support to researchers, startups, and industry partners—ensuring smooth innovation transfer and impactful commercialization.
         </p>
 
-        <div className="row g-4">
+        <div className="row g-4 justify-content-center">
 
           {/* CARD COMPONENT */}
           {[

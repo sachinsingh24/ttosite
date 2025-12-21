@@ -66,7 +66,7 @@ export default function Team() {
           Our Role in the <span style={{ color: "#b30000" }}>Innovation Ecosystem</span>
         </h2>
 
-        <div className="row text-center p-3 bg-light shadow-sm rounded ecosystem-wrapper">
+        <div className="row text-center p-3 bg-light shadow-sm rounded ecosystem-wrapper justify-content-center">
           {/* Card 1 */}
           <div className="col-md-4 p-3 border-end ecosystem-card">
             <h5 className="fw-bold">IP & Legal Manager</h5>

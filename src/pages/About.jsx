@@ -65,7 +65,7 @@ export default function About() {
 
         {/* CARD SECTION */}
         <div
-          className="row g-3 pb-3 px-2 rounded-3 mt-3"
+          className="row g-3 pb-3 px-2 rounded-3 mt-3 justify-content-center"
           style={{
             background: "linear-gradient(135deg, #b30000 0%, #ffb97c 100%)",
           }}
