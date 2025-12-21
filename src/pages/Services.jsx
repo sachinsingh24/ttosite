@@ -34,7 +34,7 @@ export default function Services() {
       {/* Services Section */}
       <section className="container py-5">
         <h2 className="fw-bold text-center display-6 mb-4">
-          Our <span style={{ color: "#b30000" }}>Offerings</span>
+          Our <span style={{ color: "#be0d07" }}>Offerings</span>
         </h2>
         <p className="text-center text-muted mb-5 px-3" style={{ maxWidth: "800px", margin: "0 auto" }}>
           TTO IIT Hyderabad provides end-to-end support to researchers, startups, and industry partners—ensuring smooth innovation transfer and impactful commercialization.

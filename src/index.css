@@ -89,14 +89,14 @@ button:focus-visible {
 
 /* ACTIVE LINK */
 nav.navbar .navbar-nav .nav-link.active {
-  color: #eea55d !important;
+  color: #f08815 !important;
   font-weight: 600;
   border-bottom: 2px solid #eea55d;
 }
 
 /* HOVER */
 nav.navbar .navbar-nav .nav-link:hover {
-  color: #eea55d !important;
+  color: #f08815 !important;
   transition: 0.2s ease-in-out;
 }
 
@@ -108,7 +108,7 @@ nav.navbar .navbar-nav .nav-link:hover {
 }
 
 .modern-btn {
-  background: linear-gradient(90deg, #b30000, #ff5e00);
+  background: linear-gradient(90deg, #be0d07, #f08815);
   border: none;
   border-radius: 30px;
   padding: 12px 26px;
@@ -131,7 +131,7 @@ nav.navbar .navbar-nav .nav-link:hover {
 
   /* Optional: Add a clean left highlight for active link on mobile */
   .navbar .nav-link.active-nav {
-    border-left: 3px solid #b30000;
+    border-left: 3px solid #be0d07;
     padding-left: 10px !important;
   }
 }

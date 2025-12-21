@@ -35,7 +35,7 @@ export default function About() {
       <section className="container py-5">
         {/* WHO WE ARE */}
         <h2 className="fw-bold mb-3 display-6">
-          Who <span style={{ color: "#b30000" }}>We Are</span>
+          Who <span style={{ color: "#be0d07" }}>We Are</span>
         </h2>
         <p className="text-muted fs-5">
           The Technology Transfer Office (TTO) at IIT Hyderabad serves as the strategic
@@ -50,7 +50,7 @@ export default function About() {
 
         {/* WHAT DRIVES US */}
         <h2 className="fw-bold mt-5 mb-3 display-6">
-          What <span style={{ color: "#b30000" }}>Drives Us</span>
+          What <span style={{ color: "#be0d07" }}>Drives Us</span>
         </h2>
         <p className="text-muted fs-5">
           We believe every innovation has the power to transform lives. Our role is to
@@ -60,14 +60,14 @@ export default function About() {
 
         {/* Role in Ecosystem */}
         <h2 className="fw-bold mt-5 mb-4 display-6 text-center">
-          Our Role in the <span style={{ color: "#b30000" }}>Innovation Ecosystem</span>
+          Our Role in the <span style={{ color: "#be0d07" }}>Innovation Ecosystem</span>
         </h2>
 
         {/* CARD SECTION */}
         <div
           className="row g-3 pb-3 px-2 rounded-3 mt-3 justify-content-center"
           style={{
-            background: "linear-gradient(135deg, #b30000 0%, #ffb97c 100%)",
+            background: "linear-gradient(135deg, #be0d07 0%, #f08815 100%)",
           }}
         >
           {[

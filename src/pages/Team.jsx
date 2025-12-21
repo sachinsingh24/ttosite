@@ -56,14 +56,14 @@ export default function Team() {
       {/* OUR TEAM SECTION */}
       <section className="container py-5">
         <h2 className="fw-bold display-6 mb-3">
-          Our <span style={{ color: "#b30000" }}>Team</span>
+          Our <span style={{ color: "#be0d07" }}>Team</span>
         </h2>
 
         <p className="text-muted fs-5">The TTO team at IIT Hyderabad brings together expertise in intellectual property, business development, technology scouting, legal strategy, and research commercialization. Together, we work to bridge science, innovation, and industry.</p>
 
         {/* ROLE IN ECOSYSTEM */}
         <h2 className="fw-bold mt-5 mb-4 display-6">
-          Our Role in the <span style={{ color: "#b30000" }}>Innovation Ecosystem</span>
+          Our Role in the <span style={{ color: "#be0d07" }}>Innovation Ecosystem</span>
         </h2>
 
         <div className="row text-center p-3 bg-light shadow-sm rounded ecosystem-wrapper justify-content-center">
@@ -93,7 +93,7 @@ export default function Team() {
       </section>
 
       {/* TEAM PHOTOS SECTION */}
-      <section className="py-5" style={{ background: "#b30000" }}>
+      <section className="py-5" style={{ background: "#be0d07" }}>
         <div className="container">
           <h2 className="text-white fw-bold mb-4 display-6">Meet the Team</h2>
 
