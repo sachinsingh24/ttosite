@@ -82,10 +82,11 @@ export default function Contact() {
               <div style={{ flexGrow: 1 }}>
                 {/* Address */}
                 <div className="mb-4 d-flex">
-                  <i className="bi bi-geo-alt-fill fs-4 me-3 text-danger"></i>
+                  <i className="bi bi-geo-alt-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
                   <div>
                     <h6 className="fw-bold mb-1">Office Address</h6>
                     <p className="text-muted m-0">
+                      Indian Institute of Technology Hyderabad <br />
                       ITH Rd, near NH-65,
                       <br /> Sangareddy,
                       <br />
@@ -97,25 +98,25 @@ export default function Contact() {
 
                 {/* Email */}
                 <div className="mb-4 d-flex">
-                  <i className="bi bi-envelope-fill fs-4 me-3 text-danger"></i>
+                  <i className="bi bi-envelope-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
                   <div>
                     <h6 className="fw-bold mb-1">Email</h6>
-                    <p className="text-muted m-0">tto@iith.ac.in</p>
+                    <p className="text-muted m-0">fic.tto@iith.ac.in</p>
                   </div>
                 </div>
 
                 {/* Phone */}
                 <div className="mb-4 d-flex">
-                  <i className="bi bi-telephone-fill fs-4 me-3 text-danger"></i>
+                  <i className="bi bi-telephone-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
                   <div>
                     <h6 className="fw-bold mb-1">Phone</h6>
-                    <p className="text-muted m-0">+91 12345 67890</p>
+                    <p className="text-muted m-0">+91 837 499 3999</p>
                   </div>
                 </div>
 
                 {/* Hours */}
                 <div className="mb-4 d-flex">
-                  <i className="bi bi-clock-fill fs-4 me-3 text-danger"></i>
+                  <i className="bi bi-clock-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
                   <div>
                     <h6 className="fw-bold mb-1">Working Hours</h6>
                     <p className="text-muted m-0">Mon – Fri: 9:00 AM – 5:30 PM</p>
@@ -126,10 +127,17 @@ export default function Contact() {
               {/* Social */}
               <div>
                 <h6 className="fw-bold mb-2">Connect With Us</h6>
-                <div className="d-flex gap-3 fs-4 text-danger">
-                  <i className="bi bi-facebook"></i>
-                  <i className="bi bi-instagram"></i>
-                  <i className="bi bi-linkedin"></i>
+                <div className="d-flex gap-3 fs-4">
+                  <a href="#" aria-label="Instagram" style={{ color: "#be0d07" }}>
+                    <i className="bi bi-facebook"></i>
+                  </a>
+
+                  <a href="https://www.instagram.com/office.tto/" style={{ color: "#be0d07" }} aria-label="Instagram">
+                    <i className="bi bi-instagram"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/technology-transfer-office-iit-hyderabad-b1141239a/" style={{ color: "#be0d07" }} aria-label="LinkedIn">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -170,7 +178,7 @@ export default function Contact() {
         }
 
         .modern-btn {
-          background: linear-gradient(90deg, #be0d07, #ff4d4d);
+          background: linear-gradient(90deg, #be0d07, #f08815);
           padding: 14px;
           border: none;
           border-radius: 30px;
