@@ -101,18 +101,18 @@ export default function Contact() {
                   <i className="bi bi-envelope-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
                   <div>
                     <h6 className="fw-bold mb-1">Email</h6>
-                    <p className="text-muted m-0">fic.tto@iith.ac.in</p>
+                    <p className="text-muted m-0">office.tto@iith.ac.in</p>
                   </div>
                 </div>
 
                 {/* Phone */}
-                <div className="mb-4 d-flex">
+                {/* <div className="mb-4 d-flex">
                   <i className="bi bi-telephone-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
                   <div>
                     <h6 className="fw-bold mb-1">Phone</h6>
                     <p className="text-muted m-0">+91 837 499 3999</p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Hours */}
                 <div className="mb-4 d-flex">

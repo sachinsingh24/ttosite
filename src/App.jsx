@@ -10,6 +10,8 @@ import NotFound from "./pages/NotFound";
 import ErrorPage from "./pages/ErrorPage";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import MSME from "./pages/msme";
+
 
 export default function App() {
   return (
@@ -22,6 +24,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/msme" element={<MSME />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/error" element={<ErrorPage />} />
           <Route path="*" element={<NotFound />} />
