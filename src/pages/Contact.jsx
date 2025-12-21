@@ -128,9 +128,9 @@ export default function Contact() {
               <div>
                 <h6 className="fw-bold mb-2">Connect With Us</h6>
                 <div className="d-flex gap-3 fs-4">
-                  <a href="#" aria-label="Instagram" style={{ color: "#be0d07" }}>
+                  {/* <a href="#" aria-label="Facebook" style={{ color: "#be0d07" }}>
                     <i className="bi bi-facebook"></i>
-                  </a>
+                  </a> */}
 
                   <a href="https://www.instagram.com/office.tto/" style={{ color: "#be0d07" }} aria-label="Instagram">
                     <i className="bi bi-instagram"></i>

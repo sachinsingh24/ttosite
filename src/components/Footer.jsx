@@ -57,9 +57,9 @@ export default function Footer() {
               <a href="https://www.linkedin.com/in/technology-transfer-office-iit-hyderabad-b1141239a/" aria-label="LinkedIn">
                 <i className="bi bi-linkedin"></i>
               </a>
-              <a href="#" aria-label="Facebook">
+              {/* <a href="#" aria-label="Facebook">
                 <i className="bi bi-facebook"></i>
-              </a>
+              </a> */}
               <a href="https://www.instagram.com/office.tto/" aria-label="Instagram">
                 <i className="bi bi-instagram"></i>
               </a>
