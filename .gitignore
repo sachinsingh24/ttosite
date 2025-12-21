@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-tto.iith.ac.in
+# tto.iith.ac.in
 vite.config.js
 
 
