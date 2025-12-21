@@ -50,6 +50,7 @@ export default function Hero({ slides = [] }) {
                 ></div>
 
                 <div className="text-center hero-text-anim" style={{ position: "relative", zIndex: 2 }}>
+                  {slide.img ? <img src={slide.img} alt="msme" className="img-fluid"/> : ""}
                   <h1 className="display-4 fw-bold">{slide.title}</h1>
                   <p className="lead" style={{ width: "75%", margin: "0 auto" }}>
                     {slide.subtitle}

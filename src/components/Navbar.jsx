@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
+import logo from "../assets/tto logo.png"
 
 export default function Navbar() {
   const closeMenu = () => {
@@ -15,7 +16,7 @@ export default function Navbar() {
       <div className="container">
         {/* BRAND LOGO */}
         <Link className="navbar-brand fw-bold nav-logo" to="/">
-          TTO IITH
+          <img src={logo} alt="TTO-IITH" width={"85px"} className="img-fluid"/>
         </Link>
 
         {/* Mobile Menu Toggle */}

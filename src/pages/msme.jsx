@@ -1,8 +1,9 @@
 import React from "react";
 import Hero from "../components/Hero";
-import hero1 from "../assets/msme banner.jpeg";
+import hero1 from "../assets/1.jpg";
 import hero2 from "../assets/TTO-IITH.jpg";
 import hero3 from "../assets/3.jpg";
+import pagelogo from "../assets/msme_banner.png";
 
 export default function msme() {
   return (
@@ -14,6 +15,7 @@ export default function msme() {
             title: "MSME TECH CONNECT 2026",
             subtitle: "Create • Connect • Commercialise — a national platform bridging technology creators and industry adopters.",
             imageUrl: hero1,
+            img: pagelogo,
           },
           {
             title: "Where Innovation Meets Industry",

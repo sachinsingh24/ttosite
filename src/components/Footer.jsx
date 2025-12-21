@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../assets/tto logo.png";
 
 export default function Footer() {
   return (
@@ -13,29 +14,43 @@ export default function Footer() {
     >
       <div className="container">
         <div className="row g-4">
-
           {/* Office Section */}
-          <div className="col-md-4">
+          <div className="col-md-6">
             <h5 className="fw-bold mb-3 footer-heading">Technology Transfer Office</h5>
-            <p className="footer-text">Indian Institute of Technology Hyderabad</p>
-            <p className="footer-text">Kandi, Sangareddy, Telangana – 502284</p>
-            {/* <p className="footer-text">Phone: +91 837 499 3999</p> */}
-            <p className="footer-text">Email: office.tto@iith.ac.in</p>
+            <div className="row justify-content-center align-items-center">
+              <div className="col-md-3">
+                <img src={logo} alt="TTO-IITH" width={"150px"} className="img-fluid" />
+              </div>
+              <div className="col-md-9">
+                <p className="footer-text">Indian Institute of Technology Hyderabad</p>
+                <p className="footer-text">Kandi, Sangareddy, Telangana – 502284</p>
+                {/* <p className="footer-text">Phone: +91 837 499 3999</p> */}
+                <p className="footer-text">Email: office.tto@iith.ac.in</p>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
-          <div className="col-md-4">
+          <div className="col-md-3">
             <h5 className="fw-bold mb-3 footer-heading">Quick Links</h5>
             <ul className="list-unstyled footer-links">
-              <li><a href="/about">About TTO</a></li>
-              <li><a href="/services">Our Services</a></li>
-              <li><a href="/team">Meet the Team</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li>
+                <a href="/about">About TTO</a>
+              </li>
+              <li>
+                <a href="/services">Our Services</a>
+              </li>
+              <li>
+                <a href="/team">Meet the Team</a>
+              </li>
+              <li>
+                <a href="/contact">Contact Us</a>
+              </li>
             </ul>
           </div>
 
           {/* Social Section */}
-          <div className="col-md-4">
+          <div className="col-md-3">
             <h5 className="fw-bold mb-3 footer-heading">Connect With Us</h5>
 
             <div className="d-flex gap-4 fs-4 footer-social">
@@ -50,9 +65,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <p className="mt-3 small footer-text">
-              Follow us for updates on technologies, innovations, and collaborations.
-            </p>
+            <p className="mt-3 small footer-text">Follow us for updates on technologies, innovations, and collaborations.</p>
           </div>
         </div>
 
@@ -61,9 +74,7 @@ export default function Footer() {
 
         {/* Bottom Copyright */}
         <div className="text-center">
-          <small className="footer-text">
-            © {new Date().getFullYear()} TTO – IIT Hyderabad. All Rights Reserved.
-          </small>
+          <small className="footer-text">© {new Date().getFullYear()} TTO – IIT Hyderabad. All Rights Reserved.</small>
         </div>
       </div>
 
