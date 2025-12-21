@@ -25,17 +25,17 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
             {[
               { to: "/", label: "Home", exact: true },
               { to: "/about", label: "About" },
-              { to: "/msme", label: "MSME" },
+              { to: "/msme", label: "MSME TECH CONNECT" },
               { to: "/services", label: "Services" },
               { to: "/team", label: "Team" },
               { to: "/contact", label: "Contact" },
             ].map((item, index) => (
               <li className="nav-item" key={index}>
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active-nav" : "nav-link")} to={item.to} end={item.exact} onClick={closeMenu}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active-nav px-2" : "nav-link px-2")} to={item.to} end={item.exact} onClick={closeMenu}>
                   {item.label}
                 </NavLink>
               </li>
@@ -59,7 +59,7 @@ export default function Navbar() {
           font-size: 17px;
           font-weight: 500;
           position: relative;
-          padding: 8px 12px;
+          padding: 8px 16px;
           transition: color 0.25s ease;
         }
 
@@ -82,7 +82,7 @@ export default function Navbar() {
         }
 
         .navbar .nav-link:hover::after {
-          width: 60%;
+          width: 90%;
         }
 
         /* ACTIVE LINK */
@@ -92,7 +92,7 @@ export default function Navbar() {
         }
 
         .active-nav::after {
-          width: 60% !important;
+          width: 90% !important;
         }
 
         /* Navbar Shadow when scrolling (optional enhancement) */
