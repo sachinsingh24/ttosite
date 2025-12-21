@@ -1,5 +1,8 @@
 import React from "react";
 import Hero from "../components/Hero";
+import hero1 from "../assets/1.jpg";
+import hero2 from "../assets/TTO-IITH.jpg";
+import hero3 from "../assets/3.jpg";
 
 export default function About() {
   return (
@@ -11,19 +14,19 @@ export default function About() {
             title: "ABOUT TTO – IIT HYDERABAD",
             subtitle:
               "Empowering innovators, accelerating technology translation, and enabling real-world impact.",
-          imageUrl: "../../public/1.jpg",
+          imageUrl: hero1,
           },
           {
             title: "Driving Innovation Forward",
             subtitle:
               "Connecting research excellence with industry needs to unlock new opportunities.",
-              imageUrl: "../../public/TTO-IITH.jpg",
+              imageUrl: hero2,
           },
           {
             title: "From Lab to Market",
             subtitle:
               "Turning ideas and discoveries into technologies that shape the future.",
-            imageUrl: "../../public/3.jpg",
+            imageUrl: hero3,
           },
         ]}
       />

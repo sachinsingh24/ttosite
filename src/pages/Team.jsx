@@ -1,10 +1,14 @@
 import React from "react";
 import Hero from "../components/Hero";
+import hero1 from "../assets/1.jpg";
+import hero2 from "../assets/TTO-IITH.jpg";
+import hero3 from "../assets/3.jpg";
+import member1 from "../assets/Mr Pradeep Kumar Yemula IITH TTO1.jpg"
 
 export default function Team() {
   const team = [
     {
-      img: "../../public/Mr Pradeep Kumar Yemula IITH TTO1.jpg",
+      img: member1,
       name: "Pradeep Kumar Yemula",
       i: "Associate Professor",
       designation: "Electrical Engineering",
@@ -34,17 +38,17 @@ export default function Team() {
           {
             title: "TEAM – TTO IIT HYDERABAD",
             subtitle: "Driving innovation, enabling technology translation, and shaping impactful outcomes.",
-            imageUrl: "../../public/1.jpg",
+            imageUrl: hero1,
           },
           {
             title: "People Behind the Innovation Ecosystem",
             subtitle: "A multidisciplinary team empowering researchers, startups, and industry partners.",
-            imageUrl: "../../public/TTO-IITH.jpg",
+            imageUrl: hero2,
           },
           {
             title: "Translating Ideas Into Impact",
             subtitle: "Committed professionals enabling smooth IP, licensing, and commercialization processes.",
-            imageUrl: "../../public/3.jpg",
+            imageUrl: hero3,
           },
         ]}
       />

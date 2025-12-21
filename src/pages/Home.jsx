@@ -1,5 +1,9 @@
 import React from "react";
 import Hero from "../components/Hero";
+import hero1 from "../assets/1.jpg";
+import hero2 from "../assets/TTO-IITH.jpg";
+import hero3 from "../assets/3.jpg";
+
 
 export default function Home() {
   return (
@@ -10,17 +14,17 @@ export default function Home() {
           {
             title: "TTO – IIT HYDERABAD",
             subtitle: "The Technology Transfer Office of IIT Hyderabad catalyzes the transformation of cutting-edge research into real-world impact. We bridge academia, industry, and startups to accelerate the journey from idea to innovation to implementation.",
-            imageUrl: "../../public/1.jpg",
+            imageUrl: hero1,
           },
           {
             title: "Empowering Innovation",
             subtitle: "Structured support for IP protection, evaluation, licensing, and commercialization.",
-            imageUrl: "../../public/TTO-IITH.jpg",
+            imageUrl: hero2,
           },
           {
             title: "Building Industry Partnerships",
             subtitle: "Unlocking opportunities for technology adoption, joint R&D, and deep-tech entrepreneurship.",
-            imageUrl: "../../public/3.jpg",
+            imageUrl: hero3,
           },
         ]}
       />

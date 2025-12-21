@@ -1,5 +1,8 @@
 import React from "react";
 import Hero from "../components/Hero";
+import hero1 from "../assets/1.jpg";
+import hero2 from "../assets/TTO-IITH.jpg";
+import hero3 from "../assets/3.jpg";
 
 export default function Services() {
   return (
@@ -11,19 +14,19 @@ export default function Services() {
             title: "SERVICES BY TTO – IIT HYDERABAD",
             subtitle:
               "Enabling innovators to protect, translate, and commercialize research for meaningful impact.",
-              imageUrl: "../../public/1.jpg",
+              imageUrl: hero1,
           },
           {
             title: "Accelerating Technology Translation",
             subtitle:
               "From IP protection to industry partnerships — supporting the full innovation lifecycle.",
-            imageUrl: "../../public/TTO-IITH.jpg",
+            imageUrl: hero2,
           },
           {
             title: "Enabling Market-Ready Innovations",
             subtitle:
               "Guiding researchers and startups toward successful commercialization pathways.",
-              imageUrl: "../../public/3.jpg",
+              imageUrl:hero3,
           },
         ]}
       />
