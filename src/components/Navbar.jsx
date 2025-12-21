@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
-import logo from "../assets/tto logo.png"
+import logo from "../assets/tto logo.png";
 
 export default function Navbar() {
   const closeMenu = () => {
@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="container">
         {/* BRAND LOGO */}
         <Link className="navbar-brand fw-bold nav-logo" to="/">
-          <img src={logo} alt="TTO-IITH" width={"85px"} className="img-fluid"/>
+          <img src={logo} alt="TTO-IITH" width={"85px"} className="img-fluid" />
         </Link>
 
         {/* Mobile Menu Toggle */}
@@ -30,13 +30,14 @@ export default function Navbar() {
             {[
               { to: "/", label: "Home", exact: true },
               { to: "/about", label: "About" },
-              { to: "/msme", label: "MSME TECH CONNECT" },
+              { to: "/msme", label: "MSME Tech Connect" },
+              { to: "/technology", label: "Technologies" },
               { to: "/services", label: "Services" },
               { to: "/team", label: "Team" },
               { to: "/contact", label: "Contact" },
             ].map((item, index) => (
               <li className="nav-item" key={index}>
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active-nav px-2" : "nav-link px-2")} to={item.to} end={item.exact} onClick={closeMenu}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active-nav px-3" : "nav-link px-3")} to={item.to} end={item.exact} onClick={closeMenu}>
                   {item.label}
                 </NavLink>
               </li>
@@ -83,7 +84,7 @@ export default function Navbar() {
         }
 
         .navbar .nav-link:hover::after {
-          width: 90%;
+          width: 70%;
         }
 
         /* ACTIVE LINK */
@@ -93,7 +94,7 @@ export default function Navbar() {
         }
 
         .active-nav::after {
-          width: 90% !important;
+          width: 70% !important;
         }
 
         /* Navbar Shadow when scrolling (optional enhancement) */

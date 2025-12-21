@@ -15,13 +15,13 @@ export default function Footer() {
       <div className="container">
         <div className="row g-4">
           {/* Office Section */}
-          <div className="col-md-6">
+          <div className="col-md-5">
             <h5 className="fw-bold mb-3 footer-heading">Technology Transfer Office</h5>
             <div className="row justify-content-center align-items-center">
-              <div className="col-md-3">
+              <div className="col-md-4">
                 <img src={logo} alt="TTO-IITH" width={"150px"} className="img-fluid" />
               </div>
-              <div className="col-md-9">
+              <div className="col-md-8">
                 <p className="footer-text">Indian Institute of Technology Hyderabad</p>
                 <p className="footer-text">Kandi, Sangareddy, Telangana – 502284</p>
                 {/* <p className="footer-text">Phone: +91 837 499 3999</p> */}
@@ -31,8 +31,9 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="col-md-2">
+          {/* <div className="col-md-4">
             <h5 className="fw-bold mb-3 footer-heading">Quick Links</h5>
+
             <ul className="list-unstyled footer-links">
               <li>
                 <a href="/about">About TTO</a>
@@ -41,16 +42,58 @@ export default function Footer() {
                 <a href="/services">Our Services</a>
               </li>
               <li>
+                <a href="/technology">Technology & Innovation</a>
+              </li>
+              <li>
+                <a href="/msme">MSME Tech Connect</a>
+              </li>
+              <li>
                 <a href="/team">Meet the Team</a>
               </li>
               <li>
                 <a href="/contact">Contact Us</a>
               </li>
             </ul>
+          </div> */}
+          {/* Quick Links */}
+          <div className="col-md-4">
+            <h5 className="fw-bold mb-3 footer-heading">Quick Links</h5>
+
+            <div className="row">
+              {/* Column 1 */}
+              <div className="col-5">
+                <ul className="list-unstyled footer-links">
+                  <li>
+                    <a href="/about">About TTO</a>
+                  </li>
+                  <li>
+                    <a href="/msme">MSME Tech Connect</a>
+                  </li>
+                  <li>
+                    <a href="/technology">Technology</a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Column 2 */}
+              <div className="col-6">
+                <ul className="list-unstyled footer-links">
+                  <li>
+                    <a href="/services">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="/team">Our Team</a>
+                  </li>
+                  <li>
+                    <a href="/contact">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Social Section */}
-          <div className="col-md-4">
+          <div className="col-md-3">
             <h5 className="fw-bold mb-3 footer-heading">Connect With Us</h5>
 
             <div className="d-flex gap-4 fs-4 footer-social">
