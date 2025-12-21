@@ -19,8 +19,8 @@ export default function Footer() {
             <h5 className="fw-bold mb-3 footer-heading">Technology Transfer Office</h5>
             <p className="footer-text">Indian Institute of Technology Hyderabad</p>
             <p className="footer-text">Kandi, Sangareddy, Telangana – 502284</p>
-            <p className="footer-text">Phone: +91 12345 67890</p>
-            <p className="footer-text">Email: tto@iith.ac.in</p>
+            <p className="footer-text">Phone: +91 837 499 3999</p>
+            <p className="footer-text">Email: fic.tto@iith.ac.in</p>
           </div>
 
           {/* Quick Links */}
