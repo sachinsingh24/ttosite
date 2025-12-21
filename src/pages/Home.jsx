@@ -9,43 +9,35 @@ export default function Home() {
         slides={[
           {
             title: "TTO – IIT HYDERABAD",
-            subtitle:
-              "The Technology Transfer Office of IIT Hyderabad catalyzes the transformation of cutting-edge research into real-world impact. We bridge academia, industry, and startups to accelerate the journey from idea to innovation to implementation.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=60",
+            subtitle: "The Technology Transfer Office of IIT Hyderabad catalyzes the transformation of cutting-edge research into real-world impact. We bridge academia, industry, and startups to accelerate the journey from idea to innovation to implementation.",
+            imageUrl: "../../public/1.jpg",
           },
           {
             title: "Empowering Innovation",
-            subtitle:
-              "Structured support for IP protection, evaluation, licensing, and commercialization.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=60",
+            subtitle: "Structured support for IP protection, evaluation, licensing, and commercialization.",
+            imageUrl: "../../public/TTO-IITH.jpg",
           },
           {
             title: "Building Industry Partnerships",
-            subtitle:
-              "Unlocking opportunities for technology adoption, joint R&D, and deep-tech entrepreneurship.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=60",
+            subtitle: "Unlocking opportunities for technology adoption, joint R&D, and deep-tech entrepreneurship.",
+            imageUrl: "../../public/3.jpg",
           },
         ]}
       />
 
       {/* MAIN SECTION */}
       <section className="container py-5">
-
         {/* Vision */}
         <h2 className="fw-bold mb-3 display-6">
-          Our <span style={{ color: "#b30000" }}>Vision</span>
+          Our <span style={{ color: "#be0d07" }}>Vision</span>
         </h2>
         <p className="text-muted" style={{ fontSize: "18px" }}>
-          To build a globally recognised technology-commercialization ecosystem with IIT Hyderabad at its center—where
-          research, innovation, and industry converge to generate transformative societal impact.
+          To build a globally recognised technology-commercialization ecosystem with IIT Hyderabad at its center—where research, innovation, and industry converge to generate transformative societal impact.
         </p>
 
         {/* Mission */}
         <h2 className="fw-bold mt-5 mb-3 display-6">
-          Our <span style={{ color: "#b30000" }}>Mission</span>
+          Our <span style={{ color: "#be0d07" }}>Mission</span>
         </h2>
         <p className="text-muted" style={{ fontSize: "18px" }}>
           We empower the IIT Hyderabad community to protect, translate, and commercialize their research by:
@@ -61,17 +53,16 @@ export default function Home() {
 
         {/* WHAT WE DO */}
         <h2 className="fw-bold mt-5 mb-4 display-6 text-center">
-          What <span style={{ color: "#b30000" }}>We Do</span>
+          What <span style={{ color: "#be0d07" }}>We Do</span>
         </h2>
 
         <div
           className="p-4 rounded-4 shadow-sm"
           style={{
-            background: "linear-gradient(135deg, #eea55d 0%, #b30000 100%)",
+            background: "linear-gradient(135deg, #f08815 0%, #be0d07 100%)",
           }}
         >
           <div className="row g-4">
-
             {[
               {
                 title: "IP Protection",
@@ -101,15 +92,12 @@ export default function Home() {
                 </div>
               </div>
             ))}
-
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center mt-5">
-          <button className="modern-btn px-4 py-2 fw-bold">
-            Learn More
-          </button>
+          <button className="modern-btn px-4 py-2 fw-bold">Learn More</button>
         </div>
       </section>
 

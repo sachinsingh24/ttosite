@@ -11,22 +11,19 @@ export default function About() {
             title: "ABOUT TTO – IIT HYDERABAD",
             subtitle:
               "Empowering innovators, accelerating technology translation, and enabling real-world impact.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=60",
+          imageUrl: "../../public/1.jpg",
           },
           {
             title: "Driving Innovation Forward",
             subtitle:
               "Connecting research excellence with industry needs to unlock new opportunities.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=60",
+              imageUrl: "../../public/TTO-IITH.jpg",
           },
           {
             title: "From Lab to Market",
             subtitle:
               "Turning ideas and discoveries into technologies that shape the future.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=60",
+            imageUrl: "../../public/3.jpg",
           },
         ]}
       />

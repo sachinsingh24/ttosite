@@ -8,7 +8,7 @@ export default function Footer() {
       style={{
         background: "linear-gradient(180deg, #0d0d0d 0%, #111 100%)",
         color: "#e6e6e6",
-        borderTop: "4px solid #b30000",
+        borderTop: "4px solid #be0d07",
       }}
     >
       <div className="container">
@@ -39,13 +39,13 @@ export default function Footer() {
             <h5 className="fw-bold mb-3 footer-heading">Connect With Us</h5>
 
             <div className="d-flex gap-4 fs-4 footer-social">
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/technology-transfer-office-iit-hyderabad-b1141239a/" aria-label="LinkedIn">
                 <i className="bi bi-linkedin"></i>
               </a>
               <a href="#" aria-label="Facebook">
                 <i className="bi bi-facebook"></i>
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/office.tto/" aria-label="Instagram">
                 <i className="bi bi-instagram"></i>
               </a>
             </div>
@@ -70,7 +70,7 @@ export default function Footer() {
       {/* Modern Footer CSS */}
       <style>{`
         .footer-heading {
-          color: #eea55d;
+          color: #f08815;
           font-size: 20px;
         }
 
@@ -90,7 +90,7 @@ export default function Footer() {
           transition: all 0.2s ease;
         }
         .footer-links a:hover {
-          color: #ff6a00;
+          color: #f08815;
           padding-left: 6px;
         }
 
@@ -99,7 +99,7 @@ export default function Footer() {
           transition: all 0.3s ease;
         }
         .footer-social a:hover {
-          color: #eea55d !important;
+          color: #f08815 !important;
           transform: translateY(-4px) scale(1.1);
           text-shadow: 0px 0px 8px rgba(255, 153, 0, 0.6);
         }

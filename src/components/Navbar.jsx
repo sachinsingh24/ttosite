@@ -64,7 +64,7 @@ export default function Navbar() {
         .nav-logo {
           font-size: 22px;
           letter-spacing: 1px;
-          color: #b30000 !important;
+          color: #be0d07 !important;
         }
 
         /* Base Nav Links */
@@ -79,7 +79,7 @@ export default function Navbar() {
 
         /* Hover Effect */
         .navbar .nav-link:hover {
-          color: #b30000 !important;
+          color: #be0d07 !important;
         }
 
         /* Underline Hover Animation */
@@ -90,7 +90,7 @@ export default function Navbar() {
           height: 2px;
           left: 50%;
           bottom: 0;
-          background-color: #b30000;
+          background-color: #be0d07;
           transition: 0.3s;
           transform: translateX(-50%);
         }
@@ -101,7 +101,7 @@ export default function Navbar() {
 
         /* ACTIVE LINK */
         .active-nav {
-          color: #b30000 !important;
+          color: #be0d07 !important;
           font-weight: 600;
         }
 

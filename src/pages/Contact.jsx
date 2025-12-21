@@ -5,7 +5,7 @@ export default function Contact() {
     <>
       <section className="container py-5" style={{ marginTop: "60px" }}>
         <h2 className="fw-bold mb-4 text-center display-6">
-          Get in <span style={{ color: "#b30000" }}>Touch</span>
+          Get in <span style={{ color: "#be0d07" }}>Touch</span>
         </h2>
 
         <p className="text-center text-muted mb-5" style={{ maxWidth: "700px", margin: "0 auto" }}>
@@ -165,12 +165,12 @@ export default function Contact() {
         }
 
         .modern-input:focus {
-          border-color: #b30000 !important;
+          border-color: #be0d07 !important;
           box-shadow: 0 0 0 4px rgba(179, 0, 0, 0.15) !important;
         }
 
         .modern-btn {
-          background: linear-gradient(90deg, #b30000, #ff4d4d);
+          background: linear-gradient(90deg, #be0d07, #ff4d4d);
           padding: 14px;
           border: none;
           border-radius: 30px;

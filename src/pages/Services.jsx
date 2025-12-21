@@ -11,22 +11,19 @@ export default function Services() {
             title: "SERVICES BY TTO – IIT HYDERABAD",
             subtitle:
               "Enabling innovators to protect, translate, and commercialize research for meaningful impact.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=60",
+              imageUrl: "../../public/1.jpg",
           },
           {
             title: "Accelerating Technology Translation",
             subtitle:
               "From IP protection to industry partnerships — supporting the full innovation lifecycle.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=60",
+            imageUrl: "../../public/TTO-IITH.jpg",
           },
           {
             title: "Enabling Market-Ready Innovations",
             subtitle:
               "Guiding researchers and startups toward successful commercialization pathways.",
-            imageUrl:
-              "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=60",
+              imageUrl: "../../public/3.jpg",
           },
         ]}
       />
