@@ -1,15 +1,15 @@
 import React from "react";
 import Hero from "../components/Hero";
 import hero1 from "../assets/1.jpg";
-import hero2 from "../assets/TTO-IITH.jpg";
-import hero3 from "../assets/3.jpg";
+// import hero2 from "../assets/TTO-IITH.jpg";
+// import hero3 from "../assets/3.jpg";
 import pagelogo from "../assets/msme_banner.png";
 
 export default function msme() {
   return (
     <>
       {/* HERO SECTION */}
-      <Hero
+      {/* <Hero
         slides={[
           {
             title: "MSME TECH CONNECT 2026",
@@ -17,19 +17,47 @@ export default function msme() {
             imageUrl: hero1,
             img: pagelogo,
           },
-          {
-            title: "Where Innovation Meets Industry",
-            subtitle: "Enabling collaboration, co-creation, and market-ready innovation for MSMEs and technology providers.",
-            imageUrl: hero2,
-          },
-          {
-            title: "From Technology to Impact",
-            subtitle: "Accelerating the journey from labs and startups to real-world industrial deployment.",
-            imageUrl: hero3,
-          },
+          // {
+          //   title: "Where Innovation Meets Industry",
+          //   subtitle: "Enabling collaboration, co-creation, and market-ready innovation for MSMEs and technology providers.",
+          //   imageUrl: hero2,
+          // },
+          // {
+          //   title: "From Technology to Impact",
+          //   subtitle: "Accelerating the journey from labs and startups to real-world industrial deployment.",
+          //   imageUrl: hero3,
+          // },
         ]}
-      />
+      /> */}
+              <div
+                style={{
+                  height: "100dvh",
+                  backgroundImage: `url(${hero1})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  position: "relative",
+                  color: "#fff",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "rgba(0, 0, 0, 0.45)",
+                  }}
+                ></div>
 
+                <div className="text-center hero-text-anim" style={{ position: "relative", zIndex: 2 }}>
+                 <img src={pagelogo} alt="msme" className="img-fluid"/>
+                  <h1 className="display-4 fw-bold">MSME TECH CONNECT 2026</h1>
+                  <p className="lead" style={{ width: "75%", margin: "0 auto" }}>
+                    Create • Connect • Commercialise — a national platform bridging technology creators and industry adopters.
+                  </p>
+                </div>
+              </div>
       {/* MAIN CONTENT */}
       <section className="container py-5">
         {/* ABOUT EVENT */}
