@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="col-md-3">
+          <div className="col-md-2">
             <h5 className="fw-bold mb-3 footer-heading">Quick Links</h5>
             <ul className="list-unstyled footer-links">
               <li>
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Social Section */}
-          <div className="col-md-3">
+          <div className="col-md-4">
             <h5 className="fw-bold mb-3 footer-heading">Connect With Us</h5>
 
             <div className="d-flex gap-4 fs-4 footer-social">
