@@ -112,7 +112,7 @@ export default function Services() {
 
                 <div className="card-body p-4">
                   <h5 className="fw-bold d-flex align-items-center gap-2">
-                    <i className={`bi ${service.icon} text-danger fs-4`}></i>
+                    <i className={`bi ${service.icon} fs-4`} style={{ color: "#be0d07" }}></i>
                     {service.title}
                   </h5>
 
