@@ -7,7 +7,7 @@ export default function Footer() {
     <footer
       className="pt-5 pb-3 mt-auto footer-modern"
       style={{
-        background: "linear-gradient(180deg, #0d0d0d 0%, #111 100%)",
+        background: "linear-gradient(rgb(14, 13, 13) 0%, rgb(58 3 3) 100%)",
         color: "#e6e6e6",
         borderTop: "4px solid #be0d07",
       }}
