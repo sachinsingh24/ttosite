@@ -1,8 +1,8 @@
-import React from "react";
-import Hero from "../components/Hero";
-import hero1 from "../assets/1.jpg";
-import hero2 from "../assets/TTO-IITH.jpg";
-import hero3 from "../assets/3.jpg";
+// import React from "react";
+// import Hero from "../components/Hero";
+// import hero1 from "../assets/1.jpg";
+// import hero2 from "../assets/TTO-IITH.jpg";
+// import hero3 from "../assets/3.jpg";
 import member1 from "../assets/Mr Pradeep Kumar Yemula IITH TTO1.jpg";
 import dummy from "../assets/dummy male.jpg";
 
@@ -34,7 +34,7 @@ export default function Team() {
   return (
     <>
       {/* Hero Section */}
-      <Hero
+      {/* <Hero
         slides={[
           {
             title: "TEAM – TTO IIT HYDERABAD",
@@ -53,7 +53,39 @@ export default function Team() {
           },
         ]}
         size={"80dvh"}
-      />
+      /> */}
+
+      <div
+        style={{
+          height: "50dvh",
+          // backgroundImage: `url(${hero1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+          color: "#fff",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "72px",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "#be0d07",
+          }}
+        ></div>
+
+        <div className="text-center hero-text-anim" style={{ position: "relative", zIndex: 2 }}>
+          <h1 className="display-4 fw-bold" style={{ color: "#f08815" }}>
+            TEAM – TTO IIT HYDERABAD"
+          </h1>
+          <p className="lead" style={{ width: "75%", margin: "0 auto" }}>
+            Driving innovation, enabling technology translation, and shaping impactful outcomes.
+          </p>
+        </div>
+      </div>
 
       {/* OUR TEAM SECTION */}
       <section className="container py-5">

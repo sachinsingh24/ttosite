@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import hero1 from "../assets/1.jpg";
 
 function Odometer({ value, label }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 100;
+    let start = 0;
     const end = value;
     const duration = 500;
     const stepTime = Math.max(Math.floor(duration / end), 1);
@@ -20,12 +19,12 @@ function Odometer({ value, label }) {
   }, [value]);
 
   return (
-    <div className="col-md-4 text-center">
-      <div className="card h-100 p-2 shadow-sm tech-card">
-        <h1 className="fw-bold display-6 m-0" style={{ color: "#be0d07" }}>
+    <div className="col-12 col-md-4">
+      <div className="card h-100 p-3 shadow-sm tech-card text-center">
+        <h2 className="fw-bold mb-1 tech-number">
           {count}+
-        </h1>
-        <p className="fs-5 fw-semibold mb-0">{label}</p>
+        </h2>
+        <p className="fw-semibold mb-0">{label}</p>
       </div>
     </div>
   );
@@ -34,81 +33,81 @@ function Odometer({ value, label }) {
 export default function Technology() {
   return (
     <>
-      <div
-        style={{
-          height: "80dvh",
-          backgroundImage: `url(${hero1})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          color: "#fff",
-        }}
-      >
+      <div className="tech-hero">
         {/* Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "rgba(0, 0, 0, 0.45)",
-          }}
-        ></div>
+        <div className="tech-overlay"></div>
 
-        {/* HERO TEXT (CENTER) */}
-        <div
-          className="text-center hero-text-anim"
-          style={{
-            position: "relative",
-            zIndex: 2,
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "0 15px",
-          }}
-        >
-          <h1 className="display-4 fw-bold">Technology & Innovation Impact</h1>
-          <p className="lead" style={{ maxWidth: "800px" }}>
+        {/* HERO TEXT */}
+        <div className="tech-hero-content">
+          <h1 className="fw-bold tech-title">
+            Technology & Innovation Impact
+          </h1>
+          <p className="tech-subtitle">
             Driving intellectual property, innovation, and entrepreneurship from IIT Hyderabad.
           </p>
         </div>
+      </div>
 
-        {/* ODOMETER – BOTTOM OF BANNER */}
-        <div
-          className="container"
-          style={{
-            position: "absolute",
-            bottom: "20px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 3,
-          }}
-        >
-          <div className="row g-3 justify-content-center">
-            <Odometer value={610} label="Patents Filed" />
-            <Odometer value={230} label="Patents Granted" />
-            <Odometer value={275} label="Startups Supported" />
-          </div>
+      {/* ODOMETERS (moved OUT of absolute banner) */}
+      <div className="container my-4">
+        <div className="row g-3 justify-content-center">
+          <Odometer value={610} label="Patents Filed" />
+          <Odometer value={230} label="Patents Granted" />
+          <Odometer value={275} label="Startups Supported" />
         </div>
       </div>
 
       {/* STYLES */}
       <style>{`
+        .tech-hero {
+          position: relative;
+          min-height: 50vh;
+          margin-top: 72px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem 1rem;
+          text-align: center;
+        }
+
+        .tech-overlay {
+          position: absolute;
+          inset: 0;
+          background: #be0d07;
+        }
+
+        .tech-hero-content {
+          position: relative;
+          z-index: 2;
+          max-width: 900px;
+        }
+
+        .tech-title {
+          color: #f08815;
+          font-size: clamp(1.8rem, 5vw, 3rem);
+        }
+
+        .tech-subtitle {
+          color: #fff;
+          font-size: clamp(1rem, 2.5vw, 1.25rem);
+          margin-top: 0.75rem;
+        }
+
         .tech-card {
           border-radius: 12px;
           transition: all 0.3s ease;
           background: #fff;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
         }
 
         .tech-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+          transform: translateY(-4px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
-
+        .tech-number {
+          color: #be0d07;
+          font-size: clamp(1.8rem, 4vw, 2.5rem);
+        }
       `}</style>
     </>
   );

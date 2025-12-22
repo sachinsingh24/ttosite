@@ -1,14 +1,13 @@
-import React from "react";
-import Hero from "../components/Hero";
-import hero1 from "../assets/1.jpg";
-import hero2 from "../assets/TTO-IITH.jpg";
-import hero3 from "../assets/3.jpg";
+// import Hero from "../components/Hero";
+// import hero1 from "../assets/1.jpg";
+// import hero2 from "../assets/TTO-IITH.jpg";
+// import hero3 from "../assets/3.jpg";
 
 export default function Services() {
   return (
     <>
       {/* Hero Section */}
-      <Hero
+      {/* <Hero
         slides={[
           {
             title: "SERVICES BY TTO – IIT HYDERABAD",
@@ -27,7 +26,38 @@ export default function Services() {
           },
         ]}
         size={"80dvh"}
-      />
+      /> */}
+      <div
+        style={{
+          height: "50dvh",
+          // backgroundImage: `url(${hero1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+          color: "#fff",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "72px",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "#be0d07",
+          }}
+        ></div>
+
+        <div className="text-center hero-text-anim" style={{ position: "relative", zIndex: 2 }}>
+          <h1 className="display-4 fw-bold" style={{ color: "#f08815" }}>
+            SERVICES BY TTO – IIT HYDERABAD"
+          </h1>
+          <p className="lead" style={{ width: "75%", margin: "0 auto" }}>
+            Enabling innovators to protect, translate, and commercialize research for meaningful impact.
+          </p>
+        </div>
+      </div>
 
       {/* Services Section */}
       <section className="container py-5">
