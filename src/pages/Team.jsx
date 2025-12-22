@@ -4,6 +4,7 @@ import hero1 from "../assets/1.jpg";
 import hero2 from "../assets/TTO-IITH.jpg";
 import hero3 from "../assets/3.jpg";
 import member1 from "../assets/Mr Pradeep Kumar Yemula IITH TTO1.jpg"
+import dummy from "../assets/dummy male.jpg"
 
 export default function Team() {
   const team = [
@@ -14,17 +15,17 @@ export default function Team() {
       designation: "Electrical Engineering",
     },
     {
-      img: "https://picsum.photos/300/220?random=1",
+      img: dummy,
       name: "name",
       designation: "Designation",
     },
     {
-      img: "https://picsum.photos/300/220?random=2",
+      img: dummy,
       name: "name",
       designation: "Designation",
     },
     {
-      img: "https://picsum.photos/300/220?random=3",
+      img: dummy,
       name: "name",
       designation: "Designation",
     },
