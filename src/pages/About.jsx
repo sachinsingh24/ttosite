@@ -12,23 +12,21 @@ export default function About() {
         slides={[
           {
             title: "ABOUT TTO – IIT HYDERABAD",
-            subtitle:
-              "Empowering innovators, accelerating technology translation, and enabling real-world impact.",
-          imageUrl: hero1,
+            subtitle: "Empowering innovators, accelerating technology translation, and enabling real-world impact.",
+            imageUrl: hero1,
           },
           {
             title: "Driving Innovation Forward",
-            subtitle:
-              "Connecting research excellence with industry needs to unlock new opportunities.",
-              imageUrl: hero2,
+            subtitle: "Connecting research excellence with industry needs to unlock new opportunities.",
+            imageUrl: hero2,
           },
           {
             title: "From Lab to Market",
-            subtitle:
-              "Turning ideas and discoveries into technologies that shape the future.",
+            subtitle: "Turning ideas and discoveries into technologies that shape the future.",
             imageUrl: hero3,
           },
         ]}
+        size={"80dvh"}
       />
 
       {/* Main About Section */}
@@ -37,26 +35,14 @@ export default function About() {
         <h2 className="fw-bold mb-3 display-6">
           Who <span style={{ color: "#be0d07" }}>We Are</span>
         </h2>
-        <p className="text-muted fs-5">
-          The Technology Transfer Office (TTO) at IIT Hyderabad serves as the strategic
-          interface between academia, industry, and society. Our mission is to transform
-          research outputs into impactful technologies, products, and solutions.
-        </p>
-        <p className="text-muted fs-5">
-          With a strong foundation in intellectual property management, industry networks,
-          and commercialization expertise, TTO ensures that innovations reach people and
-          markets where they can create meaningful change.
-        </p>
+        <p className="text-muted fs-5">The Technology Transfer Office (TTO) at IIT Hyderabad serves as the strategic interface between academia, industry, and society. Our mission is to transform research outputs into impactful technologies, products, and solutions.</p>
+        <p className="text-muted fs-5">With a strong foundation in intellectual property management, industry networks, and commercialization expertise, TTO ensures that innovations reach people and markets where they can create meaningful change.</p>
 
         {/* WHAT DRIVES US */}
         <h2 className="fw-bold mt-5 mb-3 display-6">
           What <span style={{ color: "#be0d07" }}>Drives Us</span>
         </h2>
-        <p className="text-muted fs-5">
-          We believe every innovation has the power to transform lives. Our role is to
-          recognize this potential early, protect it, nurture it, and connect it with the
-          right partners—ultimately catalyzing real-world impact.
-        </p>
+        <p className="text-muted fs-5">We believe every innovation has the power to transform lives. Our role is to recognize this potential early, protect it, nurture it, and connect it with the right partners—ultimately catalyzing real-world impact.</p>
 
         {/* Role in Ecosystem */}
         <h2 className="fw-bold mt-5 mb-4 display-6 text-center">
@@ -112,10 +98,7 @@ export default function About() {
                       background: "#ffe6e6",
                     }}
                   >
-                    <i
-                      className={`${item.icon} fs-1`}
-                      style={{ color: "#b30000" }}
-                    ></i>
+                    <i className={`${item.icon} fs-1`} style={{ color: "#b30000" }}></i>
                   </div>
                 </div>
 

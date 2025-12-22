@@ -31,7 +31,7 @@ export default function msme() {
       /> */}
               <div
                 style={{
-                  height: "100dvh",
+                  height: "80dvh",
                   backgroundImage: `url(${hero1})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",

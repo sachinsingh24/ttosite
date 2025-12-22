@@ -27,6 +27,7 @@ export default function Home() {
             imageUrl: hero3,
           },
         ]}
+    size={"100dvh"}
       />
 
       {/* MAIN SECTION */}

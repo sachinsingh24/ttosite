@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // ✔ Dots indicators
 // ✔ Auto-slide
 // ✔ Next/Prev controls
-export default function Hero({ slides = [] }) {
+export default function Hero({ slides = [],size }) {
   return (
     <header>
       <div
@@ -29,7 +29,7 @@ export default function Hero({ slides = [] }) {
             <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
               <div
                 style={{
-                  height: "100dvh",
+                  height: size,
                   backgroundImage: `url(${slide.imageUrl})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",

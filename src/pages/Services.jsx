@@ -12,23 +12,21 @@ export default function Services() {
         slides={[
           {
             title: "SERVICES BY TTO – IIT HYDERABAD",
-            subtitle:
-              "Enabling innovators to protect, translate, and commercialize research for meaningful impact.",
-              imageUrl: hero1,
+            subtitle: "Enabling innovators to protect, translate, and commercialize research for meaningful impact.",
+            imageUrl: hero1,
           },
           {
             title: "Accelerating Technology Translation",
-            subtitle:
-              "From IP protection to industry partnerships — supporting the full innovation lifecycle.",
+            subtitle: "From IP protection to industry partnerships — supporting the full innovation lifecycle.",
             imageUrl: hero2,
           },
           {
             title: "Enabling Market-Ready Innovations",
-            subtitle:
-              "Guiding researchers and startups toward successful commercialization pathways.",
-              imageUrl:hero3,
+            subtitle: "Guiding researchers and startups toward successful commercialization pathways.",
+            imageUrl: hero3,
           },
         ]}
+        size={"80dvh"}
       />
 
       {/* Services Section */}
@@ -41,74 +39,42 @@ export default function Services() {
         </p>
 
         <div className="row g-4 justify-content-center">
-
           {/* CARD COMPONENT */}
           {[
             {
               title: "Intellectual Property (IP) Support",
               icon: "bi-shield-lock-fill",
               img: "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=800&q=60",
-              points: [
-                "Patent drafting & filing",
-                "Prior art & patentability searches",
-                "Trademark & copyright filing",
-                "IP portfolio management",
-                "Institutional IP policy guidance",
-              ],
+              points: ["Patent drafting & filing", "Prior art & patentability searches", "Trademark & copyright filing", "IP portfolio management", "Institutional IP policy guidance"],
             },
             {
               title: "Technology Scouting & Evaluation",
               icon: "bi-search",
               img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=60",
-              points: [
-                "Identifying innovations in research labs",
-                "Technical feasibility assessments",
-                "Market & competitive analysis",
-                "Technology Readiness Level (TRL) evaluation",
-              ],
+              points: ["Identifying innovations in research labs", "Technical feasibility assessments", "Market & competitive analysis", "Technology Readiness Level (TRL) evaluation"],
             },
             {
               title: "Industry Partnerships",
               icon: "bi-people-fill",
               img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=800&q=60",
-              points: [
-                "Technology showcasing",
-                "Corporate collaborations",
-                "Industry outreach programs",
-                "Joint development & sponsored research",
-              ],
+              points: ["Technology showcasing", "Corporate collaborations", "Industry outreach programs", "Joint development & sponsored research"],
             },
             {
               title: "Licensing & Commercialization",
               icon: "bi-file-earmark-check-fill",
               img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=60",
-              points: [
-                "Licensing strategy development",
-                "Negotiation support",
-                "Royalty & revenue-sharing models",
-                "Technology marketing briefs",
-                "Contract drafting & agreements",
-              ],
+              points: ["Licensing strategy development", "Negotiation support", "Royalty & revenue-sharing models", "Technology marketing briefs", "Contract drafting & agreements"],
             },
             {
               title: "Startup & Spin-off Support",
               icon: "bi-rocket-takeoff-fill",
               img: "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=800&q=60",
-              points: [
-                "Spin-off creation guidance",
-                "IP licensing for startups",
-                "Grant proposal support (BIRAC, DST, MSME, iDEX)",
-                "Mentorship & incubation support",
-              ],
+              points: ["Spin-off creation guidance", "IP licensing for startups", "Grant proposal support (BIRAC, DST, MSME, iDEX)", "Mentorship & incubation support"],
             },
           ].map((service, index) => (
             <div className="col-md-4" key={index}>
               <div className="card h-100 shadow-lg border-0 service-card">
-                <img
-                  src={service.img}
-                  className="service-card-img"
-                  alt={service.title}
-                />
+                <img src={service.img} className="service-card-img" alt={service.title} />
 
                 <div className="card-body p-4">
                   <h5 className="fw-bold d-flex align-items-center gap-2">
@@ -125,14 +91,11 @@ export default function Services() {
               </div>
             </div>
           ))}
-
         </div>
 
         {/* Learn More Button */}
         <div className="text-center mt-5">
-          <button className="modern-btn px-4 py-2 fw-bold">
-            Learn More
-          </button>
+          <button className="modern-btn px-4 py-2 fw-bold">Learn More</button>
         </div>
       </section>
 

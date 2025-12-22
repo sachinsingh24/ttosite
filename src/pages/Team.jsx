@@ -3,8 +3,8 @@ import Hero from "../components/Hero";
 import hero1 from "../assets/1.jpg";
 import hero2 from "../assets/TTO-IITH.jpg";
 import hero3 from "../assets/3.jpg";
-import member1 from "../assets/Mr Pradeep Kumar Yemula IITH TTO1.jpg"
-import dummy from "../assets/dummy male.jpg"
+import member1 from "../assets/Mr Pradeep Kumar Yemula IITH TTO1.jpg";
+import dummy from "../assets/dummy male.jpg";
 
 export default function Team() {
   const team = [
@@ -52,6 +52,7 @@ export default function Team() {
             imageUrl: hero3,
           },
         ]}
+        size={"80dvh"}
       />
 
       {/* OUR TEAM SECTION */}
@@ -99,7 +100,7 @@ export default function Team() {
           <h2 className="text-white fw-bold mb-4 display-6">Meet the Team</h2>
 
           <div className="row text-center g-4">
-            {team.map((item,index) => (
+            {team.map((item, index) => (
               <div className="col-md-3" key={index}>
                 <div className="card p-2 shadow-sm team-card">
                   <img src={item.img} className="card-img-top team-img" alt="Team Member" />
