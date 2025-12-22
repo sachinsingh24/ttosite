@@ -12,8 +12,8 @@ export default function MSME() {
           <img
             src={pagelogo}
             alt="MSME Tech Connect"
-            className="img-fluid mb-3"
-            style={{ maxWidth: "140px" }}
+            className="img-fluid mb-2"
+            style={{ maxWidth: "130px" }}
           />
 
           <h1 className="fw-bold msme-title">
