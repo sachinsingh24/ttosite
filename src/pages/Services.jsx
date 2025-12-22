@@ -132,9 +132,6 @@ export default function Services() {
 
       {/* ================= STYLES ================= */}
       <style>{`
-        .highlight {
-          color: #be0d07;
-        }
 
         /* HERO */
         .services-hero {

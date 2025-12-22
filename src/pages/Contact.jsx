@@ -62,7 +62,7 @@ export default function Contact() {
   return (
     <section className="container py-5" style={{ marginTop: "60px" }}>
       <h2 className="fw-bold mb-4 text-center display-6">
-        Get in <span style={{ color: "#be0d07" }}>Touch</span>
+        Get in <span className="highlight">Touch</span>
       </h2>
         <p className="text-center text-muted mb-5" style={{ maxWidth: "700px", margin: "0 auto" }}>
           We’re here to support researchers, innovators, startups, and industry partners. Reach out to the Technology Transfer Office of IIT Hyderabad for collaboration, IP support, or technology licensing.

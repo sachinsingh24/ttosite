@@ -34,7 +34,7 @@ export default function Home() {
       <section className="container py-5">
         {/* Vision */}
         <h2 className="fw-bold mb-3 display-6">
-          Our <span style={{ color: "#be0d07" }}>Vision</span>
+          Our <span className="highlight">Vision</span>
         </h2>
         <p className="text-muted" style={{ fontSize: "18px" }}>
           To build a globally recognised technology-commercialization ecosystem with IIT Hyderabad at its center—where research, innovation, and industry converge to generate transformative societal impact.
@@ -42,7 +42,7 @@ export default function Home() {
 
         {/* Mission */}
         <h2 className="fw-bold mt-5 mb-3 display-6">
-          Our <span style={{ color: "#be0d07" }}>Mission</span>
+          Our <span className="highlight">Mission</span>
         </h2>
         <p className="text-muted" style={{ fontSize: "18px" }}>
           We empower the IIT Hyderabad community to protect, translate, and commercialize their research by:
@@ -58,7 +58,7 @@ export default function Home() {
 
         {/* WHAT WE DO */}
         <h2 className="fw-bold mt-5 mb-4 display-6 text-center">
-          What <span style={{ color: "#be0d07" }}>We Do</span>
+          What <span className="highlight">We Do</span>
         </h2>
 
         <div

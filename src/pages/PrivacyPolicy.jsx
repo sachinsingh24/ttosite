@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
   return (
     <section className="container py-5" style={{ marginTop: "80px" }}>
       <h1 className="fw-bold mb-4 display-6 text-center">
-        Privacy <span style={{ color: "#be0d07" }}>Policy</span>
+        Privacy <span className="highlight">Policy</span>
       </h1>
 
       <p className="text-muted text-center mb-5">

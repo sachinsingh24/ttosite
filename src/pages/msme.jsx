@@ -138,9 +138,6 @@ export default function MSME() {
 
       {/* ================= STYLES ================= */}
       <style>{`
-        .highlight {
-          color: #be0d07;
-        }
 
         /* HERO */
         .msme-hero {

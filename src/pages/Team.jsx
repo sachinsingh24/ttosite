@@ -141,9 +141,6 @@ export default function Team() {
 
       {/* ================= STYLES ================= */}
       <style>{`
-        .highlight {
-          color: #be0d07;
-        }
 
         /* HERO */
         .team-hero {

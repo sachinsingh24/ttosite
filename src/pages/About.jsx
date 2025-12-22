@@ -100,9 +100,7 @@ export default function About() {
 
       {/* ================= STYLES ================= */}
       <style>{`
-        .highlight {
-          color: #be0d07;
-        }
+    
 
         /* HERO */
         .about-hero {
