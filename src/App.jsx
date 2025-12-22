@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import MSME from "./pages/msme";
 import Technology from "./pages/Technology";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/msme" element={<MSME />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/error" element={<ErrorPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

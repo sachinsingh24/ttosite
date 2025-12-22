@@ -72,6 +72,9 @@ export default function Footer() {
                   <li>
                     <a href="/technology">Technology</a>
                   </li>
+                  <li>
+                    <a href="/services">Our Services</a>
+                  </li>
                 </ul>
               </div>
 
@@ -79,13 +82,13 @@ export default function Footer() {
               <div className="col-6">
                 <ul className="list-unstyled footer-links">
                   <li>
-                    <a href="/services">Our Services</a>
-                  </li>
-                  <li>
                     <a href="/team">Our Team</a>
                   </li>
                   <li>
                     <a href="/contact">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="/privacy-policy">Privacy Policy</a>
                   </li>
                 </ul>
               </div>
