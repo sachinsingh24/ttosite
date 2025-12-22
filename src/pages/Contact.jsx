@@ -64,9 +64,9 @@ export default function Contact() {
       <h2 className="fw-bold mb-4 text-center display-6">
         Get in <span className="highlight">Touch</span>
       </h2>
-        <p className="text-center text-muted mb-5" style={{ maxWidth: "700px", margin: "0 auto" }}>
-          We’re here to support researchers, innovators, startups, and industry partners. Reach out to the Technology Transfer Office of IIT Hyderabad for collaboration, IP support, or technology licensing.
-        </p>
+      <p className="text-center text-muted mb-5" style={{ maxWidth: "700px", margin: "0 auto" }}>
+        We’re here to support researchers, innovators, startups, and industry partners. Reach out to the Technology Transfer Office of IIT Hyderabad for collaboration, IP support, or technology licensing.
+      </p>
 
       <div className="row g-4 justify-content-center">
         <div className="col-lg-5 col-md-6">
@@ -153,7 +153,7 @@ export default function Contact() {
             <div style={{ flexGrow: 1 }}>
               {/* Address */}
               <div className="mb-4 d-flex">
-                <i className="bi bi-geo-alt-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
+                <i className="bi bi-geo-alt-fill fs-4 me-3 highlight"></i>
                 <div>
                   <h6 className="fw-bold mb-1">Office Address</h6>
                   <p className="text-muted m-0">
@@ -169,7 +169,7 @@ export default function Contact() {
 
               {/* Email */}
               <div className="mb-4 d-flex">
-                <i className="bi bi-envelope-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
+                <i className="bi bi-envelope-fill fs-4 me-3 highlight"></i>
                 <div>
                   <h6 className="fw-bold mb-1">Email</h6>
                   <p className="text-muted m-0">office.tto@iith.ac.in</p>
@@ -187,7 +187,7 @@ export default function Contact() {
 
               {/* Hours */}
               <div className="mb-4 d-flex">
-                <i className="bi bi-clock-fill fs-4 me-3" style={{ color: "#be0d07" }}></i>
+                <i className="bi bi-clock-fill fs-4 me-3 highlight"></i>
                 <div>
                   <h6 className="fw-bold mb-1">Working Hours</h6>
                   <p className="text-muted m-0">Mon – Fri: 9:00 AM – 5:30 PM</p>
@@ -203,10 +203,10 @@ export default function Contact() {
                     <i className="bi bi-facebook"></i>
                   </a> */}
 
-                <a href="https://www.instagram.com/office.tto/" style={{ color: "#be0d07" }} aria-label="Instagram">
+                <a href="https://www.instagram.com/office.tto/" className="highlight" aria-label="Instagram">
                   <i className="bi bi-instagram"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/technology-transfer-office-iit-hyderabad-b1141239a/" style={{ color: "#be0d07" }} aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/technology-transfer-office-iit-hyderabad-b1141239a/" className="highlight" aria-label="LinkedIn">
                   <i className="bi bi-linkedin"></i>
                 </a>
               </div>
