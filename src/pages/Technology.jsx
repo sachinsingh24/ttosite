@@ -21,7 +21,7 @@ function Odometer({ value, label }) {
   return (
     <div className="col-12 col-md-4">
       <div className="card h-100 p-3 shadow-sm tech-card text-center">
-        <h2 className="fw-bold mb-1 tech-number">
+        <h2 className="fw-bold mb-1 tech-number highlight">
           {count}+
         </h2>
         <p className="fw-semibold mb-0">{label}</p>
@@ -39,7 +39,7 @@ export default function Technology() {
 
         {/* HERO TEXT */}
         <div className="tech-hero-content">
-          <h1 className="fw-bold tech-title">
+          <h1 className="fw-bold tech-title highlight">
             Technology & Innovation Impact
           </h1>
           <p className="tech-subtitle">
@@ -83,7 +83,6 @@ export default function Technology() {
         }
 
         .tech-title {
-          color: #f08815;
           font-size: clamp(1.8rem, 5vw, 3rem);
         }
 
@@ -105,7 +104,6 @@ export default function Technology() {
         }
 
         .tech-number {
-          color: #be0d07;
           font-size: clamp(1.8rem, 4vw, 2.5rem);
         }
       `}</style>
