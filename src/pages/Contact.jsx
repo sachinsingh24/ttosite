@@ -64,6 +64,9 @@ export default function Contact() {
       <h2 className="fw-bold mb-4 text-center display-6">
         Get in <span style={{ color: "#be0d07" }}>Touch</span>
       </h2>
+        <p className="text-center text-muted mb-5" style={{ maxWidth: "700px", margin: "0 auto" }}>
+          We’re here to support researchers, innovators, startups, and industry partners. Reach out to the Technology Transfer Office of IIT Hyderabad for collaboration, IP support, or technology licensing.
+        </p>
 
       <div className="row g-4 justify-content-center">
         <div className="col-lg-5 col-md-6">
