@@ -60,7 +60,7 @@ export default function MSME() {
           ].map((item, index) => (
             <div className="col-12 col-md-4" key={index}>
               <div className="card h-100 p-4 shadow-sm service-card text-center">
-                <p className="fw-semibold mb-0">{item}</p>
+                <p className="text-muted fs-5 mb-0">{item}</p>
               </div>
             </div>
           ))}
@@ -72,12 +72,12 @@ export default function MSME() {
         </h2>
 
         <ul className="modern-list fs-5">
-          <li>Technology Exhibition & Demonstrations</li>
-          <li>Curated Industry–Technology Matchmaking</li>
-          <li>Networking & Collaboration Sessions</li>
-          <li>Expert Talks & Panel Discussions</li>
-          <li>Investor & Industry Pitch Sessions</li>
-          <li>Technology Transfer & Licensing Clinics</li>
+          <li className="text-muted">Technology Exhibition & Demonstrations</li>
+          <li className="text-muted">Curated Industry–Technology Matchmaking</li>
+          <li className="text-muted">Networking & Collaboration Sessions</li>
+          <li className="text-muted">Expert Talks & Panel Discussions</li>
+          <li className="text-muted">Investor & Industry Pitch Sessions</li>
+          <li className="text-muted">Technology Transfer & Licensing Clinics</li>
         </ul>
 
         {/* EXHIBIT */}
@@ -108,7 +108,7 @@ export default function MSME() {
             ].map((item, index) => (
               <div className="col-12 col-md-4" key={index}>
                 <div className="card h-100 p-4 shadow service-card text-center">
-                  <p className="mb-0 fw-semibold">{item}</p>
+                  <p className="mb-0 text-muted fs-5">{item}</p>
                 </div>
               </div>
             ))}
@@ -121,11 +121,11 @@ export default function MSME() {
         </h2>
 
         <ul className="modern-list fs-5">
-          <li>Leading MSMEs and manufacturing units</li>
-          <li>Large corporates & industry majors</li>
-          <li>Technology buyers and solution seekers</li>
-          <li>Investors, VCs & funding agencies</li>
-          <li>Government bodies & innovation agencies</li>
+          <li className="text-muted">Leading MSMEs and manufacturing units</li>
+          <li className="text-muted">Large corporates & industry majors</li>
+          <li className="text-muted">Technology buyers and solution seekers</li>
+          <li className="text-muted">Investors, VCs & funding agencies</li>
+          <li className="text-muted">Government bodies & innovation agencies</li>
         </ul>
 
         {/* CTA */}

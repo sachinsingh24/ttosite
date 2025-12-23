@@ -26,8 +26,8 @@ export default function Services() {
         </h2>
 
         <p
-          className="text-center text-muted mb-5 px-3"
-          style={{ maxWidth: "800px", margin: "0 auto" }}
+          className="text-center text-muted mb-5 px-3 fs-5"
+          style={{ maxWidth: "75%", margin: "0 auto" }}
         >
           TTO IIT Hyderabad provides end-to-end support to researchers,
           startups, and industry partners—ensuring smooth innovation
@@ -110,9 +110,9 @@ export default function Services() {
                     {service.title}
                   </h5>
 
-                  <ul className="mt-3 text-muted">
+                  <ul className="mt-3">
                     {service.points.map((point, i) => (
-                      <li key={i}>{point}</li>
+                      <li className="text-muted fs-5" key={i}>{point}</li>
                     ))}
                   </ul>
                 </div>

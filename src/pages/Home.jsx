@@ -36,7 +36,7 @@ export default function Home() {
         <h2 className="fw-bold mb-3 display-6">
           Our <span className="highlight">Vision</span>
         </h2>
-        <p className="text-muted" style={{ fontSize: "18px" }}>
+        <p className="text-muted fs-5" style={{ fontSize: "18px" }}>
           To build a globally recognised technology-commercialization ecosystem with IIT Hyderabad at its center—where research, innovation, and industry converge to generate transformative societal impact.
         </p>
 
@@ -44,16 +44,16 @@ export default function Home() {
         <h2 className="fw-bold mt-5 mb-3 display-6">
           Our <span className="highlight">Mission</span>
         </h2>
-        <p className="text-muted" style={{ fontSize: "18px" }}>
+        <p className="text-muted fs-5">
           We empower the IIT Hyderabad community to protect, translate, and commercialize their research by:
         </p>
 
-        <ul className="modern-list">
-          <li>Strengthening intellectual property culture</li>
-          <li>Building strategic industry partnerships</li>
-          <li>Supporting licensing and technology transfer</li>
-          <li>Enabling spin-offs and deep-tech startups</li>
-          <li>Creating sustainable impact at local, national, and global levels</li>
+        <ul className="modern-list fs-5">
+          <li className="text-muted">Strengthening intellectual property culture</li>
+          <li className="text-muted">Building strategic industry partnerships</li>
+          <li className="text-muted">Supporting licensing and technology transfer</li>
+          <li className="text-muted">Enabling spin-offs and deep-tech startups</li>
+          <li className="text-muted">Creating sustainable impact at local, national, and global levels</li>
         </ul>
 
         {/* WHAT WE DO */}
