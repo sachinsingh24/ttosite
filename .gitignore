@@ -14,6 +14,7 @@ dist-ssr
 # tto.iith.ac.in
 vite.config.js
 .env
+.well-known
 
 
 # Editor directories and files
