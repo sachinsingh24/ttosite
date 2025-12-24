@@ -1,23 +1,25 @@
 import React from "react";
+import HeroParticles from "../components/HeroParticles";
 
 export default function Services() {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
-      <div className="services-hero">
-        <div className="services-overlay banner_color"></div>
 
-        <div className="text-center hero-text-anim services-hero-content">
-          <h1 className="fw-bold banner-title">
-            SERVICES BY TTO – IIT HYDERABAD
-          </h1>
+      <div className="main_banner">
+        <div className="banner_overlay"></div>
+        <div className="particles">
+          <HeroParticles />
+        </div>
 
-          <p className="services-subtitle">
-            Enabling innovators to protect, translate, and commercialize
-            research for meaningful impact.
-          </p>
+        <div className="text-center hero-text-anim banner-content">
+          <h1 className="fw-bold banner-title">SERVICES BY TTO – IIT HYDERABAD</h1>
+
+          <p className="banner-subtitle">Enabling innovators to protect, translate, and commercialize
+            research for meaningful impact.</p>
         </div>
       </div>
+
 
       {/* ================= SERVICES SECTION ================= */}
       <section className="container py-5">
@@ -131,37 +133,6 @@ export default function Services() {
 
       {/* ================= STYLES ================= */}
       <style>{`
-
-        /* HERO */
-        .services-hero {
-          position: relative;
-          min-height: 50vh;
-          margin-top: 72px;
-          padding: 2rem 1rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-        }
-
-        .services-overlay {
-          position: absolute;
-          inset: 0;
-        }
-
-        .services-hero-content {
-          position: relative;
-          z-index: 2;
-          max-width: 900px;
-        }
-
-        .services-subtitle {
-          color: #fff;
-          font-size: clamp(1rem, 2.5vw, 1.25rem);
-          max-width: 90%;
-          margin: 0.75rem auto 0;
-        }
-
         /* CARDS */
         .service-card {
           border-radius: 18px;
@@ -182,17 +153,6 @@ export default function Services() {
           border-top-right-radius: 18px;
         }
 
-        /* BUTTON */
-        .modern-btn {
-          background: linear-gradient(90deg, #f08815, #be0d07);
-          color: #fff;
-          border: none;
-          border-radius: 30px;
-        }
-
-        .modern-btn:hover {
-          opacity: 0.9;
-        }
       `}</style>
     </>
   );

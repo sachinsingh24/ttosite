@@ -1,6 +1,7 @@
 import React from "react";
 import member1 from "../assets/Mr Pradeep Kumar Yemula IITH TTO1.jpg";
 import dummy from "../assets/dummy male.jpg";
+import HeroParticles from "../components/HeroParticles";
 
 export default function Team() {
   const team = [
@@ -33,20 +34,20 @@ export default function Team() {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
-      <div className="team-hero">
-        <div className="team-overlay banner_color"></div>
+      <div className="main_banner">
+        <div className="banner_overlay"></div>
+        <div className="particles">
+          <HeroParticles />
+        </div>
 
-        <div className="text-center hero-text-anim team-hero-content">
-          <h1 className="fw-bold banner-title">
-            TEAM – TTO IIT HYDERABAD
-          </h1>
+        <div className="text-center hero-text-anim banner-content">
+          <h1 className="fw-bold banner-title">  TEAM – TTO IIT HYDERABAD</h1>
 
-          <p className="team-subtitle">
-            Driving innovation, enabling technology translation, and shaping
-            impactful outcomes.
-          </p>
+          <p className="banner-subtitle">   Driving innovation, enabling technology translation, and shaping
+            impactful outcomes.</p>
         </div>
       </div>
+
 
       {/* ================= ABOUT TEAM ================= */}
       <section className="container py-5">

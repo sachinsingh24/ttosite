@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import HeroParticles from "../components/HeroParticles";
 
 function Odometer({ value, label }) {
   const [count, setCount] = useState(0);
@@ -21,9 +22,7 @@ function Odometer({ value, label }) {
   return (
     <div className="col-12 col-md-4">
       <div className="card h-100 p-3 shadow-sm tech-card text-center">
-        <h2 className="fw-bold mb-1 tech-number highlight">
-          {count}+
-        </h2>
+        <h2 className="fw-bold mb-1 tech-number highlight">{count}+</h2>
         <p className="fw-semibold mb-0">{label}</p>
       </div>
     </div>
@@ -33,18 +32,16 @@ function Odometer({ value, label }) {
 export default function Technology() {
   return (
     <>
-      <div className="tech-hero">
-        {/* Overlay */}
-        <div className="tech-overlay banner_color"></div>
+      <div className="main_banner">
+        <div className="banner_overlay"></div>
+        <div className="particles">
+          <HeroParticles />
+        </div>
 
-        {/* HERO TEXT */}
-        <div className="tech-hero-content">
-          <h1 className="fw-bold banner-title">
-            Technology & Innovation Impact
-          </h1>
-          <p className="tech-subtitle">
-            Driving intellectual property, innovation, and entrepreneurship from IIT Hyderabad.
-          </p>
+        <div className="text-center hero-text-anim banner-content">
+          <h1 className="fw-bold banner-title"> Technology & Innovation Impact</h1>
+
+          <p className="banner-subtitle"> Driving intellectual property, innovation, and entrepreneurship from IIT Hyderabad.</p>
         </div>
       </div>
 
@@ -59,34 +56,6 @@ export default function Technology() {
 
       {/* STYLES */}
       <style>{`
-        .tech-hero {
-          position: relative;
-          min-height: 50vh;
-          margin-top: 72px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 2rem 1rem;
-          text-align: center;
-        }
-
-        .tech-overlay {
-          position: absolute;
-          inset: 0;
-        }
-
-        .tech-hero-content {
-          position: relative;
-          z-index: 2;
-          max-width: 900px;
-        }
-
-        .tech-subtitle {
-          color: #fff;
-          font-size: clamp(1rem, 2.5vw, 1.25rem);
-          margin-top: 0.75rem;
-        }
-
         .tech-card {
           border-radius: 12px;
           transition: all 0.3s ease;

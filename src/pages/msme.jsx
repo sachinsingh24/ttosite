@@ -1,47 +1,34 @@
 import React from "react";
 import pagelogo from "../assets/msme_banner.png";
+import HeroParticles from "../components/HeroParticles";
 
 export default function MSME() {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
-      <div className="msme-hero">
-        <div className="msme-overlay banner_color"></div>
+      <div className="main_banner">
+        <div className="banner_overlay"></div>
+        <div className="particles">
+          <HeroParticles />
+        </div>
 
-        <div className="text-center hero-text-anim msme-hero-content">
-          <img
-            src={pagelogo}
-            alt="MSME Tech Connect"
-            className="img-fluid mb-2"
-            style={{ maxWidth: "130px" }}
-          />
+        <div className="text-center hero-text-anim banner-content">
+          <img src={pagelogo} alt="MSME Tech Connect" className="img-fluid mb-2" style={{ maxWidth: "130px" }} />
 
-          <h1 className="fw-bold banner-title">
-            MSME TECH CONNECT 2026
-          </h1>
+          <h1 className="fw-bold banner-title">MSME TECH CONNECT 2026</h1>
 
-          <p className="msme-subtitle">
-            Create • Connect • Commercialise — a national platform bridging
-            technology creators and industry adopters.
-          </p>
+          <p className="banner-subtitle">Create • Connect • Commercialise — a national platform bridging technology creators and industry adopters.</p>
         </div>
       </div>
 
       {/* ================= MAIN CONTENT ================= */}
       <section className="container py-5">
-
         {/* ABOUT EVENT */}
         <h2 className="fw-bold display-6 mb-3">
           About the <span className="highlight">Event</span>
         </h2>
 
-        <p className="text-muted fs-5">
-          MSME Tech Connect 2026 brings technology creators and industry adopters
-          onto a single platform to enable collaboration, co-creation, and
-          market-ready innovation. The event is designed to help promising
-          technologies move from labs and startups into real-world industrial
-          applications.
-        </p>
+        <p className="text-muted fs-5">MSME Tech Connect 2026 brings technology creators and industry adopters onto a single platform to enable collaboration, co-creation, and market-ready innovation. The event is designed to help promising technologies move from labs and startups into real-world industrial applications.</p>
 
         {/* WHO SHOULD PARTICIPATE */}
         <h2 className="fw-bold display-6 mt-5 mb-4">
@@ -49,15 +36,7 @@ export default function MSME() {
         </h2>
 
         <div className="row g-4 justify-content-center">
-          {[
-            "Micro, Small & Medium Enterprises (MSMEs)",
-            "Technology Startups & Entrepreneurs",
-            "R&D Labs & Research Institutions",
-            "Academia & Innovators",
-            "Large Industries & Corporates",
-            "Investors, Incubators & Accelerators",
-            "Policymakers & Ecosystem Enablers",
-          ].map((item, index) => (
+          {["Micro, Small & Medium Enterprises (MSMEs)", "Technology Startups & Entrepreneurs", "R&D Labs & Research Institutions", "Academia & Innovators", "Large Industries & Corporates", "Investors, Incubators & Accelerators", "Policymakers & Ecosystem Enablers"].map((item, index) => (
             <div className="col-12 col-md-4" key={index}>
               <div className="card h-100 p-4 shadow-sm service-card text-center">
                 <p className="text-muted fs-5 mb-0">{item}</p>
@@ -85,12 +64,7 @@ export default function MSME() {
           Exhibit Your <span className="highlight">Technology</span>
         </h2>
 
-        <p className="text-muted fs-5">
-          Showcase your ready-to-deploy, pilot-stage, or emerging technologies
-          to a focused audience of industry leaders and decision-makers.
-          Demonstrate solutions, validate market demand, and explore real
-          deployment opportunities.
-        </p>
+        <p className="text-muted fs-5">Showcase your ready-to-deploy, pilot-stage, or emerging technologies to a focused audience of industry leaders and decision-makers. Demonstrate solutions, validate market demand, and explore real deployment opportunities.</p>
 
         {/* WHY PARTICIPATE */}
         <h2 className="fw-bold display-6 mt-5 mb-4">
@@ -99,13 +73,7 @@ export default function MSME() {
 
         <div className="why-box p-4 rounded-4 shadow-sm">
           <div className="row g-4 justify-content-center">
-            {[
-              "Find buyers, licensees, and adopters for your technology",
-              "Explore technology transfer and licensing opportunities",
-              "Connect with top MSMEs, large corporates, and industry leaders",
-              "Gain visibility among investors, incubators, and policymakers",
-              "Build partnerships for pilots, scaling, and commercialization",
-            ].map((item, index) => (
+            {["Find buyers, licensees, and adopters for your technology", "Explore technology transfer and licensing opportunities", "Connect with top MSMEs, large corporates, and industry leaders", "Gain visibility among investors, incubators, and policymakers", "Build partnerships for pilots, scaling, and commercialization"].map((item, index) => (
               <div className="col-12 col-md-4" key={index}>
                 <div className="card h-100 p-4 shadow service-card text-center">
                   <p className="mb-0 text-muted fs-5">{item}</p>
@@ -130,9 +98,7 @@ export default function MSME() {
 
         {/* CTA */}
         <div className="text-center mt-5">
-          <button className="modern-btn px-5 py-2 fw-bold">
-            Register Interest
-          </button>
+          <button className="modern-btn px-5 py-2 fw-bold">Register Interest</button>
         </div>
       </section>
 

@@ -1,57 +1,40 @@
 import React from "react";
+import HeroParticles from "../components/HeroParticles";
 
 export default function About() {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
-      <div className="about-hero">
-        <div className="about-overlay banner_color"></div>
+      <div className="main_banner">
+        <div className="banner_overlay"></div>
+        <div className="particles">
+          <HeroParticles />
+        </div>
 
-        <div className="text-center hero-text-anim about-hero-content">
-          <h1 className="fw-bold banner-title">
-            ABOUT TTO – IIT HYDERABAD
-          </h1>
+        <div className="text-center hero-text-anim banner-content">
+          <h1 className="fw-bold banner-title">ABOUT TTO – IIT HYDERABAD</h1>
 
-          <p className="about-subtitle">
-            Empowering innovators, accelerating technology translation,
-            and enabling real-world impact.
-          </p>
+          <p className="banner-subtitle">Empowering innovators, accelerating technology translation, and enabling real-world impact.</p>
         </div>
       </div>
 
       {/* ================= MAIN CONTENT ================= */}
       <section className="container py-5">
-
         {/* WHO WE ARE */}
         <h2 className="fw-bold mb-3 display-6">
           Who <span className="highlight">We Are</span>
         </h2>
 
-        <p className="text-muted fs-5">
-          The Technology Transfer Office (TTO) at IIT Hyderabad serves as the
-          strategic interface between academia, industry, and society.
-          Our mission is to transform research outputs into impactful
-          technologies, products, and solutions.
-        </p>
+        <p className="text-muted fs-5">The Technology Transfer Office (TTO) at IIT Hyderabad serves as the strategic interface between academia, industry, and society. Our mission is to transform research outputs into impactful technologies, products, and solutions.</p>
 
-        <p className="text-muted fs-5">
-          With a strong foundation in intellectual property management,
-          industry networks, and commercialization expertise, TTO ensures
-          that innovations reach people and markets where they can create
-          meaningful change.
-        </p>
+        <p className="text-muted fs-5">With a strong foundation in intellectual property management, industry networks, and commercialization expertise, TTO ensures that innovations reach people and markets where they can create meaningful change.</p>
 
         {/* WHAT DRIVES US */}
         <h2 className="fw-bold mt-5 mb-3 display-6">
           What <span className="highlight">Drives Us</span>
         </h2>
 
-        <p className="text-muted fs-5">
-          We believe every innovation has the power to transform lives.
-          Our role is to recognize this potential early, protect it,
-          nurture it, and connect it with the right partners—ultimately
-          catalyzing real-world impact.
-        </p>
+        <p className="text-muted fs-5">We believe every innovation has the power to transform lives. Our role is to recognize this potential early, protect it, nurture it, and connect it with the right partners—ultimately catalyzing real-world impact.</p>
 
         {/* ROLE IN ECOSYSTEM */}
         <h2 className="fw-bold mt-5 mb-4 display-6 text-center">
@@ -92,44 +75,12 @@ export default function About() {
 
         {/* CTA */}
         <div className="text-center mt-5">
-          <button className="modern-btn px-4 py-2 fw-bold">
-            Learn More
-          </button>
+          <button className="modern-btn px-4 py-2 fw-bold">Learn More</button>
         </div>
       </section>
 
       {/* ================= STYLES ================= */}
       <style>{`
-    
-
-        /* HERO */
-        .about-hero {
-          position: relative;
-          min-height: 50vh;
-          margin-top: 72px;
-          padding: 2rem 1rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-        }
-
-        .about-overlay {
-          position: absolute;
-          inset: 0;
-        }
-
-        .about-hero-content {
-          position: relative;
-          z-index: 2;
-          max-width: 900px;
-        }
-        .about-subtitle {
-          color: #fff;
-          font-size: clamp(1rem, 2.5vw, 1.25rem);
-          max-width: 90%;
-          margin: 0.75rem auto 0;
-        }
 
         /* ECOSYSTEM */
         .ecosystem-wrapper {
@@ -158,18 +109,6 @@ export default function About() {
           align-items: center;
           justify-content: center;
           color: #b30000;
-        }
-
-        /* BUTTON */
-        .modern-btn {
-          background: linear-gradient(90deg, #f08815, #be0d07);
-          color: #fff;
-          border: none;
-          border-radius: 30px;
-        }
-
-        .modern-btn:hover {
-          opacity: 0.9;
         }
       `}</style>
     </>
