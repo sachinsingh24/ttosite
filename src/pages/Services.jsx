@@ -5,10 +5,10 @@ export default function Services() {
     <>
       {/* ================= HERO SECTION ================= */}
       <div className="services-hero">
-        <div className="services-overlay"></div>
+        <div className="services-overlay banner_color"></div>
 
         <div className="text-center hero-text-anim services-hero-content">
-          <h1 className="fw-bold services-title">
+          <h1 className="fw-bold banner-title">
             SERVICES BY TTO – IIT HYDERABAD
           </h1>
 
@@ -147,18 +147,12 @@ export default function Services() {
         .services-overlay {
           position: absolute;
           inset: 0;
-          background: #be0d07;
         }
 
         .services-hero-content {
           position: relative;
           z-index: 2;
           max-width: 900px;
-        }
-
-        .services-title {
-          color: #f08815;
-          font-size: clamp(1.8rem, 5vw, 3rem);
         }
 
         .services-subtitle {

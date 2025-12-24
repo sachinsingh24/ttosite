@@ -5,10 +5,10 @@ export default function About() {
     <>
       {/* ================= HERO SECTION ================= */}
       <div className="about-hero">
-        <div className="about-overlay"></div>
+        <div className="about-overlay banner_color"></div>
 
         <div className="text-center hero-text-anim about-hero-content">
-          <h1 className="fw-bold about-title">
+          <h1 className="fw-bold banner-title">
             ABOUT TTO – IIT HYDERABAD
           </h1>
 
@@ -117,7 +117,6 @@ export default function About() {
         .about-overlay {
           position: absolute;
           inset: 0;
-          background: #be0d07;
         }
 
         .about-hero-content {
@@ -125,12 +124,6 @@ export default function About() {
           z-index: 2;
           max-width: 900px;
         }
-
-        .about-title {
-          color: #f08815;
-          font-size: clamp(1.8rem, 5vw, 3rem);
-        }
-
         .about-subtitle {
           color: #fff;
           font-size: clamp(1rem, 2.5vw, 1.25rem);

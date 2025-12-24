@@ -6,7 +6,7 @@ export default function MSME() {
     <>
       {/* ================= HERO SECTION ================= */}
       <div className="msme-hero">
-        <div className="msme-overlay"></div>
+        <div className="msme-overlay banner_color"></div>
 
         <div className="text-center hero-text-anim msme-hero-content">
           <img
@@ -16,7 +16,7 @@ export default function MSME() {
             style={{ maxWidth: "130px" }}
           />
 
-          <h1 className="fw-bold msme-title">
+          <h1 className="fw-bold banner-title">
             MSME TECH CONNECT 2026
           </h1>
 
@@ -153,7 +153,6 @@ export default function MSME() {
         .msme-overlay {
           position: absolute;
           inset: 0;
-          background: #be0d07;
         }
 
         .msme-hero-content {
@@ -162,10 +161,6 @@ export default function MSME() {
           max-width: 900px;
         }
 
-        .msme-title {
-          color: #f08815;
-          font-size: clamp(1.8rem, 5vw, 3rem);
-        }
 
         .msme-subtitle {
           color: #fff;

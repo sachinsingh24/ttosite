@@ -35,11 +35,11 @@ export default function Technology() {
     <>
       <div className="tech-hero">
         {/* Overlay */}
-        <div className="tech-overlay"></div>
+        <div className="tech-overlay banner_color"></div>
 
         {/* HERO TEXT */}
         <div className="tech-hero-content">
-          <h1 className="fw-bold tech-title highlight">
+          <h1 className="fw-bold banner-title">
             Technology & Innovation Impact
           </h1>
           <p className="tech-subtitle">
@@ -73,17 +73,12 @@ export default function Technology() {
         .tech-overlay {
           position: absolute;
           inset: 0;
-          background: #be0d07;
         }
 
         .tech-hero-content {
           position: relative;
           z-index: 2;
           max-width: 900px;
-        }
-
-        .tech-title {
-          font-size: clamp(1.8rem, 5vw, 3rem);
         }
 
         .tech-subtitle {

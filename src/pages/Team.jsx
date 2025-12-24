@@ -34,10 +34,10 @@ export default function Team() {
     <>
       {/* ================= HERO SECTION ================= */}
       <div className="team-hero">
-        <div className="team-overlay"></div>
+        <div className="team-overlay banner_color"></div>
 
         <div className="text-center hero-text-anim team-hero-content">
-          <h1 className="fw-bold team-title">
+          <h1 className="fw-bold banner-title">
             TEAM – TTO IIT HYDERABAD
           </h1>
 
@@ -157,18 +157,12 @@ export default function Team() {
         .team-overlay {
           position: absolute;
           inset: 0;
-          background: #be0d07;
         }
 
         .team-hero-content {
           position: relative;
           z-index: 2;
           max-width: 900px;
-        }
-
-        .team-title {
-          color: #f08815;
-          font-size: clamp(1.8rem, 5vw, 3rem);
         }
 
         .team-subtitle {
