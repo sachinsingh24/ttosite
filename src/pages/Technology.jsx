@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import HeroParticles from "../components/HeroParticles";
 
 function Odometer({ value, label }) {

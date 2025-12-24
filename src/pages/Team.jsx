@@ -1,4 +1,3 @@
-import React from "react";
 import member1 from "../assets/Mr Pradeep Kumar Yemula IITH TTO1.jpg";
 import dummy from "../assets/dummy male.jpg";
 import HeroParticles from "../components/HeroParticles";
