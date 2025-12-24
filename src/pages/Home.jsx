@@ -4,7 +4,6 @@ import hero1 from "../assets/1.jpg";
 import hero2 from "../assets/TTO-IITH.jpg";
 import hero3 from "../assets/3.jpg";
 
-
 export default function Home() {
   return (
     <>
@@ -27,7 +26,7 @@ export default function Home() {
             imageUrl: hero3,
           },
         ]}
-    size={"100dvh"}
+        size={"100dvh"}
       />
 
       {/* MAIN SECTION */}
@@ -44,9 +43,7 @@ export default function Home() {
         <h2 className="fw-bold mt-5 mb-3 display-6">
           Our <span className="highlight">Mission</span>
         </h2>
-        <p className="text-muted fs-5">
-          We empower the IIT Hyderabad community to protect, translate, and commercialize their research by:
-        </p>
+        <p className="text-muted fs-5">We empower the IIT Hyderabad community to protect, translate, and commercialize their research by:</p>
 
         <ul className="modern-list fs-5">
           <li className="text-muted">Strengthening intellectual property culture</li>
@@ -65,6 +62,8 @@ export default function Home() {
           className="p-4 rounded-4 shadow-sm"
           style={{
             background: "linear-gradient(135deg, #f08815 0%, #be0d07 100%)",
+            position: "relative",
+            zIndex: 4,
           }}
         >
           <div className="row g-4 justify-content-center">

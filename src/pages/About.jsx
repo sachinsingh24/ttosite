@@ -41,7 +41,13 @@ export default function About() {
           Our Role in the <span className="highlight">Innovation Ecosystem</span>
         </h2>
 
-        <div className="ecosystem-wrapper">
+        <div
+          className="ecosystem-wrapper"
+          style={{
+            position: "relative",
+            zIndex: 4,
+          }}
+        >
           <div className="row g-4 justify-content-center">
             {[
               {

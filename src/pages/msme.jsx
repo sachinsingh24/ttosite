@@ -71,7 +71,10 @@ export default function MSME() {
           Why <span className="highlight">Participate</span>
         </h2>
 
-        <div className="why-box p-4 rounded-4 shadow-sm">
+        <div className="why-box p-4 rounded-4 shadow-sm"     style={{
+            position: "relative",
+            zIndex: 4,
+          }}>
           <div className="row g-4 justify-content-center">
             {["Find buyers, licensees, and adopters for your technology", "Explore technology transfer and licensing opportunities", "Connect with top MSMEs, large corporates, and industry leaders", "Gain visibility among investors, incubators, and policymakers", "Build partnerships for pilots, scaling, and commercialization"].map((item, index) => (
               <div className="col-12 col-md-4" key={index}>

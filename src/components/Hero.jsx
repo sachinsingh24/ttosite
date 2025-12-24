@@ -55,6 +55,8 @@ export default function Hero({ slides = [] }) {
       {/* STYLES */}
       <style>{`
         .hero-wrapper {
+          position:relative;
+
           margin-top: 72px; /* navbar offset */
         }
 

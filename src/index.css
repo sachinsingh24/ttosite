@@ -175,13 +175,12 @@ nav.navbar .navbar-nav .nav-link:hover {
 .particles {
   position: absolute;
   inset: 0;
-  z-index: 10;
+  z-index: 3;
   pointer-events: none;
 }
 .particles canvas {
   width: 100% !important;
   height: 100% !important;
-  mix-blend-mode: screen;
 }
 
 .banner-content {

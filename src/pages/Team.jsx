@@ -41,13 +41,11 @@ export default function Team() {
         </div>
 
         <div className="text-center hero-text-anim banner-content">
-          <h1 className="fw-bold banner-title">  TEAM – TTO IIT HYDERABAD</h1>
+          <h1 className="fw-bold banner-title"> TEAM – TTO IIT HYDERABAD</h1>
 
-          <p className="banner-subtitle">   Driving innovation, enabling technology translation, and shaping
-            impactful outcomes.</p>
+          <p className="banner-subtitle"> Driving innovation, enabling technology translation, and shaping impactful outcomes.</p>
         </div>
       </div>
-
 
       {/* ================= ABOUT TEAM ================= */}
       <section className="container py-5">
@@ -55,12 +53,7 @@ export default function Team() {
           Our <span className="highlight">Team</span>
         </h2>
 
-        <p className="text-muted fs-5">
-          The TTO team at IIT Hyderabad brings together expertise in intellectual
-          property, business development, technology scouting, legal strategy,
-          and research commercialization. Together, we bridge science,
-          innovation, and industry.
-        </p>
+        <p className="text-muted fs-5">The TTO team at IIT Hyderabad brings together expertise in intellectual property, business development, technology scouting, legal strategy, and research commercialization. Together, we bridge science, innovation, and industry.</p>
 
         {/* ================= ECOSYSTEM ROLE ================= */}
         <h2 className="fw-bold mt-5 mb-4 display-6">
@@ -71,68 +64,50 @@ export default function Team() {
           <div className="col-12 col-md-4">
             <div className="ecosystem-card p-4 h-100">
               <h5 className="fw-bold">IP & Legal Manager</h5>
-              <p className="mt-3 text-muted">
-                Oversees intellectual property portfolio, patent filings, legal
-                frameworks, IP agreements, and compliance with institutional and
-                national IP policies.
-              </p>
+              <p className="mt-3 text-muted">Oversees intellectual property portfolio, patent filings, legal frameworks, IP agreements, and compliance with institutional and national IP policies.</p>
             </div>
           </div>
 
           <div className="col-12 col-md-4">
             <div className="ecosystem-card p-4 h-100">
               <h5 className="fw-bold">Business Development & Industry Liaison</h5>
-              <p className="mt-3 text-muted">
-                Builds corporate partnerships, facilitates technology
-                showcasing, explores commercialization pathways, and leads
-                licensing negotiations.
-              </p>
+              <p className="mt-3 text-muted">Builds corporate partnerships, facilitates technology showcasing, explores commercialization pathways, and leads licensing negotiations.</p>
             </div>
           </div>
 
           <div className="col-12 col-md-4">
             <div className="ecosystem-card p-4 h-100">
               <h5 className="fw-bold">Technology & Innovation Manager</h5>
-              <p className="mt-3 text-muted">
-                Scouts innovations, evaluates readiness, identifies industry
-                needs, and guides technologies toward commercialization or
-                spin-offs.
-              </p>
+              <p className="mt-3 text-muted">Scouts innovations, evaluates readiness, identifies industry needs, and guides technologies toward commercialization or spin-offs.</p>
             </div>
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center mt-5">
-          <button className="modern-btn px-4 py-2 fw-bold">
-            Learn More
-          </button>
+          <button className="modern-btn px-4 py-2 fw-bold">Learn More</button>
         </div>
       </section>
 
       {/* ================= TEAM MEMBERS ================= */}
-      <section className="py-5 team-section">
+      <section
+        className="py-5 team-section"
+        style={{
+          position: "relative",
+          zIndex: 4,
+        }}
+      >
         <div className="container">
-          <h2 className="text-white fw-bold mb-4 display-6">
-            Meet the Team
-          </h2>
+          <h2 className="text-white fw-bold mb-4 display-6">Meet the Team</h2>
 
           <div className="row g-4 justify-content-center text-center">
             {team.map((member, index) => (
               <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
                 <div className="card p-3 team-card h-100">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="team-img mb-3"
-                  />
-                  <h6 className="fw-bold text-uppercase mb-1">
-                    {member.name}
-                  </h6>
+                  <img src={member.img} alt={member.name} className="team-img mb-3" />
+                  <h6 className="fw-bold text-uppercase mb-1">{member.name}</h6>
                   <small className="fst-italic">{member.role}</small>
-                  <p className="text-muted mb-0">
-                    {member.designation}
-                  </p>
+                  <p className="text-muted mb-0">{member.designation}</p>
                 </div>
               </div>
             ))}

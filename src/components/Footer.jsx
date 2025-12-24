@@ -10,6 +10,8 @@ export default function Footer() {
         background: "linear-gradient(rgb(14, 13, 13) 0%, rgb(58 3 3) 100%)",
         color: "#e6e6e6",
         borderTop: "4px solid #be0d07",
+        position: "relative",
+        zIndex: 4,
       }}
     >
       <div className="container">
