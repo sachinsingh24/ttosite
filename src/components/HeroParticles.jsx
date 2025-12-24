@@ -21,7 +21,7 @@ export default function HeroParticles() {
           value: "transparent",
         },
       },
-      fpsLimit: 60,
+      fpsLimit: 30,
       interactivity: {
         events: {
           onClick: {
@@ -36,7 +36,7 @@ export default function HeroParticles() {
         },
         modes: {
           push: {
-            quantity: 4,
+            quantity: 5,
           },
           repulse: {
             distance: 250,
@@ -61,14 +61,14 @@ export default function HeroParticles() {
           outModes: {
             default: "out",
           },
-          speed: 1.2,
+          speed: 1.5,
         },
         number: {
           density: {
             enable: true,
             area: 800,
           },
-          value: 90,
+          value: 150,
         },
         opacity: {
           value: 0.5,
