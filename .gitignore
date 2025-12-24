@@ -15,6 +15,7 @@ tto.iith.ac.in
 vite.config.js
 .env
 .well-known
+.htaccess
 
 
 # Editor directories and files

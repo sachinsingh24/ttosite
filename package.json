@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp .htaccess tto.iith.ac.in/.htaccess && cp -r .well-known tto.iith.ac.in/.well-known",
+    "build": "vite build",
+    "prod": "vite build && cp .htaccess tto.iith.ac.in/.htaccess && cp -r .well-known tto.iith.ac.in/.well-known",
     "lint": "eslint .",
     "preview": "vite preview"
   },
