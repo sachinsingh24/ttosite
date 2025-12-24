@@ -1,12 +1,12 @@
-import { useEffect, useMemo, useState } from "react";
+import React from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 export default function HeroParticles() {
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = React.useState(false);
 
   // Initialize engine ONCE
-  useEffect(() => {
+  React.useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
@@ -14,7 +14,7 @@ export default function HeroParticles() {
     });
   }, []);
 
-  const options = useMemo(
+  const options = React.useMemo(
     () => ({
       background: {
         color: {
@@ -52,7 +52,7 @@ export default function HeroParticles() {
           color: "#ffffff",
           distance: 140,
           enable: true,
-          opacity: 0.4,
+          opacity: 0.3,
           width: 1,
         },
         move: {
