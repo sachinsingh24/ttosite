@@ -1,5 +1,11 @@
 import React from "react";
 import HeroParticles from "../components/HeroParticles";
+import img1 from "../assets/Intellectual Property (IP) Support TTO - IITH.jpg"
+import img2 from "../assets/Technology Scouting & Evaluation TTO - IITH.jpg"
+import img3 from "../assets/Industry Partnerships TTO - IITH.jpg"
+import img4 from "../assets/Licensing & Commercialization TTO - IITH.jpg"
+import img5 from "../assets/Startup & Spin-off Support TTO - IITH.jpg"
+
 
 export default function Services() {
   return (
@@ -40,31 +46,31 @@ export default function Services() {
             {
               title: "Intellectual Property (IP) Support",
               icon: "bi-shield-lock-fill",
-              img: "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=800&q=60",
+              img: img1,
               points: ["Patent drafting & filing", "Prior art & patentability searches", "Trademark & copyright filing", "IP portfolio management", "Institutional IP policy guidance"],
             },
             {
               title: "Technology Scouting & Evaluation",
               icon: "bi-search",
-              img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=60",
+              img: img2,
               points: ["Identifying innovations in research labs", "Technical feasibility assessments", "Market & competitive analysis", "Technology Readiness Level (TRL) evaluation"],
             },
             {
               title: "Industry Partnerships",
               icon: "bi-people-fill",
-              img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=800&q=60",
+              img: img3,
               points: ["Technology showcasing", "Corporate collaborations", "Industry outreach programs", "Joint development & sponsored research"],
             },
             {
               title: "Licensing & Commercialization",
               icon: "bi-file-earmark-check-fill",
-              img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=60",
+              img: img4,
               points: ["Licensing strategy development", "Negotiation support", "Royalty & revenue-sharing models", "Technology marketing briefs", "Contract drafting & agreements"],
             },
             {
               title: "Startup & Spin-off Support",
               icon: "bi-rocket-takeoff-fill",
-              img: "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=800&q=60",
+              img: img5,
               points: ["Spin-off creation guidance", "IP licensing for startups", "Grant proposal support (BIRAC, DST, MSME, iDEX)", "Mentorship & incubation support"],
             },
           ].map((service, index) => (
