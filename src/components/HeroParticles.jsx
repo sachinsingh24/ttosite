@@ -68,7 +68,7 @@ export default function HeroParticles() {
             enable: true,
             area: 800,
           },
-          value: 150,
+          value: 250,
         },
         opacity: {
           value: 0.5,
