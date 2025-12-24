@@ -39,7 +39,7 @@ export default function HeroParticles() {
             quantity: 5,
           },
           repulse: {
-            distance: 250,
+            distance: 100,
             duration: 0.4,
           },
         },
