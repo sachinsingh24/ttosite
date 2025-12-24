@@ -10,82 +10,33 @@ export default function HeroParticles() {
   return (
     <Particles
       init={particlesInit}
-      style={{
-        position: "absolute",
-        inset: 0,
-      }}
+      style={{ position: "absolute", inset: 0 }}
       options={{
-        background: {
-          color: {
-            value: "transparent", // IMPORTANT for overlay usage
-          },
-        },
+        background: { color: "transparent" },
         fpsLimit: 30,
         detectRetina: true,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
-            onHover: {
-              enable: false,
-              mode: ["repulse", "bubble"],
-            },
+            onClick: { enable: true, mode: "push" },
             resize: true,
           },
           modes: {
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 100,
-            },
-            remove: {
-              quantity: 2,
-            },
+            push: { quantity: 10 },
           },
         },
         particles: {
-          color: {
-            value: "#ffffff",
-          },
-          links: {
-            enable: false,
-          },
-          collisions: {
-            enable: false,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: "out",
-            random: false,
-            speed: {
-              min: 0.5,
-              max: 1,
-            },
-            straight: false,
-            bounce: false,
-          },
           number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 150,
+            value: 200,
+            density: { enable: true, area: 800 },
           },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: ["star", "circle"],
-          },
-          size: {
-            value: {
-              min: 0.1,
-              max: 2,
-            },
+          color: { value: "#ffffff" },
+          shape: { type: ["circle"] },
+          opacity: { value: 0.5 },
+          size: { value: { min: 0.1, max: 3 } },
+          move: {
+            enable: true,
+            speed: { min: 0.5, max: 0.9 },
+            outModes: "out",
           },
         },
       }}
