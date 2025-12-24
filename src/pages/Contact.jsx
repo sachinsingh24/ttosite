@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const formRef = useRef();
+  const formRef = React.useRef();
 
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
-  const [errors, setErrors] = useState({});
+  const [status, setStatus] = React.useState("idle"); // idle | sending | success | error
+  const [errors, setErrors] = React.useState({});
 
   /* ---------------- VALIDATION ---------------- */
   const validate = (data) => {

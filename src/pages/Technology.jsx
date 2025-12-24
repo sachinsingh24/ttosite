@@ -1,10 +1,10 @@
-import React ,{ useEffect, useState } from "react";
+import React from "react";
 import HeroParticles from "../components/HeroParticles";
 
 function Odometer({ value, label }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = React.useState(0);
 
-  useEffect(() => {
+  React.useEffect(() => {
     let start = 0;
     const end = value;
     const duration = 500;
