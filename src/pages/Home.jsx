@@ -1,3 +1,4 @@
+import React from "react";
 import Hero from "../components/Hero";
 import hero1 from "../assets/1.jpg";
 import hero2 from "../assets/TTO-IITH.jpg";
@@ -62,7 +63,7 @@ export default function Home() {
           style={{
             background: "linear-gradient(135deg, #f08815 0%, #be0d07 100%)",
             position: "relative",
-            zIndex: 4,
+            zIndex: 11,
           }}
         >
           <div className="row g-4 justify-content-center">

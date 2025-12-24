@@ -6,14 +6,14 @@ export default function Hero({ slides = [] }) {
   return (
     <header className="hero-wrapper">
       <div id="heroCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-wrap="true" data-bs-pause="hover">
+        <div className="particles">
+          <HeroParticles />
+        </div>
         {/* INDICATORS */}
         <div className="carousel-indicators">
           {slides.map((_, index) => (
             <button key={index} type="button" data-bs-target="#heroCarousel" data-bs-slide-to={index} className={index === 0 ? "active" : ""} aria-current={index === 0 ? "true" : undefined} aria-label={`Slide ${index + 1}`} />
           ))}
-        </div>
-        <div className="particles">
-          <HeroParticles />
         </div>
 
         {/* SLIDES */}
@@ -58,6 +58,9 @@ export default function Hero({ slides = [] }) {
           position:relative;
 
           margin-top: 72px; /* navbar offset */
+        }
+        .particles {
+          z-index: 10;
         }
 
         .hero-slide {

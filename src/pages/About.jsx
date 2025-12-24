@@ -1,3 +1,4 @@
+import React from "react";
 import HeroParticles from "../components/HeroParticles";
 
 export default function About() {

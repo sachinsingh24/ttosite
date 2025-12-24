@@ -1,3 +1,4 @@
+import React from "react";
 export default function PrivacyPolicy() {
   return (
     <section className="container py-5" style={{ marginTop: "80px" }}>

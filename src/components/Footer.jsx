@@ -1,3 +1,4 @@
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/tto logo.png";
 
@@ -10,7 +11,7 @@ export default function Footer() {
         color: "#e6e6e6",
         borderTop: "4px solid #be0d07",
         position: "relative",
-        zIndex: 4,
+        zIndex: 11,
       }}
     >
       <div className="container">
