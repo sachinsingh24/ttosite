@@ -1,5 +1,5 @@
-import React , { useCallback } from "react";
-import Particles from "react-tsparticles";
+import { useCallback } from "react";
+import Particles from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
 export default function HeroParticles() {
@@ -9,8 +9,13 @@ export default function HeroParticles() {
 
   return (
     <Particles
+      id="hero-particles"
       init={particlesInit}
-      style={{ position: "absolute", inset: 0 }}
+      style={{
+        position: "absolute",
+        inset: 0,
+        zIndex: 1,
+      }}
       options={{
         background: { color: "transparent" },
         fpsLimit: 30,
@@ -30,7 +35,7 @@ export default function HeroParticles() {
             density: { enable: true, area: 800 },
           },
           color: { value: "#ffffff" },
-          shape: { type: ["circle"] },
+          shape: { type: "circle" },
           opacity: { value: 0.5 },
           size: { value: { min: 0.1, max: 3 } },
           move: {
