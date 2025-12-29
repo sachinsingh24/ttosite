@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<Team />} />
           <Route path="/technology" element={<Technology />} />
-          <Route path="/msme" element={<MSME />} />
+          <Route path="/events/msme-tech-connect" element={<MSME />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/error" element={<ErrorPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
