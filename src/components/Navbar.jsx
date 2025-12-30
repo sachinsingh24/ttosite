@@ -113,6 +113,9 @@ export default function Navbar({ onNavigate }) {
         }
 
         /* EVENTS underline handled separately */
+        .event-link {
+          cursor:pointer;
+        }
         .event-link::after {
           display: none;
         }
