@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/tto logo.png"
 
 export default function Loader() {
   return (
@@ -8,7 +7,7 @@ export default function Loader() {
         <div class="orbit"></div>
 
         <div class="tto-loader-image">
-          <img src="./src/assets/tto logo.png" alt="TTO IIT Hyderabad Logo" />
+          <img src="/tto-logo.png" alt="TTO IIT Hyderabad Logo" />
         </div>
 
         <div class="tto-brand">
