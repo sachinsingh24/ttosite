@@ -1,5 +1,10 @@
 import React from "react";
-export default function ErrorPage() {
+import { Link } from "react-router-dom";
+
+export default function ErrorPage({ onLoad }) {
+  React.useEffect(() => {
+    onLoad?.();
+  }, []);
   return (
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
       <div className="text-center p-4">
@@ -9,9 +14,9 @@ export default function ErrorPage() {
 
         <div className="text-center mt-5">
           <button className="modern-btn px-4 py-2 fw-bold">
-            <a href="/" style={{ color: "#fff" }}>
+          <Link to="/" style={{color:"#fff"}}>
               Go Back Home
-            </a>
+            </Link>
           </button>
         </div>
       </div>

@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import React from "react";
 import HeroParticles from "../components/HeroParticles";
 
 export default function About({ onLoad }) {
-  useEffect(() => {
+  React.useEffect(() => {
     onLoad?.();
   }, []);
   return (

@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import React from "react";
 import Hero from "../components/Hero";
 import hero1 from "../assets/1.jpg";
 import hero2 from "../assets/TTO-IITH.jpg";
 import hero3 from "../assets/3.jpg";
 
 export default function Home({ onLoad }) {
-  useEffect(() => {
+  React.useEffect(() => {
     onLoad?.();
   }, []);
   return (

@@ -1,5 +1,8 @@
 import React from "react";
-export default function PrivacyPolicy() {
+export default function PrivacyPolicy({ onLoad }) {
+  React.useEffect(() => {
+    onLoad?.();
+  }, []);
   return (
     <section className="container py-5" style={{ marginTop: "80px" }}>
       <h1 className="fw-bold mb-4 display-6 text-center">
