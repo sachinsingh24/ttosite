@@ -2,7 +2,6 @@ import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
-import logo from "../assets/tto logo.png";
 
 import { Home, About, Services, Team, Technology, Contact, MSME } from "../App";
 
@@ -27,7 +26,7 @@ export default function Navbar({ onNavigate }) {
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 fixed-top modern-navbar">
       <div className="container">
         <Link className="navbar-brand nav-logo" to="/" onClick={() => handleNavClick("/")} onMouseEnter={() => Home.preload()}>
-          <img src={logo} alt="TTO-IITH" width="85" />
+          <img src="/tto-logo.png" alt="TTO-IITH" width="85" />
         </Link>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

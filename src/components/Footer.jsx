@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../assets/tto logo.png";
 
 export default function Footer() {
   return (
@@ -21,7 +20,7 @@ export default function Footer() {
             <h5 className="fw-bold mb-3 footer-heading">Technology Transfer Office</h5>
             <div className="row justify-content-center align-items-center">
               <div className="col-md-4">
-                <img src={logo} alt="TTO-IITH" width={"150px"} className="img-fluid" />
+                <img src="/tto-logo.png" alt="TTO-IITH" width={"150px"} className="img-fluid" />
               </div>
               <div className="col-md-8">
                 <p className="footer-text">Indian Institute of Technology Hyderabad</p>
