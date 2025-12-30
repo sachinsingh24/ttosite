@@ -11,7 +11,7 @@ export default function Loader() {
         </div>
 
         <div class="tto-brand">
-          <strong>Web page is loading</strong>
+          <strong>Web page is loading...</strong>
           <span>Please wait a moment</span>
         </div>
       </div>
