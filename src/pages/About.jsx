@@ -1,7 +1,10 @@
-import React from "react";
+import { useEffect } from "react";
 import HeroParticles from "../components/HeroParticles";
 
-export default function About() {
+export default function About({ onLoad }) {
+  useEffect(() => {
+    onLoad?.();
+  }, []);
   return (
     <>
       {/* ================= HERO SECTION ================= */}

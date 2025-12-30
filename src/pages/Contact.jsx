@@ -1,7 +1,10 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
 
-export default function Contact() {
+export default function Contact({ onLoad }) {
+  React.useEffect(() => {
+    onLoad?.();
+  }, []);
   const formRef = React.useRef();
 
   const [status, setStatus] = React.useState("idle"); // idle | sending | success | error

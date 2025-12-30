@@ -1,8 +1,11 @@
-import React from "react";
+import { useEffect } from "react";
 import pagelogo from "../assets/msme_banner.png";
 import HeroParticles from "../components/HeroParticles";
 
-export default function MSME() {
+export default function MSME({ onLoad }) {
+  useEffect(() => {
+    onLoad?.();
+  }, []);
   return (
     <>
       {/* ================= HERO SECTION ================= */}

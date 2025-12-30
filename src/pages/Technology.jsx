@@ -29,7 +29,10 @@ function Odometer({ value, label }) {
   );
 }
 
-export default function Technology() {
+export default function Technology({ onLoad }) {
+  React.useEffect(() => {
+    onLoad?.();
+  }, []);
   return (
     <>
       <div className="main_banner">

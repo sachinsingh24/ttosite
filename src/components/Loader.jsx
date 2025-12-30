@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" as="image" href="./src/assets/tto logo.png" />
+import React from "react";
+import logo from "../assets/tto logo.png"
 
-    <meta name="theme-color" content="#be0d07" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TTO – IIT Hyderabad</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-
-    <!-- Initial loader before React mounts -->
-    <div id="initial-loader">
+export default function Loader() {
+  return (
+    <div className="tto-loader-wrapper">
       <div class="tto-loader-container">
         <div class="orbit"></div>
 
@@ -31,10 +16,9 @@
           <span>Please wait a moment</span>
         </div>
       </div>
-    </div>
 
-    <style>
-      #initial-loader {
+      <style>{`
+       .tto-loader-wrapper {
         position: fixed;
         inset: 0;
         background: radial-gradient(circle at center, #151515 0%, #070707 75%);
@@ -42,7 +26,7 @@
         align-items: center;
         justify-content: center;
         z-index: 9999;
-      }
+        }
 
       .tto-loader-container {
         position: relative;
@@ -143,8 +127,7 @@
           transform: translateX(6px);
         }
       }
-    </style>
-
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+      `}</style>
+    </div>
+  );
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import HeroParticles from "../components/HeroParticles";
 import img1 from "../assets/Intellectual Property (IP) Support TTO - IITH.jpg"
 import img2 from "../assets/Technology Scouting & Evaluation TTO - IITH.jpg"
@@ -7,7 +7,10 @@ import img4 from "../assets/Licensing & Commercialization TTO - IITH.jpg"
 import img5 from "../assets/Startup & Spin-off Support TTO - IITH.jpg"
 
 
-export default function Services() {
+export default function Services({ onLoad }) {
+  useEffect(() => {
+    onLoad?.();
+  }, []);
   return (
     <>
       {/* ================= HERO SECTION ================= */}

@@ -4,7 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
 import logo from "../assets/tto logo.png";
 
-export default function Navbar() {
+import { Home, About, Services, Team, Technology, Contact, MSME } from "../App";
+
+export default function Navbar({ onNavigate }) {
   const location = useLocation();
   const isEventActive = location.pathname.startsWith("/events");
 
@@ -13,58 +15,64 @@ export default function Navbar() {
     const bsCollapse = window.bootstrap.Collapse?.getInstance(navbar);
     if (bsCollapse) bsCollapse.hide();
   };
+  // 🔥 Trigger loader ONLY if route changes
+  const handleNavClick = (to) => {
+    if (location.pathname !== to && onNavigate) {
+      onNavigate();
+    }
+    closeMenu();
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 fixed-top modern-navbar">
       <div className="container">
-        <Link className="navbar-brand nav-logo" to="/">
+        <Link className="navbar-brand nav-logo" to="/" onClick={() => handleNavClick("/")} onMouseEnter={() => Home.preload()}>
           <img src={logo} alt="TTO-IITH" width="85" />
         </Link>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
-
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {/* Home & About */}
-            {["/", "/about"].map((path, i) => (
-              <li className="nav-item" key={i}>
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active-nav px-3" : "nav-link px-3")} to={path} end={path === "/"} onClick={closeMenu}>
-                  {path === "/" ? "Home" : "About"}
-                </NavLink>
-              </li>
-            ))}
+            {/* Home */}
+            <li className="nav-item">
+              <NavLink to="/" end className={({ isActive }) => (isActive ? "nav-link active-nav px-3" : "nav-link px-3")} onMouseEnter={() => Home.preload()} onClick={() => handleNavClick("/")}>
+                Home
+              </NavLink>
+            </li>
 
-            {/* EVENTS DROPDOWN */}
+            {/* About */}
+            <li className="nav-item">
+              <NavLink to="/about" className={({ isActive }) => (isActive ? "nav-link active-nav px-3" : "nav-link px-3")} onMouseEnter={() => About.preload()} onClick={() => handleNavClick("/about")}>
+                About
+              </NavLink>
+            </li>
+
+            {/* Events */}
             <li className="nav-item dropdown">
-              <span className={`nav-link px-3 dropdown-toggle event-link ${isEventActive ? "event-active" : ""}`} data-bs-toggle="dropdown" role="button">
+              <span className={`nav-link px-3 dropdown-toggle event-link ${isEventActive ? "event-active" : ""}`} data-bs-toggle="dropdown">
                 Events
               </span>
 
               <ul className="dropdown-menu modern-dropdown">
                 <li>
-                  <NavLink className={({ isActive }) => (isActive ? "dropdown-item dropdown-active" : "dropdown-item")} to="/events/msme-tech-connect" onClick={closeMenu}>
+                  <NavLink to="/events/msme-tech-connect" className={({ isActive }) => (isActive ? "dropdown-item dropdown-active" : "dropdown-item")} onMouseEnter={() => MSME.preload()} onClick={() => handleNavClick("/events/msme-tech-connect")}>
                     MSME Tech Connect
                   </NavLink>
                 </li>
-                {/* <li>
-                  <NavLink className={({ isActive }) => (isActive ? "dropdown-item dropdown-active" : "dropdown-item")} to="/events/msme1" onClick={closeMenu}>
-                    MSME
-                  </NavLink>
-                </li> */}
               </ul>
             </li>
 
-            {/* Other Links */}
+            {/* Other links */}
             {[
-              { to: "/technology", label: "Technologies" },
-              { to: "/services", label: "Services" },
-              { to: "/team", label: "Team" },
-              { to: "/contact", label: "Contact" },
+              { to: "/technology", label: "Technologies", preload: Technology },
+              { to: "/services", label: "Services", preload: Services },
+              { to: "/team", label: "Team", preload: Team },
+              { to: "/contact", label: "Contact", preload: Contact },
             ].map((item, i) => (
               <li className="nav-item" key={i}>
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active-nav px-3" : "nav-link px-3")} to={item.to} onClick={closeMenu}>
+                <NavLink to={item.to} className={({ isActive }) => (isActive ? "nav-link active-nav px-3" : "nav-link px-3")} onMouseEnter={() => item.preload.preload()} onClick={() => handleNavClick(item.to)}>
                   {item.label}
                 </NavLink>
               </li>
