@@ -6,8 +6,6 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" as="image" href="./src/assets/tto logo.png" />
-
     <meta name="theme-color" content="#be0d07" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TTO – IIT Hyderabad</title>
@@ -25,12 +23,11 @@
         <div class="orbit"></div>
 
         <div class="tto-loader-image">
-          <img src="/tto-logo.png" alt="TTO IIT Hyderabad Logo"/>
-
+          <img src="/tto-logo.png" alt="TTO IIT Hyderabad Logo" fetchpriority="high" decoding="async" />
         </div>
 
         <div class="tto-brand">
-          <strong>Web page is loading</strong>
+          <strong>Web page is loading...</strong>
           <span>Please wait a moment</span>
         </div>
       </div>
