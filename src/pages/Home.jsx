@@ -8,6 +8,7 @@ export default function Home({ onLoad }) {
   React.useEffect(() => {
     onLoad?.();
   }, []);
+
   return (
     <>
       {/* HERO SECTION */}
@@ -30,6 +31,7 @@ export default function Home({ onLoad }) {
           },
         ]}
         size={"100dvh"}
+        onReady={onLoad}
       />
 
       {/* MAIN SECTION */}

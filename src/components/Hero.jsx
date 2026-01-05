@@ -2,7 +2,42 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HeroParticles from "../components/HeroParticles";
 
-export default function Hero({ slides = [] }) {
+export default function Hero({ slides = [], onReady }) {
+const [ready, setReady] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!slides.length) {
+      setReady(true);
+      onReady?.();
+      return;
+    }
+
+    let loaded = 0;
+    let cancelled = false;
+
+    slides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.imageUrl;
+
+      img.onload = img.onerror = () => {
+        if (cancelled) return;
+
+        loaded += 1;
+
+        if (loaded === slides.length) {
+          setReady(true);
+          onReady?.(); // ✅ CALL HERE
+        }
+      };
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [slides, onReady]);
+
+  if (!ready) return null; // loader already visible
+
   return (
     <header className="hero-wrapper">
       <div id="heroCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-wrap="true" data-bs-pause="hover">
