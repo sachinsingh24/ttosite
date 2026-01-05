@@ -82,8 +82,8 @@ export default function App() {
       {showLoader && <Loader />}
 
       <main className="flex-fill">
-        <Suspense fallback={null}>
-          <Routes location={location} key={location.pathname}>
+        <Suspense fallback={<Loader />}>
+          <Routes location={location}>
             <Route path="/" element={<Home onLoad={markRouteLoaded} />} />
             <Route path="/about" element={<About onLoad={markRouteLoaded} />} />
             <Route path="/services" element={<Services onLoad={markRouteLoaded} />} />
