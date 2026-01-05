@@ -5,9 +5,6 @@ import hero2 from "../assets/TTO-IITH.jpg";
 import hero3 from "../assets/3.jpg";
 
 export default function Home({ onLoad }) {
-  React.useEffect(() => {
-    onLoad?.();
-  }, []);
 
   return (
     <>

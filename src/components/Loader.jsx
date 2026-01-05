@@ -3,14 +3,14 @@ import React from "react";
 export default function Loader() {
   return (
     <div className="tto-loader-wrapper">
-      <div class="tto-loader-container">
-        <div class="orbit"></div>
+      <div className="tto-loader-container">
+        <div className="orbit"></div>
 
-        <div class="tto-loader-image">
+        <div className="tto-loader-image">
           <img src="/tto-logo.png" alt="TTO IIT Hyderabad Logo" />
         </div>
 
-        <div class="tto-brand">
+        <div className="tto-brand">
           <strong>Web page is loading...</strong>
           <span>Please wait a moment</span>
         </div>

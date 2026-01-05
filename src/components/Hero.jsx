@@ -91,7 +91,6 @@ const [ready, setReady] = React.useState(false);
       <style>{`
         .hero-wrapper {
           position:relative;
-
           margin-top: 72px; /* navbar offset */
         }
         .particles {
