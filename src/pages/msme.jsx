@@ -10,13 +10,13 @@ export default function MSME({ onLoad }) {
     <>
       {/* ================= HERO SECTION ================= */}
       <div className="main_banner">
-        <div className="banner_overlay"></div>
+        <div className="banner_overlay" style={{ backgroundColor: "#f9a33f" }}></div>
         <div className="particles">
           <HeroParticles />
         </div>
 
         <div className="text-center hero-text-anim banner-content">
-          <img src={pagelogo} alt="MSME Tech Connect" className="img-fluid mb-2" style={{ maxWidth: "130px" }} />
+          <img src={pagelogo} alt="MSME Tech Connect" className="img-fluid mb-2 " style={{ maxWidth: "130px" }} />
 
           <h1 className="fw-bold banner-title">MSME TECH CONNECT 2026</h1>
 
@@ -74,10 +74,13 @@ export default function MSME({ onLoad }) {
           Why <span className="highlight">Participate</span>
         </h2>
 
-        <div className="why-box p-4 rounded-4 shadow-sm"     style={{
+        <div
+          className="why-box p-4 rounded-4 shadow-sm"
+          style={{
             position: "relative",
             zIndex: 4,
-          }}>
+          }}
+        >
           <div className="row g-4 justify-content-center">
             {["Find buyers, licensees, and adopters for your technology", "Explore technology transfer and licensing opportunities", "Connect with top MSMEs, large corporates, and industry leaders", "Gain visibility among investors, incubators, and policymakers", "Build partnerships for pilots, scaling, and commercialization"].map((item, index) => (
               <div className="col-12 col-md-4" key={index}>
@@ -103,8 +106,22 @@ export default function MSME({ onLoad }) {
         </ul>
 
         {/* CTA */}
-        <div className="text-center mt-5">
-          <button className="modern-btn px-5 py-2 fw-bold">Register Interest</button>
+        <div className="text-center mt-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+          <a href="https://forms.gle/uD7TVBivqP7ptwpP7" target="_blank" rel="noopener noreferrer" className="modern-btn px-5 pys py-2 fw-bold text-decoration-none">
+            Register as Exhibitor (Licensor)
+          </a>
+
+          <a href="https://forms.gle/DwAbtvKLZZ6dpeUv9" target="_blank" rel="noopener noreferrer" className="modern-btn px-5 py-2 fw-bold text-decoration-none">
+            Register as Visitor (Licensee)
+          </a>
+        </div>
+
+        <div className="text-center mt-3">
+          <p className="fs-4">
+            Join us as our event takes place from <strong>{`14–16 February 2026`}</strong>.
+          </p>
+          {/* <p className="fs-5 mb-1">IIT Hyderabad</p> */}
+          <p className="fw-semibold text-success fs-5">Registration is Free</p>
         </div>
       </section>
 
