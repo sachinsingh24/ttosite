@@ -125,7 +125,6 @@ export default function MSME({ onLoad }) {
         </div>
       </section>
 
-      {/* ================= STYLES ================= */}
       <style>{`
 
         /* HERO */
