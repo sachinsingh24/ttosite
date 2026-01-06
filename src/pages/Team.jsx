@@ -97,7 +97,6 @@ export default function Team({ onLoad }) {
         className="py-5 team-section"
         style={{
           position: "relative",
-          zIndex: 4,
         }}
       >
         <div className="container">

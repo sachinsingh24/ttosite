@@ -5,7 +5,7 @@ import { loadSlim } from "@tsparticles/slim";
 export default function HeroParticles() {
   const [ready, setReady] = React.useState(false);
 
-  // Initialize engine ONCE
+  // Init engine ONCE
   React.useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -16,12 +16,19 @@ export default function HeroParticles() {
 
   const options = React.useMemo(
     () => ({
+      /* 🚫 DISABLE FULLSCREEN (CRITICAL) */
+      fullScreen: {
+        enable: false,
+      },
+
       background: {
         color: {
           value: "transparent",
         },
       },
+
       fpsLimit: 30,
+
       interactivity: {
         events: {
           onClick: {
@@ -44,6 +51,7 @@ export default function HeroParticles() {
           },
         },
       },
+
       particles: {
         color: {
           value: "#ffffff",
@@ -58,10 +66,10 @@ export default function HeroParticles() {
         move: {
           direction: "none",
           enable: true,
+          speed: 1.5,
           outModes: {
             default: "out",
           },
-          speed: 1.5,
         },
         number: {
           density: {
@@ -80,6 +88,7 @@ export default function HeroParticles() {
           value: { min: 1, max: 3 },
         },
       },
+
       detectRetina: true,
     }),
     []
@@ -94,7 +103,8 @@ export default function HeroParticles() {
       style={{
         position: "absolute",
         inset: 0,
-        zIndex: 1,
+        width: "100%",
+        height: "100%",
         pointerEvents: "none",
       }}
     />

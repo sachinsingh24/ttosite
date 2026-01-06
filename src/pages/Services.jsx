@@ -42,7 +42,6 @@ export default function Services({ onLoad }) {
           className="row g-4 justify-content-center"
           style={{
             position: "relative",
-            zIndex: 4,
           }}
         >
           {[

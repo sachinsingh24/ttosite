@@ -64,8 +64,6 @@ export default function Home({ onLoad }) {
           className="p-4 rounded-4 shadow-sm"
           style={{
             background: "linear-gradient(135deg, #f08815 0%, #be0d07 100%)",
-            position: "relative",
-            zIndex: 11,
           }}
         >
           <div className="row g-4 justify-content-center">

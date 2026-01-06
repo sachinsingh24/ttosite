@@ -48,7 +48,6 @@ export default function About({ onLoad }) {
           className="ecosystem-wrapper"
           style={{
             position: "relative",
-            zIndex: 4,
           }}
         >
           <div className="row g-4 justify-content-center">

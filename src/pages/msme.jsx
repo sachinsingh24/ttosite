@@ -78,7 +78,6 @@ export default function MSME({ onLoad }) {
           className="why-box p-4 rounded-4 shadow-sm"
           style={{
             position: "relative",
-            zIndex: 4,
           }}
         >
           <div className="row g-4 justify-content-center">
