@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HeroParticles from "../components/HeroParticles";
 
 export default function Hero({ slides = [], onReady }) {
-const [ready, setReady] = React.useState(false);
+  const [ready, setReady] = React.useState(false);
 
   React.useEffect(() => {
     if (!slides.length) {
@@ -40,7 +40,16 @@ const [ready, setReady] = React.useState(false);
 
   return (
     <header className="hero-wrapper">
-      <div id="heroCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-wrap="true" data-bs-pause="hover">
+      <div
+        id="heroCarousel"
+        className="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="3000" // 🔁 2 seconds
+        data-bs-wrap="true"
+        data-bs-pause="false" // 🚫 never pause on hover
+        data-bs-touch="true" // 🚫 no pause on swipe/touch
+        data-bs-keyboard="false" // 🚫 no pause via keyboard
+      >
         <div className="particles">
           <HeroParticles />
         </div>

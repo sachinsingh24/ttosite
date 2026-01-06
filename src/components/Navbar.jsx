@@ -50,7 +50,8 @@ export default function Navbar({ onNavigate }) {
 
             {/* Events */}
             <li className="nav-item dropdown">
-              <span className={`nav-link px-3 dropdown-toggle event-link ${isEventActive ? "event-active" : ""}`} data-bs-toggle="dropdown">
+              <span className={`nav-link px-3 dropdown-toggle event-link ${isEventActive ? "event-active" : ""}`} data-bs-toggle="dropdown"
+>
                 Events
               </span>
 
@@ -198,7 +199,7 @@ export default function Navbar({ onNavigate }) {
           /* Mobile active indicator */
           .navbar-nav .active-nav,
           .navbar-nav .event-active {
-            border-left: 4px solid #f08815;
+            border-left: 3px solid #be0d07;
             background: rgba(190, 13, 7, 0.06);
           }
 
@@ -220,6 +221,34 @@ export default function Navbar({ onNavigate }) {
             right: 18px;
           }
         }
+        /* ===== DROPDOWN ON HOVER (DESKTOP ONLY) ===== */
+        @media (min-width: 992px) {
+          .nav-item.dropdown {
+            position: relative;
+          }
+
+          /* invisible hover bridge */
+          .nav-item.dropdown::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            height: 20px;
+          }
+
+          .nav-item.dropdown:hover > .dropdown-menu {
+            display: block;
+          }
+  .nav-item.dropdown:hover > .event-link {
+    color: #f08815 !important;
+  }
+
+  .nav-item.dropdown:hover > .event-link::before {
+    width: 70%;
+  }
+        }
+
       `}</style>
     </nav>
   );
