@@ -50,8 +50,7 @@ export default function Navbar({ onNavigate }) {
 
             {/* Events */}
             <li className="nav-item dropdown">
-              <span className={`nav-link px-3 dropdown-toggle event-link ${isEventActive ? "event-active" : ""}`} data-bs-toggle="dropdown"
->
+              <span className={`nav-link px-3 dropdown-toggle event-link ${isEventActive ? "event-active" : ""}`} data-bs-toggle="dropdown">
                 Events
               </span>
 
@@ -159,15 +158,14 @@ export default function Navbar({ onNavigate }) {
           font-weight: 500;
           transition: all 0.2s ease;
           margin-bottom:5px;
+          background:#f5f3f3ad;
         }
 
         .modern-dropdown .dropdown-item:hover {
-          background: #a6727014;
           color: #f08815;
         }
 
         .dropdown-active {
-          background: #a6727014;
           color: #f08815;
           font-weight: 600;
         }
@@ -240,13 +238,14 @@ export default function Navbar({ onNavigate }) {
           .nav-item.dropdown:hover > .dropdown-menu {
             display: block;
           }
-  .nav-item.dropdown:hover > .event-link {
-    color: #f08815 !important;
-  }
+          .nav-item.dropdown:hover > .event-link {
+            color: #f08815 !important;
+          }
 
-  .nav-item.dropdown:hover > .event-link::before {
-    width: 70%;
-  }
+          .nav-item.dropdown:hover > .event-link::before {
+            width: 70%;
+          }
+
         }
 
       `}</style>
