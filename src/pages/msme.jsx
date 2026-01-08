@@ -117,7 +117,7 @@ export default function MSME({ onLoad }) {
 
         <div className="text-center mt-3">
           <p className="fs-4">
-            Join us as our event takes place from <strong>{`14–16 February 2026`}</strong>.
+            Join us as our event takes place from <strong>{`19–21 February 2026`}</strong>.
           </p>
           {/* <p className="fs-5 mb-1">IIT Hyderabad</p> */}
           <p className="fw-semibold text-success fs-5">Registration is Free</p>

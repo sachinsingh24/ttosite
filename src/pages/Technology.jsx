@@ -33,6 +33,7 @@ export default function Technology({ onLoad }) {
   React.useEffect(() => {
     onLoad?.();
   }, []);
+
   return (
     <>
       <div className="main_banner">
@@ -42,23 +43,47 @@ export default function Technology({ onLoad }) {
         </div>
 
         <div className="text-center hero-text-anim banner-content">
-          <h1 className="fw-bold banner-title"> Technology & Innovation Impact</h1>
-
-          <p className="banner-subtitle"> Driving intellectual property, innovation, and entrepreneurship from IIT Hyderabad.</p>
+          <h1 className="fw-bold banner-title">Technology & Innovation Impact</h1>
+          <p className="banner-subtitle">Driving intellectual property, innovation, and entrepreneurship from IIT Hyderabad.</p>
         </div>
       </div>
 
-      {/* ODOMETERS (moved OUT of absolute banner) */}
+      {/* ODOMETERS */}
       <div className="container my-4">
         <div className="row g-3 justify-content-center">
-          <Odometer value={610} label="Patents Filed" />
-          <Odometer value={230} label="Patents Granted" />
+          <Odometer value={710} label="Patents Filed" />
+          <Odometer value={260} label="Patents Granted" />
           <Odometer value={275} label="Startups Supported" />
+        </div>
+      </div>
+
+      {/* BUTTONS BELOW ODOMETERS */}
+      {/* DESCRIPTION + BUTTONS BELOW ODOMETERS */}
+      <div className="container mb-5 text-center">
+        <p className="tech-description mx-auto mb-4">
+          Faculty members, researchers, and students at <strong>IIT Hyderabad</strong> are encouraged to submit details of their technologies, patents, and innovations to support technology transfer and commercialization efforts. Industry partners and stakeholders may also express interest in available technologies or explore collaboration opportunities through the forms below.
+        </p>
+
+        <div className="d-flex flex-column flex-md-row gap-3 justify-content-center">
+          <a href="https://forms.gle/WYEHkrDPTB43NWpn9" target="_blank" rel="noopener noreferrer" className="modern-btn">
+            Technology Submission Form
+          </a>
+
+          <a href="https://forms.gle/3MTbtw97KMQk6mqA9" target="_blank" rel="noopener noreferrer" className="modern-btn">
+            Technology Interest & Partnership Form
+          </a>
         </div>
       </div>
 
       {/* STYLES */}
       <style>{`
+.tech-description {
+  max-width: 850px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
         .tech-card {
           border-radius: 12px;
           transition: all 0.3s ease;
@@ -72,6 +97,18 @@ export default function Technology({ onLoad }) {
 
         .tech-number {
           font-size: clamp(1.8rem, 4vw, 2.5rem);
+        }
+
+        .tech-btn {
+          padding: 12px 22px;
+          font-weight: 600;
+          border-radius: 30px;
+          transition: all 0.3s ease;
+        }
+
+        .tech-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
       `}</style>
     </>
