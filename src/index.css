@@ -198,6 +198,14 @@ nav.navbar .navbar-nav .nav-link:hover {
   max-height: 100%;
   overflow: hidden;
 }
+.particles canvas {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
 
 .banner-content {
   position: relative;

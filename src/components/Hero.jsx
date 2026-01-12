@@ -1,16 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Carousel } from "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // ✅ REQUIRED
 import HeroParticles from "../components/HeroParticles";
+import { Carousel } from "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default function Hero({ slides = [], onReady }) {
-  const carouselRef = useRef(null);
-  const [firstImageReady, setFirstImageReady] = useState(false);
+  const carouselRef = React.useRef(null);
+  const carouselInstance = React.useRef(null);
+  const [firstImageReady, setFirstImageReady] = React.useState(false);
 
   /* -------------------------------------------------
-     1️⃣ PRELOAD ONLY FIRST SLIDE (LCP-correct)
+     1️⃣ PRELOAD FIRST SLIDE (LCP SAFE)
   ------------------------------------------------- */
-  useEffect(() => {
+  React.useEffect(() => {
     if (!slides.length) {
       onReady?.();
       return;
@@ -28,13 +30,15 @@ export default function Hero({ slides = [], onReady }) {
   }, [slides, onReady]);
 
   /* -------------------------------------------------
-     2️⃣ INITIALIZE BOOTSTRAP CAROUSEL
+     2️⃣ INIT BOOTSTRAP CAROUSEL (SAFE)
   ------------------------------------------------- */
-  useEffect(() => {
-    if (!carouselRef.current) return;
+  React.useEffect(() => {
+    if (!carouselRef.current || carouselInstance.current) return;
 
-    const carousel = new Carousel(carouselRef.current, {
-      interval: 5000,
+    // const { Carousel } = require("bootstrap");
+
+    carouselInstance.current = new Carousel(carouselRef.current, {
+      interval: 4000,
       ride: "carousel",
       pause: false,
       wrap: true,
@@ -42,7 +46,10 @@ export default function Hero({ slides = [], onReady }) {
       keyboard: false,
     });
 
-    return () => carousel.dispose();
+    return () => {
+      carouselInstance.current?.dispose();
+      carouselInstance.current = null;
+    };
   }, []);
 
   /* -------------------------------------------------
@@ -50,12 +57,12 @@ export default function Hero({ slides = [], onReady }) {
   ------------------------------------------------- */
   return (
     <header className="hero-wrapper">
-      {/* ================= PARTICLES (OUTSIDE CAROUSEL) ================= */}
+      {/* PARTICLES */}
       <div className="particles">
         <HeroParticles />
       </div>
 
-      {/* ================= CAROUSEL ================= */}
+      {/* CAROUSEL */}
       <div
         ref={carouselRef}
         id="heroCarousel"
@@ -96,9 +103,9 @@ export default function Hero({ slides = [], onReady }) {
               >
                 <div className="hero-overlay" />
 
-                <div className="hero-content text-center">
-                  <h1 className="hero-title">{slide.title}</h1>
-                  <p className="hero-subtitle">{slide.subtitle}</p>
+                <div className="text-center hero-text-anim banner-content">
+                  <h1 className="fw-bold banner-title">{slide.title}</h1>
+                  <p className="banner-subtitle">{slide.subtitle}</p>
                 </div>
               </div>
             </div>
@@ -127,53 +134,32 @@ export default function Hero({ slides = [], onReady }) {
         </button>
       </div>
 
-      {/* ================= CSS ================= */}
+      {/* STYLES */}
       <style>{`
         .hero-wrapper {
-          margin-top: 72px;
+          margin-top: 72px; /* ✅ navbar preserved */
           height: calc(100vh - 72px);
           position: relative;
           overflow: hidden;
           isolation: isolate;
           background: radial-gradient(circle at center, #151515 0%, #070707 75%);
         }
-
-        /* PARTICLES */
-        .hero-wrapper .particles {
-          position: absolute;
-          inset: 0;
-          z-index: 10;
-          pointer-events: none;
-          overflow: hidden;
+        .carousel {
+          height: 100%;
         }
 
-        .hero-wrapper .particles canvas {
-          position: absolute !important;
-          inset: 0 !important;
-          width: 100% !important;
-          height: 100% !important;
-          display: block;
-        }
-
-        /* CAROUSEL LAYERS */
-        .carousel,
         .carousel-inner,
         .carousel-item,
         .hero-slide {
-          position: relative;
-          z-index: 1;
           height: 100%;
         }
 
         .hero-slide {
           background-size: cover;
           background-position: center;
-          background-repeat: no-repeat;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 2rem 1rem;
-          background-color: #070707;
           opacity: 0;
           transition: opacity 0.5s ease;
         }
@@ -187,23 +173,6 @@ export default function Hero({ slides = [], onReady }) {
           inset: 0;
           background: rgba(0, 0, 0, 0.45);
           z-index: 1;
-        }
-
-        .hero-content {
-          position: relative;
-          z-index: 2;
-          max-width: 900px;
-          color: #fff;
-        }
-
-        .hero-title {
-          font-size: clamp(2rem, 4vw, 3.5rem);
-          font-weight: 700;
-        }
-
-        .hero-subtitle {
-          font-size: clamp(1rem, 2vw, 1.25rem);
-          opacity: 0.9;
         }
       `}</style>
     </header>
