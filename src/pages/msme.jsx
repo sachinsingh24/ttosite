@@ -21,7 +21,7 @@ export default function MSME({ onLoad }) {
 
           <h1 className="fw-bold banner-title">MSME TECH CONNECT 2026</h1>
 
-          <p className="banner-subtitle">Create • Connect • Commercialise — a national platform bridging technology creators and industry adopters.</p>
+          <p className="banner-subtitle">Organised under the MSME-SCIP Programme of the MSME Innovative Scheme.</p>
         </div>
       </div>
 
@@ -72,7 +72,6 @@ export default function MSME({ onLoad }) {
           <div className="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-3">
             <img src={ttfclogo} alt="TTFC Logo" className="img-fluid" style={{ maxHeight: "70px", width: "auto" }} />
           </div>
-          <p className="text-muted fs-6 mb-0">Organised under the MSME-SCIP Programme of the MSME Innovative Scheme.</p>
         </div>
 
         {/* EXHIBIT */}
