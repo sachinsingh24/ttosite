@@ -1,5 +1,6 @@
 import React from "react";
 import pagelogo from "../assets/msme_banner.png";
+import ttfclogo from "../assets/ttfc logo1.jpeg";
 import HeroParticles from "../components/HeroParticles";
 
 export default function MSME({ onLoad }) {
@@ -33,6 +34,8 @@ export default function MSME({ onLoad }) {
 
         <p className="text-muted fs-5">MSME Tech Connect 2026 brings technology creators and industry adopters onto a single platform to enable collaboration, co-creation, and market-ready innovation. The event is designed to help promising technologies move from labs and startups into real-world industrial applications.</p>
 
+
+
         {/* WHO SHOULD PARTICIPATE */}
         <h2 className="fw-bold display-6 mt-5 mb-4">
           Who Should <span className="highlight">Participate</span>
@@ -48,6 +51,7 @@ export default function MSME({ onLoad }) {
           ))}
         </div>
 
+
         {/* EVENT FORMAT */}
         <h2 className="fw-bold display-6 mt-5 mb-4">
           Event <span className="highlight">Format</span>
@@ -61,6 +65,15 @@ export default function MSME({ onLoad }) {
           <li className="text-muted">Investor & Industry Pitch Sessions</li>
           <li className="text-muted">Technology Transfer & Licensing Clinics</li>
         </ul>
+
+        {/* ORGANISED BY REFINE */}
+        <div className="mt-5 p-4 rounded-4 shadow-sm border bg-light text-center">
+          <p className="text-secondary small fw-bold text-uppercase mb-3" style={{ letterSpacing: "1px" }}>Organised by</p>
+          <div className="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-3">
+            <img src={ttfclogo} alt="TTFC Logo" className="img-fluid" style={{ maxHeight: "70px", width: "auto" }} />
+          </div>
+          <p className="text-muted fs-6 mb-0">Organised under the MSME-SCIP Programme of the MSME Innovative Scheme.</p>
+        </div>
 
         {/* EXHIBIT */}
         <h2 className="fw-bold display-6 mt-5 mb-3">
