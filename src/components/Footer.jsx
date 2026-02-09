@@ -68,7 +68,7 @@ export default function Footer() {
                     <a href="/about">About TTO</a>
                   </li>
                   <li>
-                    <a href="/msme">MSME Tech Connect</a>
+                    <a href="/events/msme-tech-connect">MSME Tech Connect</a>
                   </li>
                   <li>
                     <a href="/technology">Technology</a>
