@@ -1,5 +1,5 @@
 import React from "react";
-import pagelogo from "../assets/msme_banner.png";
+import pagelogo from "../assets/MSME LOGO-01.png";
 import ttfclogo from "../assets/ttfc logo1.jpeg";
 import msmeEventPdf from "../assets/msme event.pdf";
 import HeroParticles from "../components/HeroParticles";
