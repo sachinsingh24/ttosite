@@ -2,6 +2,7 @@ import React from "react";
 import pagelogo from "../assets/MSME LOGO-01.png";
 import ttfclogo from "../assets/ttfc logo1.jpeg";
 import msmeEventPdf from "../assets/msme event.pdf";
+import finalSchedulePdf from "../assets/Final Schedule -  MSME TECH CONNECT 2026.pdf";
 import HeroParticles from "../components/HeroParticles";
 
 export default function MSME({ onLoad }) {
@@ -24,13 +25,20 @@ export default function MSME({ onLoad }) {
 
           <p className="banner-subtitle">Organised under the MSME-SCIP Programme of the MSME Innovative Scheme.</p>
 
-          <div className="mt-2" style={{ lineHeight: "1.1" }}>
+          <div className="mt-2 d-flex flex-wrap justify-content-center gap-3">
             <a href={msmeEventPdf} download="MSME Tech Connect 2026.pdf" className="modern-btn px-4 py-2 text-decoration-none fw-bold d-inline-flex align-items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" stroke="currentColor" strokeWidth="1" className="bi bi-download" viewBox="0 0 16 16">
                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
               </svg>
               Download Event Brochure
+            </a>
+            <a href={finalSchedulePdf} download="Final Schedule - MSME TECH CONNECT 2026.pdf" className="modern-btn px-4 py-2 text-decoration-none fw-bold d-inline-flex align-items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" stroke="currentColor" strokeWidth="1" className="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+              </svg>
+              Download Event Schedule
             </a>
           </div>
         </div>
