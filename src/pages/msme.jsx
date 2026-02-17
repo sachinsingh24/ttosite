@@ -1,11 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import pagelogo from "../assets/MSME LOGO-01.png";
 import ttfclogo from "../assets/ttfc logo1.jpeg";
 import msmeEventPdf from "../assets/msme event.pdf";
 import finalSchedulePdf from "../assets/Final Schedule -  MSME TECH CONNECT 2026.pdf";
 import HeroParticles from "../components/HeroParticles";
 
+const speakersData = [
+  {
+    day: "Day 1",
+    date: "19th February 2026",
+    speakers: [
+      { name: "Mr. Joginder Tanikella", role: "CEO, T-Works, Govt. of Telangana", topic: "Enabling MSME Growth through Technology Adoption and Collaboration" },
+      { name: "Dr. T Pavan Kumar", role: "Principal Scientist - Chemistry & IPR CSIR-IMMT", topic: "Technology Transfer – What Happens After a Patent?" },
+      { name: "Dr. Surya Mani Tripathi", role: "Global Head, Legal Services, ICRISAT", topic: "Technology Transfer Models and Practical Approaches to IP Valuation" },
+      { name: "Dr. Dara Ajay", role: "Head - Technology Transfer Office (TTO), IIT Madras", topic: "Technology Transfer Agreements and Licensee Identification: From Deal Structuring to Market Connect" }
+    ]
+  },
+  {
+    day: "Day 2",
+    date: "20th February 2026",
+    speakers: [
+      { name: "Dr. Kancherla Prasad", role: "Principal Scientist, CSIR-IICT", topic: "IP Valuation and Commercial Decision-Making" },
+      { name: "Dr. Amaresh Panda", role: "KIIT-TBI Technology Transfer Office, KIIT University", topic: "Transforming Research into Revenue: A Roadmap for IP Commercialization" },
+      { name: "Mr. Gulshan Bist", role: "Asst. Director (Electronics) MSME, DFO, Hyderabad", topic: "Enhancing MSME Competitiveness through IPR: Government Policies, Schemes and Innovation Ecosystem Support" },
+      { name: "Ms. V. Swapna", role: "NI-MSME", topic: "Institutional Support for MSMEs & MSME Innovative Scheme & Role of IPFC" }
+    ]
+  },
+  {
+    day: "Day 3",
+    date: "21st February 2026",
+    speakers: [
+      { name: "Mr. Vinay Kumar Tiruvaipeta", role: "IP Professional, EEVA", topic: "Software, AI & Digital Innovation Protection" },
+      { name: "Mr. Srinivas Maddipati", role: "IP Attorney & Technology Commercialization Strategist, EEVA", topic: "Software, AI & Digital Innovation Protection" },
+      { name: "Dr. Charan Teja S.", role: "Advanced Lead Engineer GE Aerospace, Bengaluru", topic: "The Future of Technology Transfer: Agentic Systems in Action" }
+    ]
+  }
+];
+
 export default function MSME({ onLoad }) {
+  const [activeDay, setActiveDay] = useState(0);
+
   React.useEffect(() => {
     onLoad?.();
   }, []);
@@ -135,6 +169,54 @@ export default function MSME({ onLoad }) {
           <li className="text-muted">Government bodies & innovation agencies</li>
         </ul>
 
+        <div className="text-center mt-5 p-4 rounded-4 bg-light border shadow-sm">
+          <p className="fs-4 mb-2">
+            <span className="text-primary-gradient fw-bold">19–21 February 2026</span> | 9am to 5pm
+          </p>
+          <p className="fs-5 mb-2 text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+            </svg>
+            Convention Center, IIT Hyderabad, Kandi, Sangareddy
+          </p>
+          <p className="fw-semibold text-success fs-5 mb-0">Registration is Free</p>
+        </div>
+        {/* SPEAKERS SECTION */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold display-6 mb-2 text-center">
+            Meet Our <span className="highlight">Speakers</span>
+          </h2>
+          <p className="text-center text-muted fs-5 mb-5">Distinguished experts sharing insights on Technology Transfer, IP, and MSME Growth.</p>
+
+          <div className="d-flex justify-content-center mb-5 flex-wrap gap-2">
+            {speakersData.map((data, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveDay(index)}
+                className={`day-tab px-4 py-2 fw-bold ${activeDay === index ? "active" : ""}`}
+              >
+                {data.day} <br />
+                <span style={{ fontSize: "0.8rem", opacity: 0.8 }}>{data.date}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="row g-4 justify-content-center">
+            {speakersData[activeDay].speakers.map((speaker, sIndex) => (
+              <div className="col-12 col-md-6" key={sIndex}>
+                <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column gap-3">
+                  <div>
+                    <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
+                    <p className="text-secondary small mb-3 fw-semibold">{speaker.role}</p>
+                    <div className="topic-badge mb-2">Topic</div>
+                    <p className="text-muted italic mb-0">"{speaker.topic}"</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="text-center mt-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
           <a href="https://forms.gle/uD7TVBivqP7ptwpP7" target="_blank" rel="noopener noreferrer" className="modern-btn px-5 pys py-2 fw-bold text-decoration-none">
@@ -146,13 +228,7 @@ export default function MSME({ onLoad }) {
           </a>
         </div>
 
-        <div className="text-center mt-3">
-          <p className="fs-4">
-            Join us as our event takes place from <strong>{`19–21 February 2026`}</strong>.
-          </p>
-          {/* <p className="fs-5 mb-1">IIT Hyderabad</p> */}
-          <p className="fw-semibold text-success fs-5">Registration is Free</p>
-        </div>
+
       </section>
 
       <style>{`
@@ -219,6 +295,65 @@ export default function MSME({ onLoad }) {
 
         .modern-btn:hover {
           opacity: 0.9;
+        }
+
+        /* SPEAKER TABS */
+        .day-tab {
+          background: #f8f9fa;
+          border: 1px solid #dee2e6;
+          border-radius: 12px;
+          min-width: 140px;
+          transition: all 0.3s ease;
+          color: #6c757d;
+        }
+
+        .day-tab.active {
+          background: linear-gradient(135deg, #be0d07 0%, #f08815 100%);
+          color: white;
+          border-color: transparent;
+          box-shadow: 0 4px 15px rgba(190, 13, 7, 0.3);
+        }
+
+        .day-tab:hover:not(.active) {
+          background: #e9ecef;
+          color: #343a40;
+        }
+
+        /* SPEAKER CARDS */
+        .speaker-card {
+          border-radius: 20px;
+          background: rgba(255, 255, 255, 0.9);
+          backdrop-filter: blur(10px);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .speaker-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+          border-color: rgba(190, 13, 7, 0.1);
+        }
+
+        .text-primary-gradient {
+          background: linear-gradient(90deg, #be0d07, #f08815);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .topic-badge {
+          display: inline-block;
+          padding: 2px 10px;
+          background: #fff3e0;
+          color: #e65100;
+          font-size: 0.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          border-radius: 4px;
+          letter-spacing: 0.5px;
+        }
+
+        .italic {
+          font-style: italic;
         }
       `}</style>
     </>
