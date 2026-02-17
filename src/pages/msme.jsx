@@ -152,7 +152,7 @@ export default function MSME({ onLoad }) {
                     <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
                     <p className="text-secondary small mb-0 fw-semibold ls-1">{speaker.role}</p>
 
-                    <div className="mt-3">
+                    <div className="mt-1">
                       <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2">
                         <span className="topic-badge">Topic</span>
                         <div className="badge-line"></div>
@@ -414,8 +414,8 @@ export default function MSME({ onLoad }) {
         }
 
         .speaker-image-container {
-          width: 100px;
-          height: 100px;
+          width: 120px;
+          height: 120px;
           border-radius: 50%;
           overflow: hidden;
           border: 3px solid #f08815;
