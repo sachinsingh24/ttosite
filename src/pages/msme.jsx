@@ -144,7 +144,7 @@ export default function MSME({ onLoad }) {
           <div className="row g-4 justify-content-center">
             {speakersData[activeDay].speakers.map((speaker, sIndex) => (
               <div className="col-12 col-md-6" key={sIndex}>
-                <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column flex-md-row-reverse gap-4 align-items-center">
+                <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column flex-md-row-reverse gap-2 align-items-center">
                   <div className="speaker-image-container flex-shrink-0">
                     <img src={speaker.image} alt={speaker.name} className="speaker-avatar" />
                   </div>
