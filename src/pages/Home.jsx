@@ -59,7 +59,7 @@ export default function Home({ onLoad }) {
         <h2 className="fw-bold mt-5 mb-2 display-6 text-start">
           What <span className="highlight">We Do</span>
         </h2>
-        <p className="text-start text-muted mb-5">Scaling innovation through strategic support and industrial collaboration.</p>
+        <p className="text-start text-muted mb-3">Scaling innovation through strategic support and industrial collaboration.</p>
 
         <div className="row g-4 justify-content-center">
           {[

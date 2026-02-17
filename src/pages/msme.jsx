@@ -121,7 +121,7 @@ export default function MSME({ onLoad }) {
         </div>
         {/* SPEAKERS SECTION */}
         <div className="mt-5">
-          <h2 className="fw-bold display-6 mb-2 text-start">
+          <h2 className="fw-bold display-6 mb-3 text-start">
             Meet Our <span className="highlight">Speakers</span>
           </h2>
           <p className="text-start text-muted mb-3">Distinguished experts sharing insights on Technology Transfer, IP, and MSME Growth.</p>
@@ -169,7 +169,7 @@ export default function MSME({ onLoad }) {
 
         {/* WHO SHOULD PARTICIPATE */}
         <div className="mt-5 pt-4">
-          <h2 className="fw-bold display-6 mb-2 text-start">
+          <h2 className="fw-bold display-6 mb-3 text-start">
             Who Should <span className="highlight">Participate</span>
           </h2>
           <p className="text-start text-muted mb-3">Bringing together the entire innovation ecosystem for meaningful impact.</p>
@@ -223,7 +223,7 @@ export default function MSME({ onLoad }) {
 
         {/* WHY PARTICIPATE */}
         <div className="mt-5 ">
-          <h2 className="fw-bold display-6 mb-2 text-start">
+          <h2 className="fw-bold display-6 mb-3 text-start">
             Why <span className="highlight">Participate</span>
           </h2>
           <p className="text-start text-muted mb-3">Unlocking opportunities for growth, collaboration, and commercialization.</p>
@@ -241,7 +241,7 @@ export default function MSME({ onLoad }) {
                   <div className="why-icon-box mb-3">
                     {item.icon}
                   </div>
-                  <h5 className="fw-bold mb-2 text-dark">{item.title}</h5>
+                  <h5 className="fw-bold mb-3 text-dark">{item.title}</h5>
                   <p className="text-muted small mb-0">{item.desc}</p>
                 </div>
               </div>
