@@ -205,11 +205,26 @@ export default function MSME({ onLoad }) {
             {speakersData[activeDay].speakers.map((speaker, sIndex) => (
               <div className="col-12 col-md-6" key={sIndex}>
                 <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column gap-3">
-                  <div>
-                    <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
-                    <p className="text-secondary small mb-3 fw-semibold">{speaker.role}</p>
-                    <div className="topic-badge mb-2">Topic</div>
-                    <p className="text-muted italic mb-0">"{speaker.topic}"</p>
+                  <div className="d-flex align-items-start gap-4">
+                    <div className="speaker-profile-placeholder shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                      </svg>
+                    </div>
+                    <div className="flex-grow-1">
+                      <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
+                      <p className="text-secondary small mb-3 fw-semibold ls-1">{speaker.role}</p>
+
+                      <div className="mt-3">
+                        <div className="d-flex align-items-center gap-2 mb-2">
+                          <span className="topic-badge">Topic</span>
+                          <div className="badge-line"></div>
+                        </div>
+                        <p className="text-muted italic speaker-topic fs-6">
+                          "{speaker.topic}"
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -322,34 +337,82 @@ export default function MSME({ onLoad }) {
         /* SPEAKER CARDS */
         .speaker-card {
           border-radius: 20px;
-          background: rgba(255, 255, 255, 0.9);
-          backdrop-filter: blur(10px);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          border: 1px solid rgba(0,0,0,0.05);
+          background: #fff;
+          transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+          border: 1px solid rgba(0,0,0,0.05) !important;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .speaker-card::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 5px;
+          background: linear-gradient(to bottom, #be0d07, #f08815);
+          opacity: 0.8;
         }
 
         .speaker-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-          border-color: rgba(190, 13, 7, 0.1);
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+          border-color: rgba(190, 13, 7, 0.2) !important;
+        }
+
+        .speaker-profile-placeholder {
+          width: 64px;
+          height: 64px;
+          background: #f8f9fa;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #dee2e6;
+          border: 1px solid #eee;
+          flex-shrink: 0;
+        }
+
+        .speaker-card:hover .speaker-profile-placeholder {
+          background: #fff3e0;
+          color: #f08815;
+          border-color: #ffe0b2;
         }
 
         .text-primary-gradient {
           background: linear-gradient(90deg, #be0d07, #f08815);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          font-size: 1.25rem;
+        }
+
+        .ls-1 {
+          letter-spacing: 0.3px;
         }
 
         .topic-badge {
           display: inline-block;
-          padding: 2px 10px;
-          background: #fff3e0;
-          color: #e65100;
-          font-size: 0.75rem;
-          font-weight: 700;
+          padding: 3px 12px;
+          background: #be0d07;
+          color: #fff;
+          font-size: 0.65rem;
+          font-weight: 800;
           text-transform: uppercase;
-          border-radius: 4px;
-          letter-spacing: 0.5px;
+          border-radius: 20px;
+          letter-spacing: 1px;
+        }
+
+        .badge-line {
+          height: 1px;
+          flex-grow: 1;
+          background: linear-gradient(90deg, rgba(190, 13, 7, 0.2), transparent);
+        }
+
+        .speaker-topic {
+          line-height: 1.6;
+          color: #4a5568 !important;
+          font-weight: 500;
         }
 
         .italic {
