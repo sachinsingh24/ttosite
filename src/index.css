@@ -18,17 +18,42 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   min-height: 100vh;
+  font-size: 1.1rem;
+  /* Base body text size */
+  line-height: 1.6;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
 }
 
 button {
@@ -42,9 +67,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -55,9 +82,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
@@ -81,6 +110,7 @@ button:focus-visible {
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -102,9 +132,12 @@ nav.navbar .navbar-nav .nav-link:hover {
 
 .service-card-img {
   width: 100%;
-  height: 200px; /* same height for all images */
-  object-fit: cover; /* crops image nicely */
-  border-radius: 12px; /* modern shape */
+  height: 200px;
+  /* same height for all images */
+  object-fit: cover;
+  /* crops image nicely */
+  border-radius: 12px;
+  /* modern shape */
 }
 
 .modern-btn {
@@ -118,10 +151,12 @@ nav.navbar .navbar-nav .nav-link:hover {
   position: relative;
   z-index: 4;
 }
+
 .modern-btn:hover {
   opacity: 0.9;
   transform: translateY(-2px);
 }
+
 .modern-btn,
 .modern-btn:visited,
 .modern-btn:hover,
@@ -130,6 +165,7 @@ nav.navbar .navbar-nav .nav-link:hover {
   color: #ffffff !important;
   text-decoration: none;
 }
+
 /* Base nav-link styles remain same */
 
 /* Disable underline animation on mobile */
@@ -157,14 +193,17 @@ nav.navbar .navbar-nav .nav-link:hover {
   overflow: hidden;
   isolation: isolate;
 }
+
 .main_banner .sec_banner {
   position: "absolute";
   inset: 0;
   background: "rgba(0, 0, 0, 0.35)";
 }
+
 .highlight {
   color: #f08815;
 }
+
 .banner_overlay {
   background: #711411;
   position: absolute;
@@ -172,10 +211,12 @@ nav.navbar .navbar-nav .nav-link:hover {
   z-index: 0;
   overflow: hidden;
 }
+
 .banner-title {
   color: #fff;
   font-size: clamp(1.8rem, 5vw, 3rem);
 }
+
 .banner-subtitle {
   color: #fff;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
@@ -191,13 +232,14 @@ nav.navbar .navbar-nav .nav-link:hover {
   height: 100%;
   z-index: 15;
   pointer-events: none;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
-.particles > * {
+.particles>* {
   max-height: 100%;
   overflow: hidden;
 }
+
 .particles canvas {
   position: absolute !important;
   inset: 0 !important;

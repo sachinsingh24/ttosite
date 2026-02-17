@@ -89,7 +89,6 @@ export default function PrivacyPolicy({ onLoad }) {
         .privacy-content p {
           color: #555;
           line-height: 1.7;
-          font-size: 16px;
         }
       `}</style>
     </section>

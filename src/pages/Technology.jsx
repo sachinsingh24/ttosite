@@ -79,7 +79,6 @@ export default function Technology({ onLoad }) {
       <style>{`
 .tech-description {
   max-width: 850px;
-  font-size: 1.05rem;
   line-height: 1.7;
   color: #444;
 }

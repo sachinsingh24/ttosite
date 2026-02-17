@@ -56,7 +56,7 @@ export default function Team({ onLoad }) {
           Our <span className="highlight">Team</span>
         </h2>
 
-        <p className="text-muted fs-5">The TTO team at IIT Hyderabad brings together expertise in intellectual property, business development, technology scouting, legal strategy, and research commercialization. Together, we bridge science, innovation, and industry.</p>
+        <p className="text-muted">The TTO team at IIT Hyderabad brings together expertise in intellectual property, business development, technology scouting, legal strategy, and research commercialization. Together, we bridge science, innovation, and industry.</p>
 
         {/* ================= ECOSYSTEM ROLE ================= */}
         <h2 className="fw-bold mt-5 mb-4 display-6">
