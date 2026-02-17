@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HeroParticles from "../components/HeroParticles";
 
 export default function About({ onLoad }) {
@@ -83,7 +84,7 @@ export default function About({ onLoad }) {
 
         {/* CTA */}
         <div className="text-center mt-5">
-          <button className="modern-btn px-4 py-2 fw-bold">Learn More</button>
+          <Link to="/contact" className="modern-btn px-4 py-2 fw-bold text-decoration-none">Learn More</Link>
         </div>
       </section>
 

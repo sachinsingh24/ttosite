@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import hero1 from "../assets/Home_First_Banner.jpg";
 import hero2 from "../assets/TTO-IITH.jpg";
@@ -103,7 +104,7 @@ export default function Home({ onLoad }) {
 
         {/* CTA */}
         <div className="text-center mt-5">
-          <button className="modern-btn px-4 py-2 fw-bold">Learn More</button>
+          <Link to="/contact" className="modern-btn px-4 py-2 fw-bold text-decoration-none">Learn More</Link>
         </div>
       </section>
 
