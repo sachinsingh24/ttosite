@@ -109,26 +109,24 @@ export default function MSME({ onLoad }) {
             </div>
           </div>
           <div className="col-md-6 info-partition ps-md-5 d-flex flex-column justify-content-center">
-            <p className="fs-4 mb-2">
-              <span className="text-primary-gradient fw-bold">19–21 February 2026</span> | 9am to 5pm
-            </p>
-            <p className="fs-5 mb-2 text-secondary">
+            <h4 className="fw-bold text-primary-gradient mb-2">19–21 February 2026</h4>
+            <p className="mb-2 text-secondary">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
               </svg>
               Convention Center, IIT Hyderabad, Kandi, Sangareddy
             </p>
-            <p className="fw-semibold text-success fs-5 mb-0">Registration is Free</p>
+            <p className="fw-semibold text-success mb-0">Registration is Free</p>
           </div>
         </div>
         {/* SPEAKERS SECTION */}
-        <div className="mt-5 pt-4">
+        <div className="mt-5">
           <h2 className="fw-bold display-6 mb-2 text-start">
             Meet Our <span className="highlight">Speakers</span>
           </h2>
-          <p className="text-start text-muted mb-5">Distinguished experts sharing insights on Technology Transfer, IP, and MSME Growth.</p>
+          <p className="text-start text-muted mb-3">Distinguished experts sharing insights on Technology Transfer, IP, and MSME Growth.</p>
 
-          <div className="d-flex justify-content-center mb-5 flex-wrap gap-2">
+          <div className="d-flex justify-content-center mb-3 flex-wrap gap-2">
             {speakersData.map((data, index) => (
               <button
                 key={index}
@@ -136,7 +134,7 @@ export default function MSME({ onLoad }) {
                 className={`day-tab px-4 py-2 fw-bold ${activeDay === index ? "active" : ""}`}
               >
                 {data.day} <br />
-                <span style={{ fontSize: "0.8rem", opacity: 0.8 }}>{data.date}</span>
+                <span style={{ fontSize: "0.85rem", opacity: 0.8 }}>{data.date}</span>
               </button>
             ))}
           </div>
@@ -174,25 +172,25 @@ export default function MSME({ onLoad }) {
           <h2 className="fw-bold display-6 mb-2 text-start">
             Who Should <span className="highlight">Participate</span>
           </h2>
-          <p className="text-start text-muted mb-5">Bringing together the entire innovation ecosystem for meaningful impact.</p>
+          <p className="text-start text-muted mb-3">Bringing together the entire innovation ecosystem for meaningful impact.</p>
 
-          <div className="row g-4">
+          <div className="participation-layout d-flex flex-wrap gap-3 justify-content-start">
             {[
-              { label: "MSMEs", sub: "Micro, Small & Medium Enterprises", icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20V9l4-2 4 2v11M2 20h20M10 20V5l4-2 4 2v15M18 20V9l4-2v13M10 20h8" /></svg> },
-              { label: "Startups", sub: "Technology Startups & Entrepreneurs", icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3" /><path d="M12 15v5s3.03-.55 5-2c2.2-1.62 3-5 3-5" /></svg> },
-              { label: "R&D Labs", sub: "Research Institutions & Innovators", icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 3h15M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3M6 14h12" /></svg> },
-              { label: "Academia", sub: "Institutions & Academic Innovators", icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" /></svg> },
-              { label: "Large Industries", sub: "Corporates & Industry Leaders", icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M3 7h18M3 11h18M3 15h18M3 19h18M5 3v18M19 3v18M9 7v1h2V7H9zM9 11v1h2v-1H9zM9 15v1h2v-1H9zM13 7v1h2V7h-2zM13 11v1h2v-1h-2zM13 15v1h2v-1h-2z" /></svg> },
-              { label: "Investors", sub: "Investors, VCs & Incubators", icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3h12" /><path d="M6 8h12" /><path d="m6 13 8.5 8" /><path d="M6 13h3" /><path d="M9 13c6.667 0 6.667-10 0-10" /></svg> },
-              { label: "Policymakers", sub: "Government Bodies & Ecosystem Enablers", icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 21v-4a3 3 0 0 1 6 0v4M2 10l10-7 10 7" /></svg> }
+              { label: "MSMEs", sub: "Micro, Small & Medium Enterprises", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20V9l4-2 4 2v11M2 20h20M10 20V5l4-2 4 2v15M18 20V9l4-2v13M10 20h8" /></svg> },
+              { label: "Startups", sub: "Technology Startups & Entrepreneurs", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3" /><path d="M12 15v5s3.03-.55 5-2c2.2-1.62 3-5 3-5" /></svg> },
+              { label: "R&D Labs", sub: "Research Institutions & Innovators", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 3h15M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3M6 14h12" /></svg> },
+              { label: "Academia", sub: "Institutions & Academic Innovators", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" /></svg> },
+              { label: "Large Industries", sub: "Corporates & Industry Leaders", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M3 7h18M3 11h18M3 15h18M3 19h18M5 3v18M19 3v18M9 7v1h2V7H9zM9 11v1h2v-1H9zM9 15v1h2v-1H9zM13 7v1h2V7h-2zM13 11v1h2v-1h-2zM13 15v1h2v-1h-2z" /></svg> },
+              { label: "Investors", sub: "Investors, VCs & Incubators", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3h12" /><path d="M6 8h12" /><path d="m6 13 8.5 8" /><path d="M6 13h3" /><path d="M9 13c6.667 0 6.667-10 0-10" /></svg> },
+              { label: "Policymakers", sub: "Government Bodies & Enablers", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 21v-4a3 3 0 0 1 6 0v4M2 10l10-7 10 7" /></svg> }
             ].map((item, index) => (
-              <div className="col-12 col-sm-6 col-lg-4" key={index}>
-                <div className="participant-box h-100 p-4 shadow-sm">
-                  <div className="participant-icon mb-3">
-                    {item.icon}
-                  </div>
-                  <h4 className="fw-bold mb-2 h5 text-primary-gradient">{item.label}</h4>
-                  <p className="text-muted small mb-0">{item.sub}</p>
+              <div className="participation-node d-flex align-items-center gap-3" key={index}>
+                <div className="node-icon-circle">
+                  {item.icon}
+                </div>
+                <div className="node-text">
+                  <span className="node-label fw-bold d-block">{item.label}</span>
+                  <span className="node-sub text-muted small">{item.sub}</span>
                 </div>
               </div>
             ))}
@@ -201,11 +199,11 @@ export default function MSME({ onLoad }) {
 
 
         {/* EVENT FORMAT */}
-        <h2 className="fw-bold display-6 mt-5 mb-4">
+        <h2 className="fw-bold display-6 mt-5 mb-3">
           Event <span className="highlight">Format</span>
         </h2>
 
-        <ul className="modern-list fs-5">
+        <ul className="modern-list">
           <li className="text-muted">Technology Exhibition & Demonstrations</li>
           <li className="text-muted">Curated Industry–Technology Matchmaking</li>
           <li className="text-muted">Networking & Collaboration Sessions</li>
@@ -224,11 +222,11 @@ export default function MSME({ onLoad }) {
         <p className="text-muted">Showcase your ready-to-deploy, pilot-stage, or emerging technologies to a focused audience of industry leaders and decision-makers. Demonstrate solutions, validate market demand, and explore real deployment opportunities.</p>
 
         {/* WHY PARTICIPATE */}
-        <div className="mt-5 pt-4">
+        <div className="mt-5 ">
           <h2 className="fw-bold display-6 mb-2 text-start">
             Why <span className="highlight">Participate</span>
           </h2>
-          <p className="text-start text-muted mb-5">Unlocking opportunities for growth, collaboration, and commercialization.</p>
+          <p className="text-start text-muted mb-3">Unlocking opportunities for growth, collaboration, and commercialization.</p>
 
           <div className="row g-4">
             {[
@@ -251,7 +249,7 @@ export default function MSME({ onLoad }) {
           </div>
         </div>
 
-        <h2 className="fw-bold display-6 mt-5 mb-4 text-start">
+        <h2 className="fw-bold display-6 mt-5 mb-3 text-start">
           Who Will <span className="highlight">Visit</span>
         </h2>
 
@@ -311,38 +309,54 @@ export default function MSME({ onLoad }) {
           margin: 0 auto;
         }
 
-        /* PARTICIPANT CARDS */
-        .participant-box {
-          border-radius: 20px;
+        /* PARTICIPATION NODES */
+        .participation-layout {
+          margin-top: 1rem;
+        }
+
+        .participation-node {
           background: #fff;
-          border: 1px solid rgba(0,0,0,0.05);
-          transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
+          padding: 8px 24px 8px 8px;
+          border-radius: 100px;
+          border: 1px solid rgba(0,0,0,0.08);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          cursor: default;
         }
 
-        .participant-box:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
-          border-color: rgba(190, 13, 7, 0.2);
+        .participation-node:hover {
+          transform: translateX(10px) translateY(-2px);
+          box-shadow: 10px 10px 30px rgba(0,0,0,0.05);
+          border-color: #f08815;
+          background: #fffaf5;
         }
 
-        .participant-icon {
-          width: 64px;
-          height: 64px;
+        .node-icon-circle {
+          width: 44px;
+          height: 44px;
           background: rgba(240, 136, 21, 0.08);
-          border-radius: 16px;
+          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           color: #f08815;
           transition: all 0.3s ease;
+          flex-shrink: 0;
         }
 
-        .participant-box:hover .participant-icon {
+        .participation-node:hover .node-icon-circle {
           background: linear-gradient(135deg, #be0d07, #f08815);
           color: #fff;
-          transform: scale(1.1);
+        }
+
+        .node-label {
+          color: #333;
+          font-size: 1.1rem;
+          line-height: 1.2;
+        }
+
+        .node-sub {
+          font-size: 0.85rem;
+          white-space: nowrap;
         }
 
         /* WHY PARTICIPATE CARDS */
@@ -463,7 +477,6 @@ export default function MSME({ onLoad }) {
           background: linear-gradient(90deg, #be0d07, #f08815);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          font-size: 1.25rem;
         }
 
         .ls-1 {
@@ -475,7 +488,7 @@ export default function MSME({ onLoad }) {
           padding: 3px 12px;
           background: #be0d07;
           color: #fff;
-          font-size: 0.65rem;
+          font-size: 0.75rem;
           font-weight: 800;
           text-transform: uppercase;
           border-radius: 20px;
