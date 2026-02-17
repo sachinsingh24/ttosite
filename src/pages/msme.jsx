@@ -87,6 +87,69 @@ export default function MSME({ onLoad }) {
 
         <p className="text-muted fs-5">MSME Tech Connect 2026 brings technology creators and industry adopters onto a single platform to enable collaboration, co-creation, and market-ready innovation. The event is designed to help promising technologies move from labs and startups into real-world industrial applications.</p>
 
+        {/* DATE AND TIME */}
+
+        <div className="text-center mt-5 p-4 rounded-4 bg-light border shadow-sm row">
+          <div className="col-md-6 d-flex flex-column justify-content-center">
+            <p className="text-secondary small fw-bold text-uppercase mb-3" style={{ letterSpacing: "1px" }}>Organised by</p>
+            <div className="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-3">
+              <img src={ttfclogo} alt="TTFC Logo" className="img-fluid" style={{ maxHeight: "70px", width: "auto" }} />
+            </div>
+          </div>
+          <div className="col-md-6 info-partition ps-md-5 d-flex flex-column justify-content-center">
+            <p className="fs-4 mb-2">
+              <span className="text-primary-gradient fw-bold">19–21 February 2026</span> | 9am to 5pm
+            </p>
+            <p className="fs-5 mb-2 text-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+              </svg>
+              Convention Center, IIT Hyderabad, Kandi, Sangareddy
+            </p>
+            <p className="fw-semibold text-success fs-5 mb-0">Registration is Free</p>
+          </div>
+        </div>
+        {/* SPEAKERS SECTION */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold display-6 mb-2 text-center">
+            Meet Our <span className="highlight">Speakers</span>
+          </h2>
+          <p className="text-center text-muted fs-5 mb-5">Distinguished experts sharing insights on Technology Transfer, IP, and MSME Growth.</p>
+
+          <div className="d-flex justify-content-center mb-5 flex-wrap gap-2">
+            {speakersData.map((data, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveDay(index)}
+                className={`day-tab px-4 py-2 fw-bold ${activeDay === index ? "active" : ""}`}
+              >
+                {data.day} <br />
+                <span style={{ fontSize: "0.8rem", opacity: 0.8 }}>{data.date}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="row g-4 justify-content-center">
+            {speakersData[activeDay].speakers.map((speaker, sIndex) => (
+              <div className="col-12 col-md-6" key={sIndex}>
+                <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column gap-3">
+                  <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
+                  <p className="text-secondary small mb-0 fw-semibold ls-1">{speaker.role}</p>
+
+                  <div className="mt-2">
+                    <div className="d-flex align-items-center gap-2 mb-2">
+                      <span className="topic-badge">Topic</span>
+                      <div className="badge-line"></div>
+                    </div>
+                    <p className="text-muted italic speaker-topic fs-6">
+                      "{speaker.topic}"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
 
         {/* WHO SHOULD PARTICIPATE */}
@@ -119,13 +182,7 @@ export default function MSME({ onLoad }) {
           <li className="text-muted">Technology Transfer & Licensing Clinics</li>
         </ul>
 
-        {/* ORGANISED BY REFINE */}
-        <div className="mt-5 p-4 rounded-4 shadow-sm border bg-light text-center">
-          <p className="text-secondary small fw-bold text-uppercase mb-3" style={{ letterSpacing: "1px" }}>Organised by</p>
-          <div className="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-3">
-            <img src={ttfclogo} alt="TTFC Logo" className="img-fluid" style={{ maxHeight: "70px", width: "auto" }} />
-          </div>
-        </div>
+
 
         {/* EXHIBIT */}
         <h2 className="fw-bold display-6 mt-5 mb-3">
@@ -169,68 +226,7 @@ export default function MSME({ onLoad }) {
           <li className="text-muted">Government bodies & innovation agencies</li>
         </ul>
 
-        <div className="text-center mt-5 p-4 rounded-4 bg-light border shadow-sm">
-          <p className="fs-4 mb-2">
-            <span className="text-primary-gradient fw-bold">19–21 February 2026</span> | 9am to 5pm
-          </p>
-          <p className="fs-5 mb-2 text-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
-              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-            </svg>
-            Convention Center, IIT Hyderabad, Kandi, Sangareddy
-          </p>
-          <p className="fw-semibold text-success fs-5 mb-0">Registration is Free</p>
-        </div>
-        {/* SPEAKERS SECTION */}
-        <div className="mt-5 pt-4">
-          <h2 className="fw-bold display-6 mb-2 text-center">
-            Meet Our <span className="highlight">Speakers</span>
-          </h2>
-          <p className="text-center text-muted fs-5 mb-5">Distinguished experts sharing insights on Technology Transfer, IP, and MSME Growth.</p>
 
-          <div className="d-flex justify-content-center mb-5 flex-wrap gap-2">
-            {speakersData.map((data, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveDay(index)}
-                className={`day-tab px-4 py-2 fw-bold ${activeDay === index ? "active" : ""}`}
-              >
-                {data.day} <br />
-                <span style={{ fontSize: "0.8rem", opacity: 0.8 }}>{data.date}</span>
-              </button>
-            ))}
-          </div>
-
-          <div className="row g-4 justify-content-center">
-            {speakersData[activeDay].speakers.map((speaker, sIndex) => (
-              <div className="col-12 col-md-6" key={sIndex}>
-                <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column gap-3">
-                  <div className="d-flex align-items-start gap-4">
-                    <div className="speaker-profile-placeholder shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                      </svg>
-                    </div>
-                    <div className="flex-grow-1">
-                      <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
-                      <p className="text-secondary small mb-3 fw-semibold ls-1">{speaker.role}</p>
-
-                      <div className="mt-3">
-                        <div className="d-flex align-items-center gap-2 mb-2">
-                          <span className="topic-badge">Topic</span>
-                          <div className="badge-line"></div>
-                        </div>
-                        <p className="text-muted italic speaker-topic fs-6">
-                          "{speaker.topic}"
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* CTA */}
         <div className="text-center mt-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
@@ -361,25 +357,6 @@ export default function MSME({ onLoad }) {
           border-color: rgba(190, 13, 7, 0.2) !important;
         }
 
-        .speaker-profile-placeholder {
-          width: 64px;
-          height: 64px;
-          background: #f8f9fa;
-          border-radius: 16px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #dee2e6;
-          border: 1px solid #eee;
-          flex-shrink: 0;
-        }
-
-        .speaker-card:hover .speaker-profile-placeholder {
-          background: #fff3e0;
-          color: #f08815;
-          border-color: #ffe0b2;
-        }
-
         .text-primary-gradient {
           background: linear-gradient(90deg, #be0d07, #f08815);
           -webkit-background-clip: text;
@@ -417,6 +394,44 @@ export default function MSME({ onLoad }) {
 
         .italic {
           font-style: italic;
+        }
+
+        /* PARTITION */
+        .info-partition {
+          position: relative;
+        }
+
+        @media (min-width: 768px) {
+          .info-partition::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1%;
+            bottom: 1%;
+            width: 4px;
+            background: linear-gradient(to bottom, #be0d07, #f08815);
+            opacity: 0.8;
+            border-radius: 50%;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .info-partition {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            position: relative;
+          }
+          .info-partition::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 4px;
+            background: linear-gradient(to right, #be0d07, #f08815);
+            opacity: 0.8;
+            border-radius: 50%;
+          }
         }
       `}</style>
     </>
