@@ -5,34 +5,46 @@ import msmeEventPdf from "../assets/msme event.pdf";
 import finalSchedulePdf from "../assets/Final Schedule -  MSME TECH CONNECT 2026.pdf";
 import HeroParticles from "../components/HeroParticles";
 
+import colMuthireddyImg from "../assets/speaker photograph/Col. Muthireddy Chandan Kumar.jpeg";
+import drTPavanImg from "../assets/speaker photograph/Dr. T Pavan Kumar.jpg";
+import drSuryaManiImg from "../assets/speaker photograph/Dr. Surya Mani Tripathi.jpg";
+import drDaraAjayImg from "../assets/speaker photograph/Dr. Dara Ajay.png";
+import drKancherlaImg from "../assets/speaker photograph/Dr. Kancherla Prasad.jpeg";
+import drAmareshImg from "../assets/speaker photograph/Dr. Amaresh Panda.jpg";
+import mrGulshanImg from "../assets/speaker photograph/Mr. Gulshan Bist.jpg";
+import msVSwapnaImg from "../assets/speaker photograph/Ms. V. Swapna.png";
+import mrVinayImg from "../assets/speaker photograph/Mr. Vinay Kumar Tiruvaipeta.jpg";
+import mrSrinivasImg from "../assets/speaker photograph/Mr. Srinivas Maddipati.jpeg";
+import drCharanTejaImg from "../assets/speaker photograph/Dr. Charan Teja S..jpeg";
+
 const speakersData = [
   {
     day: "Day 1",
     date: "19th February 2026",
     speakers: [
-      { name: "Mr. Joginder Tanikella", role: "CEO, T-Works, Govt. of Telangana", topic: "Enabling MSME Growth through Technology Adoption and Collaboration" },
-      { name: "Dr. T Pavan Kumar", role: "Principal Scientist - Chemistry & IPR CSIR-IMMT", topic: "Technology Transfer – What Happens After a Patent?" },
-      { name: "Dr. Surya Mani Tripathi", role: "Global Head, Legal Services, ICRISAT", topic: "Technology Transfer Models and Practical Approaches to IP Valuation" },
-      { name: "Dr. Dara Ajay", role: "Head - Technology Transfer Office (TTO), IIT Madras", topic: "Technology Transfer Agreements and Licensee Identification: From Deal Structuring to Market Connect" }
+      { name: "Col. Muthireddy Chandan Kumar", role: "Engineering Head, T-Works, Govt. of Telangana", topic: "Enabling MSME Growth through Technology Adoption and Collaboration", image: colMuthireddyImg },
+      { name: "Dr. T Pavan Kumar", role: "Principal Scientist - Chemistry & IPR CSIR-IMMT", topic: "Technology Transfer – What Happens After a Patent?", image: drTPavanImg },
+      { name: "Dr. Surya Mani Tripathi", role: "Global Head, Legal Services, ICRISAT", topic: "Technology Transfer Models and Practical Approaches to IP Valuation", image: drSuryaManiImg },
+      { name: "Dr. Dara Ajay", role: "Head - Technology Transfer Office (TTO), IIT Madras", topic: "Technology Transfer Agreements and Licensee Identification: From Deal Structuring to Market Connect", image: drDaraAjayImg }
     ]
   },
   {
     day: "Day 2",
     date: "20th February 2026",
     speakers: [
-      { name: "Dr. Kancherla Prasad", role: "Principal Scientist, CSIR-IICT", topic: "IP Valuation and Commercial Decision-Making" },
-      { name: "Dr. Amaresh Panda", role: "KIIT-TBI Technology Transfer Office, KIIT University", topic: "Transforming Research into Revenue: A Roadmap for IP Commercialization" },
-      { name: "Mr. Gulshan Bist", role: "Asst. Director (Electronics) MSME, DFO, Hyderabad", topic: "Enhancing MSME Competitiveness through IPR: Government Policies, Schemes and Innovation Ecosystem Support" },
-      { name: "Ms. V. Swapna", role: "NI-MSME", topic: "Institutional Support for MSMEs & MSME Innovative Scheme & Role of IPFC" }
+      { name: "Dr. Kancherla Prasad", role: "Principal Scientist, CSIR-IICT", topic: "IP Valuation and Commercial Decision-Making", image: drKancherlaImg },
+      { name: "Dr. Amaresh Panda", role: "KIIT-TBI Technology Transfer Office, KIIT University", topic: "Transforming Research into Revenue: A Roadmap for IP Commercialization", image: drAmareshImg },
+      { name: "Mr. Gulshan Bist", role: "Asst. Director (Electronics) MSME, DFO, Hyderabad", topic: "Enhancing MSME Competitiveness through IPR: Government Policies, Schemes and Innovation Ecosystem Support", image: mrGulshanImg },
+      { name: "Ms. V. Swapna", role: "NI-MSME", topic: "Institutional Support for MSMEs & MSME Innovative Scheme & Role of IPFC", image: msVSwapnaImg }
     ]
   },
   {
     day: "Day 3",
     date: "21st February 2026",
     speakers: [
-      { name: "Mr. Vinay Kumar Tiruvaipeta", role: "IP Professional, EEVA", topic: "Software, AI & Digital Innovation Protection" },
-      { name: "Mr. Srinivas Maddipati", role: "IP Attorney & Technology Commercialization Strategist, EEVA", topic: "Software, AI & Digital Innovation Protection" },
-      { name: "Dr. Charan Teja S.", role: "Advanced Lead Engineer GE Aerospace, Bengaluru", topic: "The Future of Technology Transfer: Agentic Systems in Action" }
+      { name: "Mr. Vinay Kumar Tiruvaipeta", role: "IP Professional, EEVA", topic: "Software, AI & Digital Innovation Protection", image: mrVinayImg },
+      { name: "Mr. Srinivas Maddipati", role: "IP Attorney & Technology Commercialization Strategist, EEVA", topic: "Software, AI & Digital Innovation Protection", image: mrSrinivasImg },
+      { name: "Dr. Charan Teja S.", role: "Advanced Lead Engineer GE Aerospace, Bengaluru", topic: "The Future of Technology Transfer: Agentic Systems in Action", image: drCharanTejaImg }
     ]
   }
 ];
@@ -132,18 +144,23 @@ export default function MSME({ onLoad }) {
           <div className="row g-4 justify-content-center">
             {speakersData[activeDay].speakers.map((speaker, sIndex) => (
               <div className="col-12 col-md-6" key={sIndex}>
-                <div className="speaker-card p-3 h-100 shadow-sm border-0 d-flex flex-column gap-1">
-                  <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
-                  <p className="text-secondary small mb-0 fw-semibold ls-1">{speaker.role}</p>
+                <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column flex-md-row-reverse gap-4 align-items-center align-items-md-start">
+                  <div className="speaker-image-container flex-shrink-0">
+                    <img src={speaker.image} alt={speaker.name} className="speaker-avatar" />
+                  </div>
+                  <div className="d-flex flex-column gap-1 flex-grow-1 text-center text-md-start">
+                    <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
+                    <p className="text-secondary small mb-0 fw-semibold ls-1">{speaker.role}</p>
 
-                  <div className="mt-2">
-                    <div className="d-flex align-items-center gap-2 mb-2">
-                      <span className="topic-badge">Topic</span>
-                      <div className="badge-line"></div>
+                    <div className="mt-3">
+                      <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2">
+                        <span className="topic-badge">Topic</span>
+                        <div className="badge-line"></div>
+                      </div>
+                      <p className="text-muted italic speaker-topic fs-6 mb-0">
+                        "{speaker.topic}"
+                      </p>
                     </div>
-                    <p className="text-muted italic speaker-topic fs-6">
-                      "{speaker.topic}"
-                    </p>
                   </div>
                 </div>
               </div>
@@ -394,6 +411,21 @@ export default function MSME({ onLoad }) {
 
         .italic {
           font-style: italic;
+        }
+
+        .speaker-image-container {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 3px solid #f08815;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .speaker-avatar {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
 
         /* PARTITION */
