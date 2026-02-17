@@ -132,7 +132,7 @@ export default function MSME({ onLoad }) {
           <div className="row g-4 justify-content-center">
             {speakersData[activeDay].speakers.map((speaker, sIndex) => (
               <div className="col-12 col-md-6" key={sIndex}>
-                <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column gap-3">
+                <div className="speaker-card p-3 h-100 shadow-sm border-0 d-flex flex-column gap-1">
                   <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
                   <p className="text-secondary small mb-0 fw-semibold ls-1">{speaker.role}</p>
 
