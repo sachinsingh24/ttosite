@@ -49,6 +49,44 @@ const speakersData = [
   }
 ];
 
+const SpeakerAvatar = ({ src, name }) => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  // Reset state when source changes
+  React.useEffect(() => {
+    setLoading(true);
+    setError(false);
+  }, [src]);
+
+  return (
+    <div className="speaker-image-container flex-shrink-0 d-flex align-items-center justify-content-center position-relative">
+      {(loading || error) && (
+        <div className="position-absolute d-flex align-items-center justify-content-center w-100 h-100 bg-light" style={{ borderRadius: '50%' }}>
+          {error ? (
+            <i className="bi bi-person-fill text-muted" style={{ fontSize: '2.5rem' }}></i>
+          ) : (
+            <div className="spinner-border spinner-border-sm" role="status" style={{ color: '#f08815' }}>
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          )}
+        </div>
+      )}
+      <img
+        src={src}
+        alt={name}
+        className={`speaker-avatar ${loading || error ? 'opacity-0' : 'opacity-100'}`}
+        onLoad={() => setLoading(false)}
+        onError={() => {
+          setLoading(false);
+          setError(true);
+        }}
+        style={{ transition: 'opacity 0.3s ease-in-out' }}
+      />
+    </div>
+  );
+};
+
 export default function MSME({ onLoad }) {
   const [activeDay, setActiveDay] = useState(0);
 
@@ -141,11 +179,9 @@ export default function MSME({ onLoad }) {
 
           <div className="row g-4 justify-content-center">
             {speakersData[activeDay].speakers.map((speaker, sIndex) => (
-              <div className="col-12 col-md-6" key={sIndex}>
+              <div className="col-12 col-md-6 anime-fade-in" key={`${activeDay}-${sIndex}`}>
                 <div className="speaker-card p-4 h-100 shadow-sm border-0 d-flex flex-column flex-md-row-reverse gap-2 align-items-center">
-                  <div className="speaker-image-container flex-shrink-0">
-                    <img src={speaker.image} alt={speaker.name} className="speaker-avatar" />
-                  </div>
+                  <SpeakerAvatar src={speaker.image} name={speaker.name} />
                   <div className="d-flex flex-column gap-1 flex-grow-1 text-center text-md-start">
                     <h5 className="fw-bold mb-1 text-primary-gradient">{speaker.name}</h5>
                     <p className="text-secondary small mb-0 fw-semibold ls-1">{speaker.role}</p>
@@ -562,6 +598,15 @@ export default function MSME({ onLoad }) {
             opacity: 0.8;
             border-radius: 50%;
           }
+        }
+
+        .anime-fade-in {
+          animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </>
