@@ -305,7 +305,7 @@ export default function MSME({ onLoad }) {
             Register as Exhibitor (Licensor)
           </a>
 
-          <a href="https://forms.gle/DwAbtvKLZZ6dpeUv9" target="_blank" rel="noopener noreferrer" className="modern-btn px-5 py-2 fw-bold text-decoration-none">
+          <a href="https://my.allevents.in/msmetechconnect" target="_blank" rel="noopener noreferrer" className="modern-btn px-5 py-2 fw-bold text-decoration-none">
             Register as Visitor (Licensee)
           </a>
         </div>
